@@ -320,37 +320,37 @@
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-01)",
-					"lineHeight": "100px"
+					"lineHeight": "1.06"
 				}
 			},
 			"h2": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-02)",
-					"lineHeight": "80px"
+					"lineHeight": "1.11"
 				}
 			},
 			"h3": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-03)",
-					"lineHeight": "64px"
+					"lineHeight": "1.2"
 				}
 			},
 			"h4": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-04)",
-					"lineHeight": "52px"
+					"lineHeight": "1.2"
 				}
 			},
 			"h5": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-05)",
-					"lineHeight": "42px"
+					"lineHeight": "1.2"
 				}
 			},
 			"h6": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--heading-06)",
-					"lineHeight": "36px"
+					"lineHeight": "1.2"
 				}
 			},
 			"heading": {
@@ -365,6 +365,12 @@
 			}
 		},
 		"blocks": {
+			"core/post-comments-form": {
+				"css": "& textarea { background-color: var(--wp--preset--color--light-bg); color: var(--wp--preset--color--text-white); border: 1px solid var(--wp--preset--color--text-color); border-radius: 8px; padding: 12px 16px; } & input:not([type=submit]):not([type=checkbox]) { background-color: var(--wp--preset--color--light-bg); color: var(--wp--preset--color--text-white); border: 1px solid var(--wp--preset--color--text-color); border-radius: 8px; padding: 12px 16px; }"
+			},
+			"core/search": {
+				"css": "& .wp-block-search__input { background-color: var(--wp--preset--color--light-bg); color: var(--wp--preset--color--text-white); border: 1px solid var(--wp--preset--color--text-color); padding: 12px 16px; }"
+			},
 			"core/navigation": {
 				"spacing": {
 					"blockGap": "32px"

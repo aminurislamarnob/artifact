@@ -9,13 +9,17 @@
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--20)">
-	<!-- wp:paragraph {"textColor":"text-color","fontSize":"medium-title"} -->
-	<p class="has-text-color-color has-text-color has-medium-title-font-size"><?php echo esc_html__( 'Testimonial', 'artifact' ); ?></p>
-	<!-- /wp:paragraph -->
+	<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+	<div class="wp-block-group alignwide">
+		<!-- wp:paragraph {"textColor":"text-color","fontSize":"medium-title"} -->
+		<p class="has-text-color-color has-text-color has-medium-title-font-size"><?php echo esc_html__( 'Testimonial', 'artifact' ); ?></p>
+		<!-- /wp:paragraph -->
 
-	<!-- wp:heading {"align":"wide","fontSize":"heading-03"} -->
-	<h2 class="wp-block-heading alignwide has-heading-03-font-size"><?php echo esc_html__( 'Our client stories', 'artifact' ); ?></h2>
-	<!-- /wp:heading -->
+		<!-- wp:heading {"fontSize":"heading-03"} -->
+		<h2 class="wp-block-heading has-heading-03-font-size"><?php echo esc_html__( 'Our client stories', 'artifact' ); ?></h2>
+		<!-- /wp:heading -->
+	</div>
+	<!-- /wp:group -->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--50)">

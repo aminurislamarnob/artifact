@@ -11,6 +11,8 @@
 
 $artifact_logo = esc_url( get_parent_theme_file_uri( 'assets/images/logo.svg' ) );
 $artifact_home = esc_url( home_url( '/' ) );
+$artifact_email = __( 'support@welan.com', 'artifact' );
+$artifact_phone = __( '+254 659 546', 'artifact' );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|50","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--20)">
@@ -40,11 +42,11 @@ $artifact_home = esc_url( home_url( '/' ) );
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><a href="mailto:support@welan.com">support@welan.com</a></p>
+			<p><a href="<?php echo esc_url( 'mailto:' . $artifact_email ); ?>"><?php echo esc_html( $artifact_email ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph -->
-			<p><a href="tel:+254659546">+254 659 546</a></p>
+			<p><a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $artifact_phone ) ); ?>"><?php echo esc_html( $artifact_phone ); ?></a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

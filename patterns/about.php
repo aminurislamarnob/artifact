@@ -31,8 +31,8 @@ $artifact_about = esc_url( get_parent_theme_file_uri( 'assets/images/about-portr
 			<h2 class="wp-block-heading has-heading-03-font-size"><?php echo esc_html__( 'We help to accelerate your business growth', 'artifact' ); ?></h2>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"fontSize":"heading-06"} -->
-			<p class="has-heading-06-font-size"><?php echo esc_html__( 'We develop disruptive solutions for organisations. We’ve built a reputation for excellent client satisfaction as evidenced by our service.', 'artifact' ); ?></p>
+			<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.4"}},"fontSize":"heading-06"} -->
+			<p class="has-heading-06-font-size" style="line-height:1.4"><?php echo esc_html__( 'We develop disruptive solutions for organisations. We’ve built a reputation for excellent client satisfaction as evidenced by our service.', 'artifact' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"textColor":"text-color"} -->

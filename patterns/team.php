@@ -64,8 +64,8 @@ $artifact_team = array(
 		<?php foreach ( $artifact_team as $artifact_member ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/' . $artifact_member['file'] ) ); ?>" alt="<?php echo esc_attr( $artifact_member['alt'] ); ?>"/></figure>
+			<!-- wp:image {"aspectRatio":"2/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/' . $artifact_member['file'] ) ); ?>" alt="<?php echo esc_attr( $artifact_member['alt'] ); ?>" style="aspect-ratio:2/3;object-fit:cover"/></figure>
 			<!-- /wp:image -->
 			<!-- wp:heading {"level":3,"fontSize":"medium-title"} -->
 			<h3 class="wp-block-heading has-medium-title-font-size"><?php echo esc_html( $artifact_member['name'] ); ?></h3>
