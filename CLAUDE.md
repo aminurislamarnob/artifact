@@ -35,3 +35,8 @@ Keep these slugs. `main-bg` is the page surface. Use primary as text only where 
 ## theme.json cache
 
 WordPress caches compiled global styles. If an edit does not show, hard-refresh. Site Editor customizations in `wp_global_styles` override `theme.json`.
+
+## Tests
+
+`composer test:unit` (files only), `composer test:integration` (needs the `artifact_tests` MySQL database, which it wipes), `npm run test:e2e` (needs Artifact active on `WP_BASE_URL`, default `http://fse-theme-dev.test`). When you add a token slug, pattern or template, update the expected lists in `tests/phpunit/unit` so the suite keeps guarding the contract. See `README.md` for setup.
+

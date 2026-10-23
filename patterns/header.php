@@ -20,7 +20,7 @@ $artifact_home = esc_url( home_url( '/' ) );
 		<figure class="wp-block-image size-full is-resized"><a href="<?php echo $artifact_home; ?>"><img src="<?php echo $artifact_logo; ?>" alt="<?php echo esc_attr__( 'weLabs', 'artifact' ); ?>" style="width:154px;height:36px"/></a></figure>
 		<!-- /wp:image -->
 
-		<!-- wp:navigation {"overlayMenu":"mobile","overlayBackgroundColor":"main-bg","overlayTextColor":"text-white","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"center","flexWrap":"wrap"}} -->
+		<!-- wp:navigation {"ariaLabel":"<?php echo esc_attr__( 'Primary menu', 'artifact' ); ?>","overlayMenu":"mobile","overlayBackgroundColor":"main-bg","overlayTextColor":"text-white","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"center","flexWrap":"wrap"}} -->
 			<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Home', 'artifact' ); ?>","url":"<?php echo $artifact_home; ?>","kind":"custom"} /-->
 			<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'About', 'artifact' ); ?>","url":"#","kind":"custom"} /-->
 			<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Services', 'artifact' ); ?>","url":"#","kind":"custom"} /-->

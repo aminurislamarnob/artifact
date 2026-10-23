@@ -130,7 +130,7 @@
 		},
 		"typography": {
 			"defaultFontSizes": false,
-			"fontStyles": true,
+			"fontStyle": true,
 			"fontWeight": true,
 			"lineHeight": true,
 			"letterSpacing": true,

@@ -53,7 +53,7 @@ $artifact_phone = __( '+254 659 546', 'artifact' );
 
 		<!-- wp:column {"width":"22.5%"} -->
 		<div class="wp-block-column" style="flex-basis:22.5%">
-			<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"}} -->
+			<!-- wp:navigation {"ariaLabel":"<?php echo esc_attr__( 'Footer menu', 'artifact' ); ?>","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"}} -->
 				<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'About', 'artifact' ); ?>","url":"#","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Services', 'artifact' ); ?>","url":"#","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Blog', 'artifact' ); ?>","url":"#","kind":"custom"} /-->
@@ -64,7 +64,7 @@ $artifact_phone = __( '+254 659 546', 'artifact' );
 
 		<!-- wp:column {"width":"22.5%"} -->
 		<div class="wp-block-column" style="flex-basis:22.5%">
-			<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"}} -->
+			<!-- wp:navigation {"ariaLabel":"<?php echo esc_attr__( 'Footer resources menu', 'artifact' ); ?>","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"}} -->
 				<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Portfolios', 'artifact' ); ?>","url":"#","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Team members', 'artifact' ); ?>","url":"#","kind":"custom"} /-->
 				<!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Help', 'artifact' ); ?>","url":"#","kind":"custom"} /-->

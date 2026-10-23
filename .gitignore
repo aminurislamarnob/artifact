@@ -9,3 +9,7 @@ vendor
 phpcs-report.txt
 .phpunit.result.cache
 composer.lock
+test-results
+playwright-report
+tests/e2e/.auth
+tests/e2e/.fixtures.json

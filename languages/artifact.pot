@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-23T14:40:34+00:00\n"
+"POT-Creation-Date: 2026-10-23T15:25:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -123,6 +123,10 @@ msgstr ""
 msgid "Let’s work together"
 msgstr ""
 
+#: patterns/footer.php:56
+msgid "Footer menu"
+msgstr ""
+
 #: patterns/footer.php:57
 #: patterns/header.php:25
 msgid "About"
@@ -142,6 +146,10 @@ msgstr ""
 
 #: patterns/footer.php:60
 msgid "Contact"
+msgstr ""
+
+#: patterns/footer.php:67
+msgid "Footer resources menu"
 msgstr ""
 
 #: patterns/footer.php:68
@@ -212,6 +220,10 @@ msgstr ""
 #: patterns/header.php
 msgctxt "Pattern title"
 msgid "Header"
+msgstr ""
+
+#: patterns/header.php:23
+msgid "Primary menu"
 msgstr ""
 
 #: patterns/header.php:24
