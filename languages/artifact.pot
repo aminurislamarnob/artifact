@@ -1,0 +1,631 @@
+# Copyright (C) 2026 Aminur Islam Arnob
+# This file is distributed under the GNU General Public License v2.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Artifact 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/aminurislamarnob/artifact/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-23T13:47:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: artifact\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Artifact"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/aminurislamarnob/artifact"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Artifact is a black WordPress block theme for company websites, built for the site editor."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Aminur Islam Arnob"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://aiarnob.com"
+msgstr ""
+
+#: patterns/about.php
+msgctxt "Pattern title"
+msgid "About"
+msgstr ""
+
+#: patterns/about.php:19
+msgid "Team member at work"
+msgstr ""
+
+#: patterns/about.php:27
+msgid "About Us"
+msgstr ""
+
+#: patterns/about.php:31
+msgid "We help to accelerate your business growth"
+msgstr ""
+
+#: patterns/about.php:35
+msgid "We develop disruptive solutions for organisations. We’ve built a reputation for excellent client satisfaction as evidenced by our service."
+msgstr ""
+
+#: patterns/about.php:39
+msgid "Seamlessly formulate exceptional “outside the box” thinking business e-commerce. Phosfluorescently engage end-to-end platforms before integrated functionalities."
+msgstr ""
+
+#: patterns/about.php:43
+msgid "More about us"
+msgstr ""
+
+#: patterns/features.php
+msgctxt "Pattern title"
+msgid "Features"
+msgstr ""
+
+#: patterns/features.php:17
+msgid "Developed With Highest Care. Always updated."
+msgstr ""
+
+#: patterns/features.php:25
+msgid "Our Expert & Dedicated Team Members."
+msgstr ""
+
+#: patterns/features.php:33
+msgid "24/7 Customer Support for Client Satisfaction."
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php:20
+#: patterns/header.php:20
+msgid "weLabs"
+msgstr ""
+
+#: patterns/footer.php:25
+msgid "Facebook"
+msgstr ""
+
+#: patterns/footer.php:26
+msgid "X"
+msgstr ""
+
+#: patterns/footer.php:27
+msgid "LinkedIn"
+msgstr ""
+
+#: patterns/footer.php:28
+msgid "Instagram"
+msgstr ""
+
+#: patterns/footer.php:39
+msgid "Let’s work together"
+msgstr ""
+
+#: patterns/footer.php:55
+#: patterns/header.php:25
+msgid "About"
+msgstr ""
+
+#: patterns/footer.php:56
+#: patterns/header.php:26
+#: patterns/services.php:24
+msgid "Services"
+msgstr ""
+
+#: patterns/footer.php:57
+#: patterns/header.php:28
+#: patterns/latest-articles.php:17
+msgid "Blog"
+msgstr ""
+
+#: patterns/footer.php:58
+msgid "Contact"
+msgstr ""
+
+#: patterns/footer.php:66
+msgid "Portfolios"
+msgstr ""
+
+#: patterns/footer.php:67
+msgid "Team members"
+msgstr ""
+
+#: patterns/footer.php:68
+msgid "Help"
+msgstr ""
+
+#: patterns/footer.php:78
+msgid "Powered by WeLabs"
+msgstr ""
+
+#: patterns/footer.php:84
+msgid "Subscribe newsletter"
+msgstr ""
+
+#: patterns/footer.php:88
+msgid "Enter email address..."
+msgstr ""
+
+#: patterns/footer.php:94
+msgid "Subscribe"
+msgstr ""
+
+#: patterns/fun-facts.php
+msgctxt "Pattern title"
+msgid "Fun facts"
+msgstr ""
+
+#: patterns/fun-facts.php:17
+msgid "10+"
+msgstr ""
+
+#: patterns/fun-facts.php:20
+msgid "Years of Experience"
+msgstr ""
+
+#: patterns/fun-facts.php:28
+msgid "230+"
+msgstr ""
+
+#: patterns/fun-facts.php:31
+msgid "Active Customers"
+msgstr ""
+
+#: patterns/fun-facts.php:39
+msgid "60+"
+msgstr ""
+
+#: patterns/fun-facts.php:42
+msgid "Team Members"
+msgstr ""
+
+#: patterns/fun-facts.php:50
+msgid "500+"
+msgstr ""
+
+#: patterns/fun-facts.php:53
+msgid "Company Trusted Us"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/header.php:24
+msgid "Home"
+msgstr ""
+
+#: patterns/header.php:27
+msgid "Portfolio"
+msgstr ""
+
+#: patterns/header.php:29
+msgid "Contacts"
+msgstr ""
+
+#: patterns/header.php:35
+#: patterns/project-cta.php:19
+#: patterns/work-process.php:66
+msgid "Start A Project"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Homepage dark hero with headline, supporting copy, and a call to action."
+msgstr ""
+
+#: patterns/hero.php:20
+msgid "Creating<br>Software &amp; Digital Excellence"
+msgstr ""
+
+#: patterns/hero.php:24
+msgid "We transform businesses of most major sectors with powerful and adaptable digital solutions."
+msgstr ""
+
+#: patterns/hero.php:30
+msgid "Lets Talk With US"
+msgstr ""
+
+#: patterns/hero.php:40
+msgid "Portrait of a professional"
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr ""
+
+#: patterns/hidden-404.php:11
+msgid "Page not found"
+msgstr ""
+
+#: patterns/hidden-404.php:15
+msgid "The page you are looking for does not exist, or it has been moved. Try a search."
+msgstr ""
+
+#: patterns/hidden-404.php:18
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-404.php:18
+msgid "Search…"
+msgstr ""
+
+#: patterns/hidden-no-results.php
+msgctxt "Pattern title"
+msgid "No results"
+msgstr ""
+
+#: patterns/hidden-no-results.php:11
+msgid "No posts were found."
+msgstr ""
+
+#: patterns/latest-articles.php
+msgctxt "Pattern title"
+msgid "Latest articles"
+msgstr ""
+
+#: patterns/latest-articles.php:20
+msgid "Our latest<br>articles"
+msgstr ""
+
+#: patterns/latest-articles.php:28
+#: patterns/services.php:82
+#: patterns/team.php:55
+msgid "View All"
+msgstr ""
+
+#: patterns/latest-articles.php:42
+msgid "Read more"
+msgstr ""
+
+#: patterns/project-cta.php
+msgctxt "Pattern title"
+msgid "Project call to action"
+msgstr ""
+
+#: patterns/project-cta.php:13
+msgid "Got A Project?<br>Let’s Talk. Hi,"
+msgstr ""
+
+#: patterns/services.php
+msgctxt "Pattern title"
+msgid "Services"
+msgstr ""
+
+#: patterns/services.php:11
+msgid "Theme Development & Customization"
+msgstr ""
+
+#: patterns/services.php:12
+msgid "Plugin Development & Customization"
+msgstr ""
+
+#: patterns/services.php:13
+msgid "E-commerce Development"
+msgstr ""
+
+#: patterns/services.php:14
+msgid "Custom WordPress Development"
+msgstr ""
+
+#: patterns/services.php:15
+msgid "Custom APIs & Integration"
+msgstr ""
+
+#: patterns/services.php:16
+msgid "Security & Performance"
+msgstr ""
+
+#: patterns/services.php:18
+msgid "Creates tailored websites to reflect your brand and engage your audience effectively."
+msgstr ""
+
+#: patterns/services.php:19
+msgid "Learn More"
+msgstr ""
+
+#: patterns/services.php:28
+msgid "Top notch digital services"
+msgstr ""
+
+#: patterns/team.php
+msgctxt "Pattern title"
+msgid "Team"
+msgstr ""
+
+#: patterns/team.php:13
+msgid "Jacob McDany"
+msgstr ""
+
+#: patterns/team.php:14
+#: patterns/team.php:20
+#: patterns/team.php:26
+#: patterns/team.php:32
+msgid "CEO of Rackspace"
+msgstr ""
+
+#: patterns/team.php:15
+msgid "Portrait of Jacob McDany"
+msgstr ""
+
+#: patterns/team.php:19
+msgid "Aliah Lane"
+msgstr ""
+
+#: patterns/team.php:21
+msgid "Portrait of Aliah Lane"
+msgstr ""
+
+#: patterns/team.php:25
+msgid "Loki Bright"
+msgstr ""
+
+#: patterns/team.php:27
+msgid "Portrait of Loki Bright"
+msgstr ""
+
+#: patterns/team.php:31
+msgid "Rosalee Melvin"
+msgstr ""
+
+#: patterns/team.php:33
+msgid "Portrait of Rosalee Melvin"
+msgstr ""
+
+#: patterns/team.php:44
+msgid "Team Member"
+msgstr ""
+
+#: patterns/team.php:47
+msgid "Meet our<br>expert team"
+msgstr ""
+
+#: patterns/testimonials.php
+msgctxt "Pattern title"
+msgid "Testimonials"
+msgstr ""
+
+#: patterns/testimonials.php:13
+msgid "Testimonial"
+msgstr ""
+
+#: patterns/testimonials.php:17
+msgid "Our client stories"
+msgstr ""
+
+#: patterns/testimonials.php:27
+msgid "I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage."
+msgstr ""
+
+#: patterns/testimonials.php:29
+#: patterns/testimonials.php:42
+msgid "Wade Warren, CEO, ABC Corporation"
+msgstr ""
+
+#: patterns/testimonials.php:40
+msgid "It’s all good. It was worth a fortune to my company. It is the most valuable business resource we have."
+msgstr ""
+
+#: patterns/work-process.php
+msgctxt "Pattern title"
+msgid "Work process"
+msgstr ""
+
+#: patterns/work-process.php:13
+msgid "Work Process"
+msgstr ""
+
+#: patterns/work-process.php:17
+msgid "How we work"
+msgstr ""
+
+#: patterns/work-process.php:28
+msgid "Submit a proposal for your awesome project."
+msgstr ""
+
+#: patterns/work-process.php:31
+msgid "Get your thoughts to paper faster with our step-by-step process."
+msgstr ""
+
+#: patterns/work-process.php:34
+msgid "Get Started"
+msgstr ""
+
+#: patterns/work-process.php:45
+msgid "Our expert developer team is ready to do all."
+msgstr ""
+
+#: patterns/work-process.php:56
+msgid "Get full support from us through the project."
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "10px"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "20px"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "30px"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "50px"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "60px"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "70px"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "100px"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Main BG"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Light BG"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Dark BG"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Heading Color"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Text White"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Text Color"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Link Color"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Poppins"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small Paragraph"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium Paragraph"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large Paragraph"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small Title"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium Title"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large Title"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 01"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 02"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 03"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 04"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 05"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 06"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Button Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Button Small"
+msgstr ""
+
+#: styles/blocks/button-rounded.json
+msgctxt "Style variation name"
+msgid "Rounded"
+msgstr ""
