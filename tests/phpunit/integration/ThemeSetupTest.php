@@ -21,7 +21,7 @@ class ThemeSetupTest extends Artifact_Test_Case {
 		$this->assertSame( 'Artifact', $theme->get( 'Name' ) );
 		$this->assertSame( 'artifact', $theme->get( 'TextDomain' ) );
 		$this->assertSame( '/languages', $theme->get( 'DomainPath' ) );
-		$this->assertSame( '6.7', $theme->get( 'RequiresWP' ) );
+		$this->assertSame( '6.9', $theme->get( 'RequiresWP' ) );
 		$this->assertSame( '7.4', $theme->get( 'RequiresPHP' ) );
 		$this->assertTrue( $theme->is_block_theme() );
 	}

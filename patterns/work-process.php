@@ -7,33 +7,10 @@
  * @package Artifact
  */
 
-$artifact_desk  = esc_url( get_parent_theme_file_uri( 'assets/images/work-desk.jpg' ) );
-$artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
+$artifact_desk        = esc_url( get_parent_theme_file_uri( 'assets/images/work-desk.jpg' ) );
+$artifact_arrow       = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
 $artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-right.svg' ) );
-$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
-$artifact_steps = array(
-	array(
-		'n'       => '1',
-		'current' => true,
-		'title'   => __( 'Submit a proposal for your awesome project.', 'artifact' ),
-		'copy'    => __( 'Get your thoughts to paper faster with our step-by-step AI copywriter. Get your thoughts to paper faster with our step-by-step AI copywriter.', 'artifact' ),
-		'link'    => __( 'Get Started', 'artifact' ),
-	),
-	array(
-		'n'       => '2',
-		'current' => false,
-		'title'   => __( 'Our expert developer team is ready to do all.', 'artifact' ),
-		'copy'    => '',
-		'link'    => '',
-	),
-	array(
-		'n'       => '3',
-		'current' => false,
-		'title'   => __( 'Get full support from us through the project.', 'artifact' ),
-		'copy'    => '',
-		'link'    => '',
-	),
-);
+$artifact_icon_alt    = esc_attr__( 'Arrow', 'artifact' );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"48px"}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--20)">
@@ -53,34 +30,69 @@ $artifact_steps = array(
 	<div class="wp-block-columns alignwide are-vertically-aligned-center">
 		<!-- wp:column {"width":"42%","style":{"spacing":{"blockGap":"32px"}}} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
-			<?php foreach ( $artifact_steps as $artifact_step ) : ?>
-				<?php $artifact_step_class = esc_attr( $artifact_step['current'] ? 'artifact-step is-current' : 'artifact-step' ); ?>
-			<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-			<div class="wp-block-group">
-				<!-- wp:paragraph {"className":"<?php echo $artifact_step_class; ?>"} -->
-				<p class="<?php echo $artifact_step_class; ?>"><?php echo esc_html( $artifact_step['n'] ); ?></p>
-				<!-- /wp:paragraph -->
+			<!-- wp:accordion {"showIcon":false,"autoclose":true,"className":"artifact-work-process-accordion"} -->
+			<div role="group" class="wp-block-accordion artifact-work-process-accordion">
+				<!-- wp:accordion-item {"openByDefault":true} -->
+				<div class="wp-block-accordion-item is-open">
+					<!-- wp:accordion-heading {"showIcon":false} -->
+					<h3 class="wp-block-accordion-heading"><button class="wp-block-accordion-heading__toggle" type="button"><span class="wp-block-accordion-heading__toggle-title"><?php echo esc_html__( 'Submit a proposal for your awesome project.', 'artifact' ); ?></span></button></h3>
+					<!-- /wp:accordion-heading -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
-				<div class="wp-block-group">
-					<!-- wp:heading {"level":3,"style":{"typography":{"lineHeight":"26px"}},"fontSize":"medium-title"} -->
-					<h3 class="wp-block-heading has-medium-title-font-size" style="line-height:26px"><?php echo esc_html( $artifact_step['title'] ); ?></h3>
-					<!-- /wp:heading -->
-					<?php if ( $artifact_step['copy'] ) : ?>
-					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"22px"}},"textColor":"text-color","fontSize":"small-paragraph"} -->
-					<p class="has-text-color-color has-text-color has-small-paragraph-font-size" style="line-height:22px"><?php echo esc_html( $artifact_step['copy'] ); ?></p>
-					<!-- /wp:paragraph -->
-					<?php endif; ?>
-					<?php if ( $artifact_step['link'] ) : ?>
-					<!-- wp:paragraph {"textColor":"text-white"} -->
-					<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html( $artifact_step['link'] ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="16" height="16"/></a></p>
-					<!-- /wp:paragraph -->
-					<?php endif; ?>
+					<!-- wp:accordion-panel -->
+					<div class="wp-block-accordion-panel" role="region">
+						<!-- wp:paragraph {"style":{"typography":{"lineHeight":"22px"}},"textColor":"text-color","fontSize":"small-paragraph"} -->
+						<p class="has-text-color-color has-text-color has-small-paragraph-font-size" style="line-height:22px"><?php echo esc_html__( 'Get your thoughts to paper faster with our step-by-step AI copywriter. Get your thoughts to paper faster with our step-by-step AI copywriter.', 'artifact' ); ?></p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:paragraph {"textColor":"text-white"} -->
+						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="16" height="16"/></a></p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:accordion-panel -->
 				</div>
-				<!-- /wp:group -->
+				<!-- /wp:accordion-item -->
+
+				<!-- wp:accordion-item -->
+				<div class="wp-block-accordion-item">
+					<!-- wp:accordion-heading {"showIcon":false} -->
+					<h3 class="wp-block-accordion-heading"><button class="wp-block-accordion-heading__toggle" type="button"><span class="wp-block-accordion-heading__toggle-title"><?php echo esc_html__( 'Our expert developer team is ready to do all.', 'artifact' ); ?></span></button></h3>
+					<!-- /wp:accordion-heading -->
+
+					<!-- wp:accordion-panel -->
+					<div class="wp-block-accordion-panel" role="region">
+						<!-- wp:paragraph {"style":{"typography":{"lineHeight":"22px"}},"textColor":"text-color","fontSize":"small-paragraph"} -->
+						<p class="has-text-color-color has-text-color has-small-paragraph-font-size" style="line-height:22px"><?php echo esc_html__( 'Get your thoughts to paper faster with our step-by-step AI copywriter. Get your thoughts to paper faster with our step-by-step AI copywriter.', 'artifact' ); ?></p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:paragraph {"textColor":"text-white"} -->
+						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="16" height="16"/></a></p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:accordion-panel -->
+				</div>
+				<!-- /wp:accordion-item -->
+
+				<!-- wp:accordion-item -->
+				<div class="wp-block-accordion-item">
+					<!-- wp:accordion-heading {"showIcon":false} -->
+					<h3 class="wp-block-accordion-heading"><button class="wp-block-accordion-heading__toggle" type="button"><span class="wp-block-accordion-heading__toggle-title"><?php echo esc_html__( 'Get full support from us through the project.', 'artifact' ); ?></span></button></h3>
+					<!-- /wp:accordion-heading -->
+
+					<!-- wp:accordion-panel -->
+					<div class="wp-block-accordion-panel" role="region">
+						<!-- wp:paragraph {"style":{"typography":{"lineHeight":"22px"}},"textColor":"text-color","fontSize":"small-paragraph"} -->
+						<p class="has-text-color-color has-text-color has-small-paragraph-font-size" style="line-height:22px"><?php echo esc_html__( 'Get your thoughts to paper faster with our step-by-step AI copywriter. Get your thoughts to paper faster with our step-by-step AI copywriter.', 'artifact' ); ?></p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:paragraph {"textColor":"text-white"} -->
+						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="16" height="16"/></a></p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:accordion-panel -->
+				</div>
+				<!-- /wp:accordion-item -->
 			</div>
-			<!-- /wp:group -->
-			<?php endforeach; ?>
+			<!-- /wp:accordion -->
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">

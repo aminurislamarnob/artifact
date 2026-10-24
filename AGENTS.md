@@ -5,7 +5,7 @@ Instructions and guidelines for AI coding agents operating on the **Artifact** W
 ## Repository Overview
 - **Theme**: Artifact (Full Site Editing block theme for company websites).
 - **Target**: Official WordPress.org Theme Directory submission.
-- **Requirements**: WordPress 6.7+, PHP 7.4+.
+- **Requirements**: WordPress 6.9+, PHP 7.4+.
 - **Configuration**: `theme.json` (schema v3).
 - **Text Domain**: `artifact`, domain path `/languages`.
 

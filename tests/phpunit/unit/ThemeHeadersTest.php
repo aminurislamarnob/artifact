@@ -38,7 +38,7 @@ class ThemeHeadersTest extends TestCase {
 	}
 
 	public function test_minimum_requirements() {
-		$this->assertSame( '6.7', $this->header['Requires at least'] );
+		$this->assertSame( '6.9', $this->header['Requires at least'] );
 		$this->assertSame( '7.4', $this->header['Requires PHP'] );
 	}
 
