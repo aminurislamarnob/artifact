@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-24T17:34:16+00:00\n"
+"POT-Creation-Date: 2026-10-24T18:38:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: patterns/about.php:12
 #: patterns/footer.php:15
-#: patterns/hero.php:13
+#: patterns/hero.php:12
 #: patterns/latest-articles.php:11
 #: patterns/project-cta.php:12
 #: patterns/services.php:12
@@ -298,19 +298,39 @@ msgctxt "Pattern description"
 msgid "Homepage dark hero with headline, supporting copy, and a call to action."
 msgstr ""
 
-#: patterns/hero.php:18
-msgid "Product team at a workstation, with project and satisfaction highlights"
+#: patterns/hero.php:14
+msgid "Sparkle"
 msgstr ""
 
-#: patterns/hero.php:26
+#: patterns/hero.php:16
+msgid "2K+ Successful Projects"
+msgstr ""
+
+#: patterns/hero.php:18
+msgid "Product team at a workstation"
+msgstr ""
+
+#: patterns/hero.php:20
+msgid "Decorative swirl"
+msgstr ""
+
+#: patterns/hero.php:22
+msgid "100% Client Satisfaction"
+msgstr ""
+
+#: patterns/hero.php:24
+msgid "How we work"
+msgstr ""
+
+#: patterns/hero.php:33
 msgid "Creating<br>Software &amp; Digital Excellence"
 msgstr ""
 
-#: patterns/hero.php:30
+#: patterns/hero.php:37
 msgid "We transform businesses of most major sectors with powerful and adaptable digital solutions."
 msgstr ""
 
-#: patterns/hero.php:36
+#: patterns/hero.php:43
 msgid "Lets Talk With US"
 msgstr ""
 
@@ -430,7 +450,7 @@ msgid "APIs"
 msgstr ""
 
 #: patterns/services.php:43
-msgid "Security & Performance"
+msgid "Website Security & Performance"
 msgstr ""
 
 #: patterns/services.php:44
@@ -483,34 +503,107 @@ msgstr ""
 msgid "5 stars"
 msgstr ""
 
-#: patterns/testimonials.php:12
+#: patterns/testimonials.php:15
 msgid "Wade Warren"
 msgstr ""
 
-#: patterns/testimonials.php:13
+#: patterns/testimonials.php:16
 msgid "CEO, ABC Corporation"
 msgstr ""
 
 #: patterns/testimonials.php:17
-#: patterns/testimonials.php:27
 msgid "“I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage.”"
 msgstr ""
 
 #: patterns/testimonials.php:18
-#: patterns/testimonials.php:23
-#: patterns/testimonials.php:28
 msgid "Portrait of Wade Warren"
 msgstr ""
 
 #: patterns/testimonials.php:22
-msgid "“It’s all good. It was worth a fortune to my company. It is the most valuable business resource we have.”"
+msgid "Esther Howard"
+msgstr ""
+
+#: patterns/testimonials.php:23
+msgid "VP of Marketing, TechFlow"
+msgstr ""
+
+#: patterns/testimonials.php:24
+msgid "“It’s all good. It was worth a fortune to my company. It is the most valuable business resource we have ever invested in. The turnaround time was incredible.”"
+msgstr ""
+
+#: patterns/testimonials.php:25
+msgid "Portrait of Esther Howard"
+msgstr ""
+
+#: patterns/testimonials.php:29
+msgid "Cameron Williamson"
+msgstr ""
+
+#: patterns/testimonials.php:30
+msgid "Founder, StudioDesign"
+msgstr ""
+
+#: patterns/testimonials.php:31
+msgid "“Artifact exceeded our expectations on every single front. Their engineering standard, attention to typography, and performance is world-class. Our core web vitals went from red to straight 100s across mobile and desktop. I cannot recommend them highly enough.”"
+msgstr ""
+
+#: patterns/testimonials.php:32
+msgid "Portrait of Cameron Williamson"
+msgstr ""
+
+#: patterns/testimonials.php:36
+msgid "Jenny Wilson"
 msgstr ""
 
 #: patterns/testimonials.php:37
+msgid "Head of Product, Apex Global"
+msgstr ""
+
+#: patterns/testimonials.php:38
+msgid "“The seamless integration and responsive design delivered exactly what we needed to scale our enterprise platform effortlessly.”"
+msgstr ""
+
+#: patterns/testimonials.php:39
+msgid "Portrait of Jenny Wilson"
+msgstr ""
+
+#: patterns/testimonials.php:43
+msgid "Robert Fox"
+msgstr ""
+
+#: patterns/testimonials.php:44
+msgid "CTO, CloudSphere"
+msgstr ""
+
+#: patterns/testimonials.php:45
+msgid "“Working with Artifact felt like having an elite engineering team in-house. They understood complex requirements immediately and executed with flawless precision. Truly exceptional work from start to finish.”"
+msgstr ""
+
+#: patterns/testimonials.php:46
+msgid "Portrait of Robert Fox"
+msgstr ""
+
+#: patterns/testimonials.php:50
+msgid "Leslie Alexander"
+msgstr ""
+
+#: patterns/testimonials.php:51
+msgid "Managing Director, Horizon Media"
+msgstr ""
+
+#: patterns/testimonials.php:52
+msgid "“Outstanding quality, clear communication, and impeccable design sense. They turned our ambitious vision into reality faster than we thought possible.”"
+msgstr ""
+
+#: patterns/testimonials.php:53
+msgid "Portrait of Leslie Alexander"
+msgstr ""
+
+#: patterns/testimonials.php:62
 msgid "Testimonial"
 msgstr ""
 
-#: patterns/testimonials.php:41
+#: patterns/testimonials.php:66
 msgid "Our client stories"
 msgstr ""
 

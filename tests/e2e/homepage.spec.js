@@ -29,7 +29,7 @@ test.describe( 'Homepage', () => {
 		await expect( h1 ).toContainText( 'Digital Excellence' );
 
 		const hero = page.locator( 'main > .alignfull' ).first();
-		await expect( hero.getByRole( 'img' ) ).toBeVisible();
+		await expect( hero.getByRole( 'img' ).first() ).toBeVisible();
 		await expect( hero.getByRole( 'link', { name: /talk with us/i } ) ).toBeVisible();
 	} );
 

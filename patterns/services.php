@@ -40,7 +40,7 @@ $artifact_services = array(
 	),
 	array(
 		'icon'  => 'icon-service-security.svg',
-		'title' => __( 'Security & Performance', 'artifact' ),
+		'title' => __( 'Website Security & Performance', 'artifact' ),
 		'alt'   => __( 'Security', 'artifact' ),
 	),
 );
@@ -86,7 +86,7 @@ $artifact_services = array(
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"28px"}},"textColor":"text-white","fontSize":"medium-paragraph"} -->
-					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a href="#"><?php echo esc_html( $artifact_learn ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
+					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -125,7 +125,7 @@ $artifact_services = array(
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"28px"}},"textColor":"text-white","fontSize":"medium-paragraph"} -->
-					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a href="#"><?php echo esc_html( $artifact_learn ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
+					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

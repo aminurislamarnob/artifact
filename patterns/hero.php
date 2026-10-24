@@ -8,20 +8,27 @@
  * @package Artifact
  */
 
-$artifact_scene = esc_url( get_parent_theme_file_uri( 'assets/images/hero-scene.png' ) );
-$artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
-$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
+$artifact_arrow        = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
+$artifact_icon_alt     = esc_attr__( 'Arrow', 'artifact' );
+$artifact_sparkle      = esc_url( get_parent_theme_file_uri( 'assets/images/hero-sparkle.svg' ) );
+$artifact_sparkle_alt  = esc_attr__( 'Sparkle', 'artifact' );
+$artifact_badge        = esc_url( get_parent_theme_file_uri( 'assets/images/hero-badge-projects.svg' ) );
+$artifact_badge_alt    = esc_attr__( '2K+ Successful Projects', 'artifact' );
+$artifact_main         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-illustration-main.png' ) );
+$artifact_main_alt     = esc_attr__( 'Product team at a workstation', 'artifact' );
+$artifact_pink         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-vector-pink.svg' ) );
+$artifact_pink_alt     = esc_attr__( 'Decorative swirl', 'artifact' );
+$artifact_card         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-card-client.svg' ) );
+$artifact_card_alt     = esc_attr__( '100% Client Satisfaction', 'artifact' );
+$artifact_pill         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-pill-work.svg' ) );
+$artifact_pill_alt     = esc_attr__( 'How we work', 'artifact' );
 ?>
 <!-- wp:group {"align":"full","className":"artifact-hero","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull artifact-hero has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--20)">
-	<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero__scene"} -->
-	<figure class="wp-block-image size-full artifact-hero__scene"><img src="<?php echo $artifact_scene; ?>" alt="<?php echo esc_attr__( 'Product team at a workstation, with project and satisfaction highlights', 'artifact' ); ?>"/></figure>
-	<!-- /wp:image -->
-
-	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|50"}}}} -->
-	<div class="wp-block-columns alignwide">
-		<!-- wp:column {"width":"49%","style":{"spacing":{"blockGap":"48px"}}} -->
-		<div class="wp-block-column" style="flex-basis:49%">
+	<!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
+		<!-- wp:column {"verticalAlignment":"center","width":"49%","style":{"spacing":{"blockGap":"48px"}}} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:49%">
 			<!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"100px"}},"fontSize":"heading-01"} -->
 			<h1 class="wp-block-heading has-heading-01-font-size" style="line-height:100px"><?php echo wp_kses_post( __( 'Creating<br>Software &amp; Digital Excellence', 'artifact' ) ); ?></h1>
 			<!-- /wp:heading -->
@@ -40,8 +47,36 @@ $artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 		</div>
 		<!-- /wp:column -->
 
-		<!-- wp:column {"width":"51%"} -->
-		<div class="wp-block-column" style="flex-basis:51%"></div>
+		<!-- wp:column {"verticalAlignment":"center","width":"51%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:51%">
+			<!-- wp:group {"className":"artifact-hero-illustration","layout":{"type":"default"}} -->
+			<div class="wp-block-group artifact-hero-illustration">
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__sparkle"} -->
+				<figure class="wp-block-image size-full artifact-hero-illust__sparkle"><img src="<?php echo $artifact_sparkle; ?>" alt="<?php echo $artifact_sparkle_alt; ?>"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__badge"} -->
+				<figure class="wp-block-image size-full artifact-hero-illust__badge"><img src="<?php echo $artifact_badge; ?>" alt="<?php echo $artifact_badge_alt; ?>"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__main"} -->
+				<figure class="wp-block-image size-full artifact-hero-illust__main"><img src="<?php echo $artifact_main; ?>" alt="<?php echo $artifact_main_alt; ?>"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__pink"} -->
+				<figure class="wp-block-image size-full artifact-hero-illust__pink"><img src="<?php echo $artifact_pink; ?>" alt="<?php echo $artifact_pink_alt; ?>"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__card"} -->
+				<figure class="wp-block-image size-full artifact-hero-illust__card"><img src="<?php echo $artifact_card; ?>" alt="<?php echo $artifact_card_alt; ?>"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__pill"} -->
+				<figure class="wp-block-image size-full artifact-hero-illust__pill"><img src="<?php echo $artifact_pill; ?>" alt="<?php echo $artifact_pill_alt; ?>"/></figure>
+				<!-- /wp:image -->
+			</div>
+			<!-- /wp:group -->
+		</div>
 		<!-- /wp:column -->
 	</div>
 	<!-- /wp:columns -->
