@@ -95,7 +95,7 @@ $artifact_steps = array(
 		<!-- wp:column {"width":"58%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%">
 			<!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"24px"}}} -->
-			<figure class="wp-block-image size-full" style="border-radius:24px"><img src="<?php echo $artifact_desk; ?>" alt="<?php echo esc_attr__( 'Laptop, notebook, and coffee on a desk', 'artifact' ); ?>" style="border-radius:24px"/></figure>
+			<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo $artifact_desk; ?>" alt="<?php echo esc_attr__( 'Laptop, notebook, and coffee on a desk', 'artifact' ); ?>" style="border-radius:24px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

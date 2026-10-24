@@ -30,7 +30,7 @@ $artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 			<!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"24px"}},"className":"is-style-rounded"} -->
-			<figure class="wp-block-image size-full is-style-rounded" style="border-radius:24px"><img src="<?php echo $artifact_about; ?>" alt="<?php echo esc_attr__( 'Three colleagues reviewing work on a laptop', 'artifact' ); ?>" style="border-radius:24px"/></figure>
+			<figure class="wp-block-image size-full has-custom-border is-style-rounded"><img src="<?php echo $artifact_about; ?>" alt="<?php echo esc_attr__( 'Three colleagues reviewing work on a laptop', 'artifact' ); ?>" style="border-radius:24px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

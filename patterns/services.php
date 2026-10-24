@@ -66,7 +66,7 @@ $artifact_services = array(
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:group {"style":{"border":{"radius":"20px","width":"1px","color":"var:preset|color|border"},"spacing":{"padding":{"top":"24px","bottom":"24px","left":"24px","right":"24px"},"blockGap":"48px"}},"backgroundColor":"light-bg","layout":{"type":"flex","orientation":"vertical"}} -->
-			<div class="wp-block-group has-light-bg-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:20px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
+			<div class="wp-block-group has-border-color has-light-bg-background-color has-background" style="border-color:var(--wp--preset--color--border);border-width:1px;border-radius:20px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
 				<!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
 					<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-service-icon"} -->
@@ -105,7 +105,7 @@ $artifact_services = array(
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:group {"style":{"border":{"radius":"20px","width":"1px","color":"var:preset|color|border"},"spacing":{"padding":{"top":"24px","bottom":"24px","left":"24px","right":"24px"},"blockGap":"48px"}},"backgroundColor":"light-bg","layout":{"type":"flex","orientation":"vertical"}} -->
-			<div class="wp-block-group has-light-bg-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:20px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
+			<div class="wp-block-group has-border-color has-light-bg-background-color has-background" style="border-color:var(--wp--preset--color--border);border-width:1px;border-radius:20px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
 				<!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
 					<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-service-icon"} -->
@@ -140,7 +140,7 @@ $artifact_services = array(
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
 		<!-- wp:button {"backgroundColor":"light-bg","textColor":"text-white","className":"artifact-button-icon","style":{"border":{"width":"1px","color":"var:preset|color|border"}},"fontSize":"button-large"} -->
-		<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-light-bg-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="#" style="border-color:var(--wp--preset--color--border);border-width:1px"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_out; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
+		<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-light-bg-background-color has-text-color has-background has-border-color has-button-large-font-size has-custom-font-size wp-element-button" href="#" style="border-color:var(--wp--preset--color--border);border-width:1px"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_out; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

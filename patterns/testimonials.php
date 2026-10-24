@@ -60,7 +60,7 @@ $artifact_stories = array(
 			<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group">
 				<!-- wp:image {"width":"60px","height":"60px","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"100%"}}} -->
-				<figure class="wp-block-image size-full is-resized" style="border-radius:100%"><img src="<?php echo $artifact_photo; ?>" alt="<?php echo esc_attr( $artifact_story['alt'] ); ?>" style="border-radius:100%;width:60px;height:60px;object-fit:cover"/></figure>
+				<figure class="wp-block-image size-full is-resized has-custom-border"><img src="<?php echo $artifact_photo; ?>" alt="<?php echo esc_attr( $artifact_story['alt'] ); ?>" style="border-radius:100%;width:60px;height:60px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:group {"style":{"spacing":{"blockGap":"4px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 				<div class="wp-block-group">
@@ -82,9 +82,11 @@ $artifact_stories = array(
 
 	<!-- wp:group {"align":"wide","className":"artifact-pagination-dots","layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide artifact-pagination-dots">
+		<!-- wp:html -->
 		<span class="artifact-dot is-active" aria-hidden="true"></span>
 		<span class="artifact-dot" aria-hidden="true"></span>
 		<span class="artifact-dot" aria-hidden="true"></span>
+		<!-- /wp:html -->
 	</div>
 	<!-- /wp:group -->
 </div>

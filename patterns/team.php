@@ -59,13 +59,13 @@ foreach ( array( 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ) as $artifact_index => 
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-team-card","style":{"border":{"radius":"24px"}}} -->
-			<figure class="wp-block-image size-full artifact-team-card" style="border-radius:24px"><img src="<?php echo $artifact_photo; ?>" alt="<?php echo esc_attr( $artifact_member['alt'] ); ?>" style="border-radius:24px;width:100%;height:auto"/></figure>
+			<figure class="wp-block-image size-full has-custom-border artifact-team-card"><img src="<?php echo $artifact_photo; ?>" alt="<?php echo esc_attr( $artifact_member['alt'] ); ?>" style="border-radius:24px"/></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"12px","margin":{"top":"16px"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 			<div class="wp-block-group" style="margin-top:16px">
 				<!-- wp:image {"width":"20px","height":"20px","sizeSlug":"full","linkDestination":"none"} -->
-				<figure class="wp-block-image size-full is-resized" style="margin-top:4px"><img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="20" height="20"/></figure>
+				<figure class="wp-block-image size-full is-resized"><img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" style="width:20px;height:20px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":"4px"}},"layout":{"type":"constrained","justifyContent":"left"}} -->

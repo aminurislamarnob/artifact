@@ -16,8 +16,12 @@ $artifact_button = esc_html__( 'Start A Project', 'artifact' );
 ?>
 <!-- wp:group {"align":"full","className":"artifact-cta","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull artifact-cta has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--20)">
-	<!-- wp:group {"align":"wide","className":"artifact-cta-box","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"32px","right":"32px"},"blockGap":"24px"}},"backgroundColor":"primary","layout":{"type":"flex","orientation":"vertical","justifyContent":"center","verticalAlignment":"center"}} -->
-	<div class="wp-block-group alignwide artifact-cta-box has-primary-background-color has-background" style="background-image:url('<?php echo $artifact_bg; ?>');background-size:cover;background-position:center;border-radius:24px;padding-top:80px;padding-right:32px;padding-bottom:80px;padding-left:32px">
+	<!-- wp:html -->
+	<style>.artifact-cta-box{background-image:url('<?php echo $artifact_bg; ?>');}</style>
+	<!-- /wp:html -->
+
+	<!-- wp:group {"align":"wide","className":"artifact-cta-box","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"32px","right":"32px"}}},"backgroundColor":"primary","layout":{"type":"flex","orientation":"vertical","justifyContent":"center","verticalAlignment":"center"}} -->
+	<div class="wp-block-group alignwide artifact-cta-box has-primary-background-color has-background" style="padding-top:80px;padding-right:32px;padding-bottom:80px;padding-left:32px">
 		<!-- wp:paragraph {"align":"center","textColor":"text-white","fontSize":"medium-title","style":{"typography":{"lineHeight":"26px"}}} -->
 		<p class="has-text-align-center has-text-white-color has-text-color has-medium-title-font-size" style="line-height:26px"><?php echo $artifact_subtitle; ?></p>
 		<!-- /wp:paragraph -->

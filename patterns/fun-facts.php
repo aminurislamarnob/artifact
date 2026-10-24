@@ -10,7 +10,7 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|50"}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--20)">
 	<!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px"/>
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
 	<!-- /wp:separator -->
 
 	<!-- wp:columns {"align":"wide"} -->
@@ -62,7 +62,7 @@
 	<!-- /wp:columns -->
 
 	<!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
-	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px"/>
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
 	<!-- /wp:separator -->
 </div>
 <!-- /wp:group -->
