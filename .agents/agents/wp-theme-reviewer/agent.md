@@ -87,6 +87,7 @@ When conducting an audit, run these verification steps:
 3. `npm run test:e2e`: Runs Playwright test suite (68 tests covering Axe a11y, WCAG 2.1, keyboard nav, responsive viewports, block editor validation).
 4. `wp theme-check run artifact`: Runs official Theme Check plugin scan.
 5. `wp i18n make-pot . languages/artifact.pot`: Ensures POT file is up to date.
+6. `bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify`: Verifies required Theme Unit Test settings & endpoints.
 
 ### 4. REPORT FORMAT
 Always present your findings in a structured WordPress.org Review Ticket format:

@@ -21,6 +21,7 @@ composer test:unit        # 292 assertions checking theme standards & presets
 composer test:integration # 161 assertions verifying template hierarchy & rendering
 npm run test:e2e          # 68 Playwright tests verifying Axe WCAG 2.1 A/AA, a11y, mobile & editor
 wp theme-check run artifact # Official WordPress.org Theme Check plugin scan
+bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify # Theme Unit Test data audit
 ```
 
 ## WordPress.org Compliance Rules

@@ -44,9 +44,27 @@ wp i18n make-pot . languages/artifact.pot
 ```
 Ensures all translatable strings are captured and text domain is `artifact`.
 
+### Step 6: Theme Unit Test Data & Settings
+The official WordPress Theme Unit Test data populates WordPress with stub data (edge cases, long titles, sticky posts, media alignments, threaded comments, empty titles/bodies) to verify visual rendering under review conditions.
+
+To download the official test XML, install `wordpress-importer`, import stub data, and configure the 6 required handbook settings:
+```bash
+bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh import
+```
+
+To audit active test settings and critical endpoints:
+```bash
+bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify
+```
+
+To re-apply official handbook settings only (e.g. `posts_per_page=5`, `thread_comments_depth=3`, permalinks):
+```bash
+bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh settings
+```
+
 ## Key WordPress.org Theme Review Policies
 1. **Queue Limit**: Only 1 theme per author in the queue at any time.
 2. **Rejection Threshold**: $\ge 3$ distinct required issues result in immediate closure/rejection.
 3. **Inactivity Rule**: 7 days without response closes the ticket.
-4. **Licensing**: All code, fonts, and images must be 100% GPL-compatible. Fonts must be self-hosted with `OFL.txt`. Unsplash, Pixabay, and Freepik are strictly prohibited.
+4. **Licensing**: All code, fonts, and images must be 100% GPL-compatible. Fonts must be self-hosted with `OFL.txt`. Third-party non-GPL stock photo services and commercial asset repositories are strictly prohibited.
 5. **Security**: All output must be properly escaped (`esc_html__`, `esc_attr__`, `esc_url`, `wp_kses_post`).
