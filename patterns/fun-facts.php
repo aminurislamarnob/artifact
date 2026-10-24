@@ -7,8 +7,12 @@
  * @package Artifact
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|50"}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--20)">
+	<!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px"/>
+	<!-- /wp:separator -->
+
 	<!-- wp:columns {"align":"wide"} -->
 	<div class="wp-block-columns alignwide">
 		<!-- wp:column -->
@@ -56,5 +60,9 @@
 		<!-- /wp:column -->
 	</div>
 	<!-- /wp:columns -->
+
+	<!-- wp:separator {"align":"wide","className":"is-style-wide"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px"/>
+	<!-- /wp:separator -->
 </div>
 <!-- /wp:group -->

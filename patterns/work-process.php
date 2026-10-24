@@ -9,13 +9,14 @@
 
 $artifact_desk  = esc_url( get_parent_theme_file_uri( 'assets/images/work-desk.png' ) );
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
+$artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-right.svg' ) );
 $artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 $artifact_steps = array(
 	array(
 		'n'       => '1',
 		'current' => true,
 		'title'   => __( 'Submit a proposal for your awesome project.', 'artifact' ),
-		'copy'    => __( 'Get your thoughts to paper faster with our step-by-step process.', 'artifact' ),
+		'copy'    => __( 'Get your thoughts to paper faster with our step-by-step AI copywriter. Get your thoughts to paper faster with our step-by-step AI copywriter.', 'artifact' ),
 		'link'    => __( 'Get Started', 'artifact' ),
 	),
 	array(
@@ -54,7 +55,7 @@ $artifact_steps = array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
 			<?php foreach ( $artifact_steps as $artifact_step ) : ?>
 				<?php $artifact_step_class = esc_attr( $artifact_step['current'] ? 'artifact-step is-current' : 'artifact-step' ); ?>
-			<!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+			<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"className":"<?php echo $artifact_step_class; ?>"} -->
 				<p class="<?php echo $artifact_step_class; ?>"><?php echo esc_html( $artifact_step['n'] ); ?></p>
@@ -62,17 +63,17 @@ $artifact_steps = array(
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 				<div class="wp-block-group">
-					<!-- wp:heading {"level":3,"fontSize":"large-title"} -->
-					<h3 class="wp-block-heading has-large-title-font-size"><?php echo esc_html( $artifact_step['title'] ); ?></h3>
+					<!-- wp:heading {"level":3,"style":{"typography":{"lineHeight":"26px"}},"fontSize":"medium-title"} -->
+					<h3 class="wp-block-heading has-medium-title-font-size" style="line-height:26px"><?php echo esc_html( $artifact_step['title'] ); ?></h3>
 					<!-- /wp:heading -->
 					<?php if ( $artifact_step['copy'] ) : ?>
-					<!-- wp:paragraph {"textColor":"text-color","fontSize":"small-paragraph"} -->
-					<p class="has-text-color-color has-text-color has-small-paragraph-font-size"><?php echo esc_html( $artifact_step['copy'] ); ?></p>
+					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"22px"}},"textColor":"text-color","fontSize":"small-paragraph"} -->
+					<p class="has-text-color-color has-text-color has-small-paragraph-font-size" style="line-height:22px"><?php echo esc_html( $artifact_step['copy'] ); ?></p>
 					<!-- /wp:paragraph -->
 					<?php endif; ?>
 					<?php if ( $artifact_step['link'] ) : ?>
 					<!-- wp:paragraph {"textColor":"text-white"} -->
-					<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html( $artifact_step['link'] ); ?></a></p>
+					<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html( $artifact_step['link'] ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="16" height="16"/></a></p>
 					<!-- /wp:paragraph -->
 					<?php endif; ?>
 				</div>
@@ -83,8 +84,8 @@ $artifact_steps = array(
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
-				<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"is-style-rounded artifact-button-icon","fontSize":"button-large"} -->
-				<div class="wp-block-button is-style-rounded artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="#"><?php echo esc_html__( 'Start A Project', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
+				<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"artifact-button-icon","fontSize":"button-large"} -->
+				<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="#"><?php echo esc_html__( 'Start A Project', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

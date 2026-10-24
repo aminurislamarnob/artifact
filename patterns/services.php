@@ -139,8 +139,8 @@ $artifact_services = array(
 
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
-		<!-- wp:button {"backgroundColor":"light-bg","textColor":"text-white","className":"is-style-rounded artifact-button-icon","style":{"border":{"width":"1px","color":"var:preset|color|border"}},"fontSize":"button-large"} -->
-		<div class="wp-block-button is-style-rounded artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-light-bg-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="#" style="border-color:var(--wp--preset--color--border);border-width:1px"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_out; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
+		<!-- wp:button {"backgroundColor":"light-bg","textColor":"text-white","className":"artifact-button-icon","style":{"border":{"width":"1px","color":"var:preset|color|border"}},"fontSize":"button-large"} -->
+		<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-light-bg-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="#" style="border-color:var(--wp--preset--color--border);border-width:1px"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_out; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->
