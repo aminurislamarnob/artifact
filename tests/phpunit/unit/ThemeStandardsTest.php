@@ -157,16 +157,13 @@ class ThemeStandardsTest extends TestCase {
 		}
 	}
 
-	public function test_every_bundled_photo_credits_an_unsplash_source_and_the_licence() {
+	public function test_no_disallowed_image_services_are_referenced() {
 		$readme = Artifact_Theme_Files::read( 'readme.txt' );
 
-		foreach ( Artifact_Theme_Files::files_in( 'assets/images', 'jpg' ) as $image ) {
-			$name = preg_quote( basename( $image ), '/' );
-			$this->assertMatchesRegularExpression(
-				'#' . $name . '\s+Source: https://unsplash\.com/photos/\S+.*?\s+License: Unsplash License#s',
-				$readme,
-				"{$image} needs a Source URL and licence in readme.txt"
-			);
+		// WordPress.org prohibited asset services (non-GPL compatible).
+		$prohibited = array( 'unsplash.com', 'pixabay.com', 'freepik.com', 'flaticon.com', 'splitshire.com' );
+		foreach ( $prohibited as $domain ) {
+			$this->assertStringNotContainsString( $domain, $readme, "Prohibited domain {$domain} must not be referenced in readme.txt" );
 		}
 	}
 

@@ -15,12 +15,12 @@ $artifact_learn = __( 'Learn More', 'artifact' );
 $artifact_services = array(
 	array(
 		'icon'  => 'icon-service-theme.svg',
-		'title' => __( 'Theme Development & Customaization', 'artifact' ),
+		'title' => __( 'Theme Development & Customization', 'artifact' ),
 		'alt'   => __( 'Theme development', 'artifact' ),
 	),
 	array(
 		'icon'  => 'icon-service-plugin.svg',
-		'title' => __( 'Plugin Development & Customaization', 'artifact' ),
+		'title' => __( 'Plugin Development & Customization', 'artifact' ),
 		'alt'   => __( 'Plugin development', 'artifact' ),
 	),
 	array(
@@ -30,7 +30,7 @@ $artifact_services = array(
 	),
 	array(
 		'icon'  => 'icon-service-wordpress.svg',
-		'title' => __( 'Custom Wordpress Developmnet', 'artifact' ),
+		'title' => __( 'Custom WordPress Development', 'artifact' ),
 		'alt'   => __( 'WordPress', 'artifact' ),
 	),
 	array(

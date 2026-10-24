@@ -18,7 +18,7 @@ $artifact_stories = array(
 		'alt'   => __( 'Portrait of Wade Warren', 'artifact' ),
 	),
 	array(
-		'photo' => 'team-1.jpg',
+		'photo' => 'team-b.png',
 		'name'  => __( 'Esther Howard', 'artifact' ),
 		'role'  => __( 'VP of Marketing, TechFlow', 'artifact' ),
 		'quote' => __( '“It’s all good. It was worth a fortune to my company. It is the most valuable business resource we have ever invested in. The turnaround time was incredible.”', 'artifact' ),
@@ -32,7 +32,7 @@ $artifact_stories = array(
 		'alt'   => __( 'Portrait of Cameron Williamson', 'artifact' ),
 	),
 	array(
-		'photo' => 'team-2.jpg',
+		'photo' => 'team-d.png',
 		'name'  => __( 'Jenny Wilson', 'artifact' ),
 		'role'  => __( 'Head of Product, Apex Global', 'artifact' ),
 		'quote' => __( '“The seamless integration and responsive design delivered exactly what we needed to scale our enterprise platform effortlessly.”', 'artifact' ),
@@ -46,7 +46,7 @@ $artifact_stories = array(
 		'alt'   => __( 'Portrait of Robert Fox', 'artifact' ),
 	),
 	array(
-		'photo' => 'team-3.jpg',
+		'photo' => 'team-f.png',
 		'name'  => __( 'Leslie Alexander', 'artifact' ),
 		'role'  => __( 'Managing Director, Horizon Media', 'artifact' ),
 		'quote' => __( '“Outstanding quality, clear communication, and impeccable design sense. They turned our ambitious vision into reality faster than we thought possible.”', 'artifact' ),

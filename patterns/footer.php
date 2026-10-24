@@ -94,7 +94,7 @@ $artifact_phone = __( '+254 659 546', 'artifact' );
 				<div class="wp-block-group artifact-footer-newsletter">
 					<!-- wp:html -->
 					<form class="artifact-newsletter-form" action="#" method="post">
-						<label class="screen-reader-text" for="artifact-footer-email"><?php echo esc_attr__( 'Enter email address...', 'artifact' ); ?></label>
+						<label class="screen-reader-text" for="artifact-footer-email"><?php echo esc_html__( 'Enter email address...', 'artifact' ); ?></label>
 						<input id="artifact-footer-email" type="email" name="email" placeholder="<?php echo esc_attr__( 'Enter email address...', 'artifact' ); ?>" required />
 						<button type="submit" aria-label="<?php echo esc_attr__( 'Subscribe', 'artifact' ); ?>">
 							<img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="20" height="20"/>

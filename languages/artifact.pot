@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-24T18:38:17+00:00\n"
+"POT-Creation-Date: 2026-10-24T19:01:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -319,6 +319,7 @@ msgid "100% Client Satisfaction"
 msgstr ""
 
 #: patterns/hero.php:24
+#: patterns/work-process.php:47
 msgid "How we work"
 msgstr ""
 
@@ -410,7 +411,7 @@ msgid "Learn More"
 msgstr ""
 
 #: patterns/services.php:18
-msgid "Theme Development & Customaization"
+msgid "Theme Development & Customization"
 msgstr ""
 
 #: patterns/services.php:19
@@ -418,7 +419,7 @@ msgid "Theme development"
 msgstr ""
 
 #: patterns/services.php:23
-msgid "Plugin Development & Customaization"
+msgid "Plugin Development & Customization"
 msgstr ""
 
 #: patterns/services.php:24
@@ -434,7 +435,7 @@ msgid "E-commerce"
 msgstr ""
 
 #: patterns/services.php:33
-msgid "Custom Wordpress Developmnet"
+msgid "Custom WordPress Development"
 msgstr ""
 
 #: patterns/services.php:34
@@ -634,10 +635,6 @@ msgstr ""
 
 #: patterns/work-process.php:43
 msgid "Work Process"
-msgstr ""
-
-#: patterns/work-process.php:47
-msgid "How we works"
 msgstr ""
 
 #: patterns/work-process.php:98
