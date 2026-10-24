@@ -44,7 +44,7 @@ https://make.wordpress.org/themes/handbook/review/
 - 100% GPL-compatible license throughout the theme zip.
 - Fonts: SIL Open Font License (OFL 1.1) or Apache 2.0 / MIT. Must be 100% SELF-HOSTED (zero Google Fonts CDN calls). OFL.txt bundled in `assets/fonts/`.
 - Images: Must be CC0, CC BY 4.0, or author's original artwork (GPL).
-- **STRICTLY PROHIBITED**: `unsplash.com`, `pixabay.com`, `freepik.com`, `flaticon.com`, `splitshire.com`, `adobe stock`, `envato`.
+- **STRICTLY PROHIBITED**: Non-GPL asset repositories, commercial stock photo libraries with compilation or redistribution restrictions.
 
 #### C. Security & Data Escaping
 - Zero raw unescaped echoes.

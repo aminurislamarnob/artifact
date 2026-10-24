@@ -103,8 +103,6 @@ test.describe( 'Mobile (375px)', () => {
 	 * the moment it is fixed, at which point remove the `test.fail` line.
 	 */
 	test( 'no heading word is wider than its container', async ( { page } ) => {
-		test.fail( true, 'Known defect: heading font sizes are not fluid on small screens' );
-
 		await page.goto( '/' );
 		await page.evaluate( () => document.fonts.ready );
 

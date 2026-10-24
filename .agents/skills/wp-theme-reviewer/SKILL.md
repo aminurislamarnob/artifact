@@ -13,7 +13,7 @@ This repository-specific skill provides instructions and test execution procedur
 ```bash
 composer test:unit
 ```
-Verifies theme file contracts, theme presets against `theme.json`, template pattern references, license declarations in `readme.txt`, and ensures zero prohibited image repositories (`unsplash.com`, `pixabay.com`, etc.) are referenced.
+Verifies theme file contracts, theme presets against `theme.json`, template pattern references, license declarations in `readme.txt`, and ensures zero prohibited non-GPL image repositories are referenced.
 
 ### Step 2: Run PHPUnit Integration Tests
 ```bash

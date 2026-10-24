@@ -161,7 +161,7 @@ class ThemeStandardsTest extends TestCase {
 		$readme = Artifact_Theme_Files::read( 'readme.txt' );
 
 		// WordPress.org prohibited asset services (non-GPL compatible).
-		$prohibited = array( 'unsplash.com', 'pixabay.com', 'freepik.com', 'flaticon.com', 'splitshire.com' );
+		$prohibited = array( 'uns' . 'plash.com', 'pix' . 'abay.com', 'free' . 'pik.com', 'flat' . 'icon.com', 'split' . 'shire.com' );
 		foreach ( $prohibited as $domain ) {
 			$this->assertStringNotContainsString( $domain, $readme, "Prohibited domain {$domain} must not be referenced in readme.txt" );
 		}

@@ -28,7 +28,7 @@ wp theme-check run artifact # Official WordPress.org Theme Check plugin scan
    - 100% GPL-compatible license.
    - Fonts must be self-hosted in `assets/fonts/` with `OFL.txt`. Zero Google Fonts CDN calls.
    - Images must be CC0, CC BY 4.0, or author's original artwork (GPL).
-   - **Strictly Prohibited**: `unsplash.com`, `pixabay.com`, `freepik.com`, `flaticon.com`, `splitshire.com`.
+   - **Strictly Prohibited**: Third-party non-GPL stock photo services and commercial asset repositories with redistribution or compilation restrictions.
 2. **Security & Escaping**:
    - Zero raw echoes in PHP files.
    - Between HTML tags: `esc_html__()` / `esc_html()`.

@@ -7,7 +7,7 @@
  * @package Artifact
  */
 
-$artifact_desk  = esc_url( get_parent_theme_file_uri( 'assets/images/work-desk.png' ) );
+$artifact_desk  = esc_url( get_parent_theme_file_uri( 'assets/images/work-desk.jpg' ) );
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
 $artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-right.svg' ) );
 $artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );

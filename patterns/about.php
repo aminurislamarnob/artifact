@@ -7,7 +7,7 @@
  * @package Artifact
  */
 
-$artifact_about = esc_url( get_parent_theme_file_uri( 'assets/images/about-team.png' ) );
+$artifact_about = esc_url( get_parent_theme_file_uri( 'assets/images/about-team.jpg' ) );
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
 $artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 ?>
