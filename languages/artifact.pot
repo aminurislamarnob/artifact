@@ -9,13 +9,15 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-24T14:01:18+00:00\n"
+"POT-Creation-Date: 2026-10-24T17:34:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
 
 #. Theme Name of the theme
 #: style.css
+#: patterns/footer.php:34
+#: patterns/header.php:20
 msgid "Artifact"
 msgstr ""
 
@@ -56,6 +58,7 @@ msgid "Arrow"
 msgstr ""
 
 #: patterns/about.php:19
+#: patterns/footer.php:67
 msgid "About Us"
 msgstr ""
 
@@ -113,81 +116,73 @@ msgctxt "Pattern title"
 msgid "Footer"
 msgstr ""
 
-#: patterns/footer.php:16
-msgid "support@welan.com"
+#: patterns/footer.php:17
+msgid "Email"
 msgstr ""
 
-#: patterns/footer.php:17
+#: patterns/footer.php:19
+msgid "Phone"
+msgstr ""
+
+#: patterns/footer.php:21
+msgid "Location"
+msgstr ""
+
+#: patterns/footer.php:22
+msgid "contact@artifact.dev"
+msgstr ""
+
+#: patterns/footer.php:23
 msgid "+254 659 546"
 msgstr ""
 
-#: patterns/footer.php:24
-#: patterns/header.php:20
-msgid "weLabs"
+#: patterns/footer.php:38
+msgid "Delivering modern software and custom development services worldwide."
 msgstr ""
 
-#: patterns/footer.php:29
-msgid "Facebook"
-msgstr ""
-
-#: patterns/footer.php:30
-msgid "X"
-msgstr ""
-
-#: patterns/footer.php:31
-msgid "LinkedIn"
-msgstr ""
-
-#: patterns/footer.php:32
-msgid "Instagram"
-msgstr ""
-
-#: patterns/footer.php:43
-msgid "Let’s work together"
+#: patterns/footer.php:52
+msgid "Dhaka, Bangladesh"
 msgstr ""
 
 #: patterns/footer.php:62
-msgid "Footer menu"
-msgstr ""
-
-#: patterns/footer.php:63
-msgid "• About"
-msgstr ""
-
-#: patterns/footer.php:64
-msgid "• Services"
+msgid "Site Links"
 msgstr ""
 
 #: patterns/footer.php:65
-msgid "• Blog"
+msgid "Site links left"
 msgstr ""
 
 #: patterns/footer.php:66
-msgid "• Contact"
+#: patterns/header.php:24
+msgid "Home"
 msgstr ""
 
-#: patterns/footer.php:73
-msgid "Footer resources menu"
-msgstr ""
-
-#: patterns/footer.php:74
-msgid "• Portfolios"
-msgstr ""
-
-#: patterns/footer.php:75
-msgid "• Team members"
+#: patterns/footer.php:68
+msgid "Our Services"
 msgstr ""
 
 #: patterns/footer.php:76
-msgid "• Help"
+msgid "Explore"
 msgstr ""
 
-#: patterns/footer.php:86
-msgid "Powered by WeLabs"
+#: patterns/footer.php:79
+msgid "Site links right"
 msgstr ""
 
-#: patterns/footer.php:92
-msgid "Subscribe newsletter"
+#: patterns/footer.php:80
+msgid "Start a Project"
+msgstr ""
+
+#: patterns/footer.php:81
+msgid "Privacy Policy"
+msgstr ""
+
+#: patterns/footer.php:82
+msgid "Terms & Conditions"
+msgstr ""
+
+#: patterns/footer.php:90
+msgid "Subscribe Us"
 msgstr ""
 
 #: patterns/footer.php:97
@@ -197,6 +192,26 @@ msgstr ""
 
 #: patterns/footer.php:99
 msgid "Subscribe"
+msgstr ""
+
+#: patterns/footer.php:109
+msgid "X"
+msgstr ""
+
+#: patterns/footer.php:110
+msgid "LinkedIn"
+msgstr ""
+
+#: patterns/footer.php:111
+msgid "Instagram"
+msgstr ""
+
+#: patterns/footer.php:112
+msgid "Facebook"
+msgstr ""
+
+#: patterns/footer.php:125
+msgid "© 2026 Artifact, All Rights Reserved."
 msgstr ""
 
 #: patterns/fun-facts.php
@@ -243,10 +258,6 @@ msgstr ""
 
 #: patterns/header.php:23
 msgid "Primary menu"
-msgstr ""
-
-#: patterns/header.php:24
-msgid "Home"
 msgstr ""
 
 #: patterns/header.php:25

@@ -9,15 +9,15 @@
  * @package Artifact
  */
 
-$artifact_logo = esc_url( get_parent_theme_file_uri( 'assets/images/logo.svg' ) );
+$artifact_logo = esc_url( get_parent_theme_file_uri( 'assets/images/artifact-logo.svg' ) );
 $artifact_home = esc_url( home_url( '/' ) );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 	<div class="wp-block-group alignwide">
-		<!-- wp:image {"width":"154px","height":"36px","sizeSlug":"full","linkDestination":"custom"} -->
-		<figure class="wp-block-image size-full is-resized"><a href="<?php echo $artifact_home; ?>"><img src="<?php echo $artifact_logo; ?>" alt="<?php echo esc_attr__( 'weLabs', 'artifact' ); ?>" style="width:154px;height:36px"/></a></figure>
+		<!-- wp:image {"width":"148px","height":"36px","sizeSlug":"full","linkDestination":"custom"} -->
+		<figure class="wp-block-image size-full is-resized"><a href="<?php echo $artifact_home; ?>"><img src="<?php echo $artifact_logo; ?>" alt="<?php echo esc_attr__( 'Artifact', 'artifact' ); ?>" style="width:148px;height:36px"/></a></figure>
 		<!-- /wp:image -->
 
 		<!-- wp:navigation {"ariaLabel":"<?php echo esc_attr__( 'Primary menu', 'artifact' ); ?>","overlayMenu":"mobile","overlayBackgroundColor":"main-bg","overlayTextColor":"text-white","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"center","flexWrap":"wrap"}} -->

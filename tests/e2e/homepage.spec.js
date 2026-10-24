@@ -73,7 +73,7 @@ test.describe( 'Homepage', () => {
 		page,
 	} ) => {
 		const header = page.locator( 'header' );
-		await expect( header.getByRole( 'img', { name: 'weLabs' } ) ).toBeVisible();
+		await expect( header.getByRole( 'img', { name: 'Artifact' } ) ).toBeVisible();
 
 		const nav = header.getByRole( 'navigation', { name: 'Primary menu' } );
 		for ( const label of [ 'Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contacts' ] ) {
@@ -84,7 +84,7 @@ test.describe( 'Homepage', () => {
 
 	test( 'the logo links back to the home page', async ( { page, fixtures } ) => {
 		await page.goto( fixtures.post.url );
-		await page.locator( 'header' ).getByRole( 'link', { name: 'weLabs' } ).click();
+		await page.locator( 'header' ).getByRole( 'link', { name: 'Artifact' } ).click();
 
 		await expect( page ).toHaveURL( /\/$/ );
 		await expect( page.getByRole( 'heading', { level: 1 } ) ).toContainText( 'Creating' );
