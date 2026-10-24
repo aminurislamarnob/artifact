@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-24T06:07:49+00:00\n"
+"POT-Creation-Date: 2026-10-24T13:09:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -355,16 +355,20 @@ msgctxt "Pattern title"
 msgid "Project call to action"
 msgstr ""
 
-#: patterns/project-cta.php:11
+#: patterns/project-cta.php:12
+msgid "Submit"
+msgstr ""
+
+#: patterns/project-cta.php:13
 msgid "Enter your email"
 msgstr ""
 
-#: patterns/project-cta.php:17
-msgid "Got A Project? Let’s Talk. Hi,"
+#: patterns/project-cta.php:20
+msgid "Got A Project?"
 msgstr ""
 
-#: patterns/project-cta.php:21
-msgid "Send"
+#: patterns/project-cta.php:20
+msgid "Let’s Talk. Hi,"
 msgstr ""
 
 #: patterns/services.php

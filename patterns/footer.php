@@ -86,8 +86,8 @@ $artifact_phone = __( '+254 659 546', 'artifact' );
 		<p class="has-text-color-color has-text-color has-medium-paragraph-font-size"><?php echo esc_html__( 'Powered by WeLabs', 'artifact' ); ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
+		<!-- wp:group {"className":"artifact-footer-newsletter","style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group artifact-footer-newsletter">
 			<!-- wp:paragraph {"textColor":"text-white","fontSize":"small-paragraph"} -->
 			<p class="has-text-white-color has-text-color has-small-paragraph-font-size"><?php echo esc_html__( 'Subscribe newsletter', 'artifact' ); ?></p>
 			<!-- /wp:paragraph -->
