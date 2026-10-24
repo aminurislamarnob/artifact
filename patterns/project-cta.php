@@ -6,19 +6,21 @@
  *
  * @package Artifact
  */
-?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--20)">
-	<!-- wp:heading {"textAlign":"center","align":"wide","fontSize":"heading-03"} -->
-	<h2 class="wp-block-heading alignwide has-text-align-center has-heading-03-font-size"><?php echo wp_kses_post( __( 'Got A Project?<br>Let’s Talk. Hi,', 'artifact' ) ); ?></h2>
-	<!-- /wp:heading -->
 
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-	<div class="wp-block-buttons">
-		<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"is-style-rounded"} -->
-		<div class="wp-block-button is-style-rounded"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#"><?php echo esc_html__( 'Start A Project', 'artifact' ); ?></a></div>
-		<!-- /wp:button -->
-	</div>
-	<!-- /wp:buttons -->
+$artifact_banner = esc_url( get_parent_theme_file_uri( 'assets/images/cta-banner.png' ) );
+$artifact_email_label = esc_attr__( 'Enter your email', 'artifact' );
+?>
+<!-- wp:group {"align":"full","className":"artifact-cta","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull artifact-cta has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--20)">
+	<!-- wp:html -->
+	<figure class="wp-block-image alignwide size-full artifact-cta__media">
+		<img src="<?php echo $artifact_banner; ?>" alt="<?php echo esc_attr__( 'Got A Project? Let’s Talk. Hi,', 'artifact' ); ?>" />
+		<form action="#" method="post">
+			<label class="screen-reader-text" for="artifact-cta-email"><?php echo $artifact_email_label; ?></label>
+			<input id="artifact-cta-email" type="email" name="email" autocomplete="email" placeholder="<?php echo $artifact_email_label; ?>" />
+			<button type="submit" aria-label="<?php echo esc_attr__( 'Send', 'artifact' ); ?>"></button>
+		</form>
+	</figure>
+	<!-- /wp:html -->
 </div>
 <!-- /wp:group -->

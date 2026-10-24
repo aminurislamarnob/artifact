@@ -7,32 +7,24 @@
  * @package Artifact
  */
 
-$artifact_team = array(
-	array(
-		'file'  => 'team-1.jpg',
-		'name'  => __( 'Jacob McDany', 'artifact' ),
-		'role'  => __( 'CEO of Rackspace', 'artifact' ),
-		'alt'   => __( 'Portrait of Jacob McDany', 'artifact' ),
-	),
-	array(
-		'file'  => 'team-2.jpg',
-		'name'  => __( 'Aliah Lane', 'artifact' ),
-		'role'  => __( 'CEO of Rackspace', 'artifact' ),
-		'alt'   => __( 'Portrait of Aliah Lane', 'artifact' ),
-	),
-	array(
-		'file'  => 'team-3.jpg',
-		'name'  => __( 'Loki Bright', 'artifact' ),
-		'role'  => __( 'CEO of Rackspace', 'artifact' ),
-		'alt'   => __( 'Portrait of Loki Bright', 'artifact' ),
-	),
-	array(
-		'file'  => 'team-4.jpg',
-		'name'  => __( 'Rosalee Melvin', 'artifact' ),
-		'role'  => __( 'CEO of Rackspace', 'artifact' ),
-		'alt'   => __( 'Portrait of Rosalee Melvin', 'artifact' ),
-	),
+$artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
+$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
+$artifact_names = array(
+	__( 'Jacob McDany', 'artifact' ),
+	__( 'Aliah Lane', 'artifact' ),
+	__( 'Loki Bright', 'artifact' ),
+	__( 'Rosalee Melvin', 'artifact' ),
 );
+$artifact_role = __( 'CEO of Rackspace', 'artifact' );
+$artifact_team = array();
+foreach ( array( 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ) as $artifact_index => $artifact_letter ) {
+	$artifact_team[] = array(
+		'file' => 'team-' . $artifact_letter . '.png',
+		'name' => $artifact_names[ $artifact_index % 4 ],
+		'role' => $artifact_role,
+		'alt'  => $artifact_names[ $artifact_index % 4 ],
+	);
+}
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-main-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--20)">
@@ -51,24 +43,26 @@ $artifact_team = array(
 
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"is-style-rounded"} -->
-			<div class="wp-block-button is-style-rounded"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#"><?php echo esc_html__( 'View All', 'artifact' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"is-style-rounded artifact-button-icon"} -->
+			<div class="wp-block-button is-style-rounded artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
 	</div>
 	<!-- /wp:group -->
 
+	<?php foreach ( array_chunk( $artifact_team, 4 ) as $artifact_row ) : ?>
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--50)">
-		<?php foreach ( $artifact_team as $artifact_member ) : ?>
+		<?php foreach ( $artifact_row as $artifact_member ) : ?>
+			<?php $artifact_photo = esc_url( get_parent_theme_file_uri( 'assets/images/' . $artifact_member['file'] ) ); ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:image {"aspectRatio":"2/3","scale":"cover","sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/images/' . $artifact_member['file'] ) ); ?>" alt="<?php echo esc_attr( $artifact_member['alt'] ); ?>" style="aspect-ratio:2/3;object-fit:cover"/></figure>
+			<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-team-card"} -->
+			<figure class="wp-block-image size-full artifact-team-card"><img src="<?php echo $artifact_photo; ?>" alt="<?php echo esc_attr( $artifact_member['alt'] ); ?>"/></figure>
 			<!-- /wp:image -->
 			<!-- wp:heading {"level":3,"fontSize":"medium-title"} -->
-			<h3 class="wp-block-heading has-medium-title-font-size"><?php echo esc_html( $artifact_member['name'] ); ?></h3>
+			<h3 class="wp-block-heading has-medium-title-font-size"><img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="16" height="16"/> <?php echo esc_html( $artifact_member['name'] ); ?></h3>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"textColor":"text-color","fontSize":"small-paragraph"} -->
 			<p class="has-text-color-color has-text-color has-small-paragraph-font-size"><?php echo esc_html( $artifact_member['role'] ); ?></p>
@@ -78,5 +72,6 @@ $artifact_team = array(
 		<?php endforeach; ?>
 	</div>
 	<!-- /wp:columns -->
+	<?php endforeach; ?>
 </div>
 <!-- /wp:group -->

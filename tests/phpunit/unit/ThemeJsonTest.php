@@ -54,7 +54,7 @@ class ThemeJsonTest extends TestCase {
 
 	public function test_color_palette_keeps_the_documented_slugs() {
 		$this->assertEqualsCanonicalizing(
-			array( 'primary', 'secondary', 'main-bg', 'light-bg', 'dark-bg', 'heading-color', 'text-white', 'text-color', 'link-color' ),
+			array( 'primary', 'secondary', 'main-bg', 'light-bg', 'dark-bg', 'heading-color', 'text-white', 'text-color', 'link-color', 'border' ),
 			Artifact_Theme_Files::defined_presets()['color']
 		);
 	}

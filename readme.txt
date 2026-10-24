@@ -86,3 +86,6 @@ License: Unsplash License (https://unsplash.com/license)
 team-4.jpg
 Source: https://unsplash.com/photos/0a1dd7228f2d (photo-1507003211169-0a1dd7228f2d)
 License: Unsplash License (https://unsplash.com/license)
+
+Homepage dark exports from Figma file rhXpPSv3HxiGpTiN733snB, node 9100:115184. Bundled so the front page can match that frame. GPL-2.0-or-later as part of this theme.
+Files: hero-scene.png, about-team.png, work-desk.png, cta-banner.png, story-wade-a.png, story-wade-b.png, story-wade-c.png, team-a.png, team-b.png, team-c.png, team-d.png, team-e.png, team-f.png, team-g.png, team-h.png, icon-arrow-right.svg, icon-feature-care.svg, icon-feature-team.svg, icon-feature-support.svg, icon-service-theme.svg, icon-service-plugin.svg, icon-service-commerce.svg, icon-service-wordpress.svg, icon-service-api.svg, icon-service-security.svg, icon-star.svg
