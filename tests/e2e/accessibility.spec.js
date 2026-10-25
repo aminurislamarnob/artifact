@@ -140,8 +140,9 @@ test.describe( 'axe scan (WCAG 2.1 A/AA)', () => {
 			const results = await new AxeBuilder( { page } )
 				.withTags( [ 'wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa' ] )
 				// Not part of the theme: the WooCommerce mini cart that a
-				// shared dev site may inject.
+				// shared dev site may inject, and Laravel Herd's local dev badge.
 				.exclude( '[class*="wc-block-"]' )
+				.exclude( '#herd-ai-host' )
 				// The text of <title> comes from the site title setting, which a
 				// fresh dev site leaves empty. The single post page below proves
 				// the template produces a title.
