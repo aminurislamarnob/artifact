@@ -3,6 +3,7 @@
 .gitignore
 .distignore
 .agents
+.claude
 AGENTS.md
 .phpunit.result.cache
 CLAUDE.md

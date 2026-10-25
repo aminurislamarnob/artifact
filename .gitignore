@@ -14,4 +14,4 @@ playwright-report
 tests/e2e/.auth
 tests/e2e/.fixtures.json
 .agents/skills/wp-theme-reviewer/data/
-
+.claude/skills/wp-theme-reviewer/data/
