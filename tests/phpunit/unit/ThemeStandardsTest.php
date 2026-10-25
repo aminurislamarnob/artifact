@@ -167,6 +167,43 @@ class ThemeStandardsTest extends TestCase {
 		}
 	}
 
+	/**
+	 * Every icon is a Material Symbol (Apache 2.0). Flaticon and unknown kits
+	 * are not GPL-compatible, so they cannot ship.
+	 */
+	public function test_icons_are_material_symbols_credited_in_the_readme() {
+		$credit = $this->readme_entry( 'Material Symbols' );
+		$icons  = array_merge( glob( Artifact_Theme_Files::path( 'assets/images/icon-*.svg' ) ), array( Artifact_Theme_Files::path( 'assets/images/stars-rating.svg' ) ) );
+
+		$this->assertStringContainsString( 'Apache License 2.0', $credit );
+		foreach ( $icons as $icon ) {
+			$this->assertStringContainsString( basename( $icon ), $credit, basename( $icon ) . ' is not credited to Material Symbols' );
+		}
+	}
+
+	public function test_icons_carry_no_traces_of_a_figma_or_flaticon_export() {
+		$icons = array_merge( glob( Artifact_Theme_Files::path( 'assets/images/icon-*.svg' ) ), array( Artifact_Theme_Files::path( 'assets/images/stars-rating.svg' ) ) );
+
+		foreach ( $icons as $icon ) {
+			$this->assertDoesNotMatchRegularExpression( '/clip0_\d+_\d+|\bfi_\d+|Icon\/Solid/', file_get_contents( $icon ), basename( $icon ) . ' is a design-tool export, not a Material Symbol' );
+		}
+	}
+
+	/**
+	 * One blank-line separated entry of the readme, found by its first line.
+	 *
+	 * @param string $name First line of the entry.
+	 * @return string
+	 */
+	private function readme_entry( $name ) {
+		foreach ( preg_split( '/\n\s*\n/', Artifact_Theme_Files::read( 'readme.txt' ) ) as $entry ) {
+			if ( 0 === strpos( trim( $entry ), $name ) ) {
+				return $entry;
+			}
+		}
+		$this->fail( "readme.txt has no {$name} entry" );
+	}
+
 	public function test_images_referenced_by_markup_exist() {
 		$referenced = array();
 		foreach ( Artifact_Theme_Files::markup_files() as $file ) {

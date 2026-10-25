@@ -3,7 +3,7 @@ const crypto = require( 'crypto' );
 const fs = require( 'fs' );
 const path = require( 'path' );
 const { chromium } = require( '@playwright/test' );
-const { wp } = require( './utils/wp-cli' );
+const { wp, wpEval } = require( './utils/wp-cli' );
 const { FIXTURE_FILE, AUTH_FILE } = require( './utils/fixtures' );
 
 const RUN = Date.now().toString( 36 );
@@ -67,6 +67,49 @@ module.exports = async function globalSetup( config ) {
 		] )
 	);
 
+	// A page built from the Services starter pattern, the way a site owner
+	// would make it: pattern content plus the Page No Title template.
+	const servicesTitle = `Artifact E2E Services ${ RUN }`;
+	const servicesId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=page',
+			'--post_status=publish',
+			`--post_title=${ servicesTitle }`,
+			'--page_template=page-no-title',
+			`--post_content=${ wpEval(
+				"echo WP_Block_Patterns_Registry::get_instance()->get_registered( 'artifact/page-services' )['content'];"
+			) }`,
+			'--porcelain',
+		] )
+	);
+
+	const permalink = ( id ) =>
+		wp( [ 'eval', `echo get_permalink( ${ id } );` ] );
+
+	// The header navigation shows the newest saved menu, so this run's menu
+	// wins over whatever the dev site has and the labels are known.
+	const menuLink = ( label, id ) =>
+		`<!-- wp:navigation-link ${ JSON.stringify( {
+			label,
+			type: 'page',
+			id,
+			url: permalink( id ),
+			kind: 'post-type',
+		} ) } /-->`;
+	const menuId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=wp_navigation',
+			'--post_status=publish',
+			`--post_title=Artifact E2E menu ${ RUN }`,
+			`--post_content=${ menuLink( 'About', pageId ) }${ menuLink( 'Services', servicesId ) }`,
+			'--porcelain',
+		] )
+	);
+
 	const login = `artifact-e2e-${ RUN }`;
 	const password = crypto.randomBytes( 12 ).toString( 'hex' );
 	const adminId = Number(
@@ -81,9 +124,6 @@ module.exports = async function globalSetup( config ) {
 		] )
 	);
 
-	const permalink = ( id ) =>
-		wp( [ 'eval', `echo get_permalink( ${ id } );` ] );
-
 	const fixtures = {
 		post: {
 			id: postId,
@@ -97,6 +137,12 @@ module.exports = async function globalSetup( config ) {
 			slug: wp( [ 'post', 'get', String( pageId ), '--field=post_name' ] ),
 			url: permalink( pageId ),
 		},
+		services: {
+			id: servicesId,
+			title: servicesTitle,
+			url: permalink( servicesId ),
+		},
+		menu: { id: menuId, labels: [ 'About', 'Services' ] },
 		category: {
 			id: categoryId,
 			name: categoryInfo.name,

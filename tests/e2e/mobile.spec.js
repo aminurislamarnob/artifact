@@ -14,24 +14,26 @@ test.describe( 'Mobile (375px)', () => {
 
 	test( 'the header shows a menu button instead of the link row', async ( {
 		page,
+		fixtures,
 	} ) => {
 		await page.goto( '/' );
 
 		const header = page.locator( 'header' );
 		await expect( header.getByRole( 'button', { name: 'Open menu' } ) ).toBeVisible();
-		await expect( header.getByRole( 'link', { name: 'Services', exact: true } ) ).toBeHidden();
+		await expect( header.getByRole( 'link', { name: fixtures.menu.labels[ 0 ], exact: true } ) ).toBeHidden();
 		await expect( header.getByRole( 'img', { name: 'Artifact' } ) ).toBeVisible();
 	} );
 
 	test( 'the menu opens as a dialog with every link, and closes with the close button', async ( {
 		page,
+		fixtures,
 	} ) => {
 		await page.goto( '/' );
 
 		await page.getByRole( 'button', { name: 'Open menu' } ).click();
 		const dialog = page.getByRole( 'dialog' );
 		await expect( dialog ).toBeVisible();
-		for ( const label of [ 'Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contacts' ] ) {
+		for ( const label of fixtures.menu.labels ) {
 			await expect( dialog.getByRole( 'link', { name: label, exact: true } ) ).toBeVisible();
 		}
 		await expect( page.locator( 'html' ) ).toHaveClass( /has-modal-open/ );
@@ -131,10 +133,11 @@ test.describe( 'Tablet (768px)', () => {
 
 	test( 'the header keeps the full navigation row and nothing spills sideways', async ( {
 		page,
+		fixtures,
 	} ) => {
 		await page.goto( '/' );
 
-		await expect( page.locator( 'header' ).getByRole( 'link', { name: 'Services', exact: true } ) ).toBeVisible();
+		await expect( page.locator( 'header' ).getByRole( 'link', { name: fixtures.menu.labels[ 0 ], exact: true } ) ).toBeVisible();
 		await expect( page.getByRole( 'button', { name: 'Open menu' } ) ).toBeHidden();
 		expect(
 			await page.evaluate( () => document.documentElement.scrollWidth <= window.innerWidth )

@@ -93,6 +93,13 @@ class TemplateSourceTest extends TestCase {
 		$this->assertStringContainsString( '<!-- wp:post-title {"level":1} /-->', Artifact_Theme_Files::read( 'templates/page.html' ) );
 	}
 
+	public function test_the_page_no_title_template_leaves_the_h1_to_the_content() {
+		$source = Artifact_Theme_Files::read( 'templates/page-no-title.html' );
+
+		$this->assertStringContainsString( 'wp:post-content', $source );
+		$this->assertStringNotContainsString( 'wp:post-title', $source );
+	}
+
 	public function test_homepage_has_exactly_one_h1() {
 		$count = 0;
 		foreach ( Artifact_Theme_Files::HOMEPAGE_PATTERNS as $slug ) {

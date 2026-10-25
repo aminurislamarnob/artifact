@@ -29,10 +29,11 @@ test.describe( 'Keyboard access', () => {
 
 	test( 'the header navigation links can be reached with the keyboard in order', async ( {
 		page,
+		fixtures,
 	} ) => {
 		await page.goto( '/' );
 
-		const labels = [ 'Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contacts' ];
+		const labels = fixtures.menu.labels;
 		// Skip link, logo link, then the menu.
 		await page.keyboard.press( 'Tab' );
 		await page.keyboard.press( 'Tab' );

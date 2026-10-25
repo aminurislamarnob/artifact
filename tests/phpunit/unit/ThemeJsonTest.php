@@ -42,6 +42,17 @@ class ThemeJsonTest extends TestCase {
 		$this->assertSame( '1170px', $settings['layout']['wideSize'] );
 	}
 
+	public function test_it_offers_the_page_no_title_template_for_pages() {
+		$this->assertContains(
+			array(
+				'name'      => 'page-no-title',
+				'title'     => 'Page No Title',
+				'postTypes' => array( 'page' ),
+			),
+			$this->json['customTemplates']
+		);
+	}
+
 	public function test_it_switches_off_every_core_default_preset() {
 		$settings = $this->json['settings'];
 

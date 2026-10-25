@@ -8,6 +8,8 @@ Instructions and guidelines for AI coding agents operating on the **Artifact** W
 - **Requirements**: WordPress 6.9+, PHP 7.4+.
 - **Configuration**: `theme.json` (schema v3).
 - **Text Domain**: `artifact`, domain path `/languages`.
+- **Design**: Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark (node `9100:115184`) and Services list page (node `9153:182157`). Other pages wait for their frames.
+- **Pages**: non-front pages ship as starter page patterns plus the `page-no-title` template, not as slug templates.
 
 ## Local Theme Review Agent
 This repository contains a dedicated repo-specific review agent and skill:
@@ -17,9 +19,9 @@ This repository contains a dedicated repo-specific review agent and skill:
 
 Whenever changes are made, run the review suite to guarantee WordPress.org submission readiness:
 ```bash
-composer test:unit        # 292 assertions checking theme standards & presets
-composer test:integration # 161 assertions verifying template hierarchy & rendering
-npm run test:e2e          # 68 Playwright tests verifying Axe WCAG 2.1 A/AA, a11y, mobile & editor
+composer test:unit        # theme standards, presets, patterns & licensing
+composer test:integration # template hierarchy & rendering
+npm run test:e2e          # Playwright + axe WCAG 2.1 A/AA, keyboard, mobile & editor
 wp theme-check run artifact # Official WordPress.org Theme Check plugin scan
 bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify # Theme Unit Test data audit
 ```
@@ -29,6 +31,7 @@ bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify # Theme 
    - 100% GPL-compatible license.
    - Fonts must be self-hosted in `assets/fonts/` with `OFL.txt`. Zero Google Fonts CDN calls.
    - Images must be CC0, CC BY 4.0, or author's original artwork (GPL).
+   - Icons are Material Symbols (Apache 2.0), credited by file in `readme.txt`. Figma layers named `fi_<number>` are Flaticon downloads and must not be exported.
    - **Strictly Prohibited**: Third-party non-GPL stock photo services and commercial asset repositories with redistribution or compilation restrictions.
 2. **Security & Escaping**:
    - Zero raw echoes in PHP files.

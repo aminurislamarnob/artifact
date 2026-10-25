@@ -35,6 +35,21 @@ final class Artifact_Theme_Files {
 	);
 
 	/**
+	 * Sections of the Services starter page, in page order.
+	 */
+	const SERVICES_PAGE_PATTERNS = array(
+		'artifact/page-hero',
+		'artifact/services-grid',
+		'artifact/work-process',
+		'artifact/project-cta',
+	);
+
+	/**
+	 * Full-page starter patterns offered when a page is created.
+	 */
+	const PAGE_PATTERNS = array( 'artifact/page-services' );
+
+	/**
 	 * Theme root, without a trailing slash.
 	 *
 	 * @return string

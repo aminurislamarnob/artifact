@@ -58,10 +58,11 @@ Files: assets/fonts/Poppins-Regular.woff2, Poppins-Medium.woff2, Poppins-SemiBol
 logo.svg, artifact-logo.svg
 Custom wordmark exported from the Homepage dark Figma file (file rhXpPSv3HxiGpTiN733snB). Original artwork, GPL-2.0-or-later as part of this theme.
 
-icon-arrow-outward.svg
-Derived from Material Symbols “arrow_outward”.
+Material Symbols
+Copyright Google LLC
 Source: https://fonts.google.com/icons
 License: Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+Files: icon-arrow-outward.svg (arrow_outward), icon-arrow-right.svg (arrow_forward), icon-service-theme.svg (palette), icon-service-plugin.svg (extension), icon-service-commerce.svg (shopping_cart), icon-service-wordpress.svg (web), icon-service-api.svg (api), icon-service-security.svg (shield_lock), icon-service-single-store.svg (storefront), icon-service-multi-vendor.svg (store), icon-service-speed.svg (speed), icon-service-mobile-app.svg (phone_iphone), icon-service-automation.svg (account_tree), icon-service-support.svg (support_agent), icon-feature-care.svg (volunteer_activism), icon-feature-team.svg (groups), icon-feature-support.svg (support_agent), icon-mail.svg (mail), icon-phone.svg (call), icon-location.svg (location_on), stars-rating.svg (star, filled)
 
 Homepage dark exports from Figma file rhXpPSv3HxiGpTiN733snB, node 9100:115184. Bundled so the front page can match that frame. GPL-2.0-or-later as part of this theme.
-Files: hero-scene.png, hero-illustration-main.png, hero-badge-projects.svg, hero-card-client.svg, hero-pill-work.svg, hero-sparkle.svg, hero-vector-pink.svg, about-team.jpg, work-desk.jpg, cta-banner.png, cta-bg.png, cta-arrow.svg, story-wade-a.png, story-wade-b.png, story-wade-c.png, team-a.png, team-b.png, team-c.png, team-d.png, team-e.png, team-f.png, team-g.png, team-h.png, icon-arrow-right.svg, icon-feature-care.svg, icon-feature-team.svg, icon-feature-support.svg, icon-service-theme.svg, icon-service-plugin.svg, icon-service-commerce.svg, icon-service-wordpress.svg, icon-service-api.svg, icon-service-security.svg, icon-star.svg, stars-rating.svg, blog-1.png, blog-2.png, icon-mail.svg, icon-location.svg, icon-phone.svg
+Files: hero-scene.png, hero-illustration-main.png, hero-badge-projects.svg, hero-card-client.svg, hero-pill-work.svg, hero-sparkle.svg, hero-vector-pink.svg, about-team.jpg, work-desk.jpg, cta-banner.png, cta-bg.png, cta-arrow.svg, story-wade-a.png, story-wade-b.png, story-wade-c.png, team-a.png, team-b.png, team-c.png, team-d.png, team-e.png, team-f.png, team-g.png, team-h.png, blog-1.png, blog-2.png

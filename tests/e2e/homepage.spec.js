@@ -69,14 +69,15 @@ test.describe( 'Homepage', () => {
 		}
 	} );
 
-	test( 'header offers the logo, navigation and a call to action', async ( {
+	test( 'header offers the logo, the site menu and a call to action', async ( {
 		page,
+		fixtures,
 	} ) => {
 		const header = page.locator( 'header' );
 		await expect( header.getByRole( 'img', { name: 'Artifact' } ) ).toBeVisible();
 
 		const nav = header.getByRole( 'navigation', { name: 'Primary menu' } );
-		for ( const label of [ 'Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contacts' ] ) {
+		for ( const label of fixtures.menu.labels ) {
 			await expect( nav.getByRole( 'link', { name: label, exact: true } ) ).toBeVisible();
 		}
 		await expect( header.getByRole( 'link', { name: 'Start A Project' } ) ).toBeVisible();

@@ -51,15 +51,15 @@ class TemplatesTest extends Artifact_Test_Case {
 			}
 		}
 
-		$this->assertEqualsCanonicalizing( array( 'index', 'front-page', 'page', 'single', 'archive', 'search', '404' ), $slugs );
+		$this->assertEqualsCanonicalizing( array( 'index', 'front-page', 'page', 'page-no-title', 'single', 'archive', 'search', '404' ), $slugs );
 	}
 
 	public function test_template_content_matches_the_template_files() {
-		foreach ( array( 'index', 'front-page', 'page', 'single', 'archive', 'search', '404' ) as $slug ) {
+		foreach ( array( 'index', 'front-page', 'page', 'page-no-title', 'single', 'archive', 'search', '404' ) as $slug ) {
 			$template = get_block_template( "artifact//{$slug}", 'wp_template' );
 
 			$this->assertNotNull( $template, "{$slug} template missing" );
-			$this->assertFalse( $template->is_custom, "{$slug} should not be a user customisation" );
+			$this->assertSame( 'theme', $template->source, "{$slug} should come from the theme file, not a user customisation" );
 			// WordPress stamps template-part blocks with the theme slug on load.
 			$this->assertSame(
 				trim( Artifact_Theme_Files::read( "templates/{$slug}.html" ) ),

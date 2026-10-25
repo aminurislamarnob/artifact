@@ -15,8 +15,75 @@ class PatternSourceTest extends TestCase {
 
 	public function test_the_expected_set_of_patterns_exists() {
 		$this->assertEqualsCanonicalizing(
-			array_merge( Artifact_Theme_Files::HOMEPAGE_PATTERNS, Artifact_Theme_Files::HIDDEN_PATTERNS ),
+			array_unique(
+				array_merge(
+					Artifact_Theme_Files::HOMEPAGE_PATTERNS,
+					Artifact_Theme_Files::SERVICES_PAGE_PATTERNS,
+					Artifact_Theme_Files::PAGE_PATTERNS,
+					Artifact_Theme_Files::HIDDEN_PATTERNS
+				)
+			),
 			Artifact_Theme_Files::pattern_slugs()
+		);
+	}
+
+	/**
+	 * An empty navigation block lets core use the site's own menu, or a list
+	 * of its pages, so links are real and the current page is marked.
+	 */
+	public function test_the_header_menu_is_the_sites_own_not_hard_coded_links() {
+		$source = Artifact_Theme_Files::read( 'patterns/header.php' );
+
+		$this->assertMatchesRegularExpression( '/<!-- wp:navigation \{.*?\} \/-->/', $source );
+		$this->assertStringNotContainsString( 'wp:navigation-link', $source );
+	}
+
+	public function test_the_services_page_is_offered_as_a_starter_for_new_pages() {
+		$headers = Artifact_Theme_Files::pattern_headers( 'patterns/page-services.php' );
+
+		$this->assertSame( 'core/post-content', $headers['block types'] );
+		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
+	}
+
+	public function test_the_services_page_composes_its_sections_in_order() {
+		$this->assertSame(
+			Artifact_Theme_Files::SERVICES_PAGE_PATTERNS,
+			Artifact_Theme_Files::referenced_patterns( 'patterns/page-services.php' )
+		);
+	}
+
+	public function test_the_services_page_has_exactly_one_h1() {
+		$count = 0;
+		foreach ( Artifact_Theme_Files::SERVICES_PAGE_PATTERNS as $slug ) {
+			$count += substr_count( Artifact_Theme_Files::read( 'patterns/' . substr( $slug, strlen( 'artifact/' ) ) . '.php' ), '<h1' );
+		}
+
+		$this->assertSame( 1, $count );
+	}
+
+	public function test_the_page_hero_label_is_the_page_title_rendered_as_a_paragraph() {
+		$this->assertStringContainsString( '<!-- wp:post-title {"level":0', Artifact_Theme_Files::read( 'patterns/page-hero.php' ) );
+	}
+
+	/**
+	 * Services patterns sit in core's own categories, so functions.php does
+	 * not have to register one.
+	 *
+	 * @dataProvider services_category_patterns
+	 *
+	 * @param string $file Pattern path.
+	 */
+	public function test_services_patterns_use_the_core_services_category( $file ) {
+		$categories = array_map( 'trim', explode( ',', Artifact_Theme_Files::pattern_headers( $file )['categories'] ) );
+
+		$this->assertContains( 'services', $categories );
+	}
+
+	public static function services_category_patterns() {
+		return array(
+			'page-services' => array( 'patterns/page-services.php' ),
+			'services-grid' => array( 'patterns/services-grid.php' ),
+			'services'      => array( 'patterns/services.php' ),
 		);
 	}
 
@@ -124,6 +191,7 @@ class PatternSourceTest extends TestCase {
 	 */
 	public function test_translation_calls_use_the_artifact_text_domain( $file ) {
 		$calls = Artifact_Theme_Files::translation_calls( Artifact_Theme_Files::read( $file ) );
+		$this->addToAssertionCount( 1 ); // Patterns made only of pattern references have no strings.
 
 		foreach ( $calls as $call ) {
 			$this->assertSame( 'artifact', $call['domain'], "{$file}: \"{$call['text']}\" uses the wrong text domain" );

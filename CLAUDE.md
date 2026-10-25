@@ -6,7 +6,7 @@ Local site: `http://fse-theme-dev.test` (Herd root `/Users/aiarnob/Herd/fse-them
 
 ## Scope
 
-Design source is Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark only (node `9100:115184`). Sample fills; do not trust typed hex labels. Do not invent other pages until those frames exist. No WooCommerce support. No theme style variations. LTR only: do not add `accessibility-ready`, `rtl-language-support`, or e-commerce tags. Still ship a skip link and keyboard-usable nav.
+Design source is Figma `rhXpPSv3HxiGpTiN733snB`: Homepage dark (node `9100:115184`) and the Services list page (node `9153:182157`). Sample fills; do not trust typed hex labels or layer text. Do not invent other pages until those frames exist. No WooCommerce support. No theme style variations. LTR only: do not add `accessibility-ready`, `rtl-language-support`, or e-commerce tags. Still ship a skip link and keyboard-usable nav.
 
 ## Architecture
 
@@ -15,13 +15,16 @@ Design source is Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark only (node `9100:
 - `functions.php` loads the text domain and filters `hooked_block_types` so WooCommerce's mini cart and account blocks stay out of the header. Nothing else: no block style registration, no supports core already gives block themes.
 - `templates/front-page.html` is a `<main>` of `wp:pattern` references in order: hero, features, about, fun-facts, services, a wide separator, work-process, team, testimonials, latest-articles, project-cta.
 - `parts/header.html` and `parts/footer.html` only reference `artifact/header` and `artifact/footer`. Those patterns hold the markup, are bound to their template part areas, and have `Inserter: no`.
+- The header menu is an empty `<!-- wp:navigation /-->`, so core shows the site's newest saved menu or its pages. Do not hard-code menu links. The current page link (`aria-current="page"`) is primary-coloured.
+- Pages other than the front page ship as starter page patterns (`Block Types: core/post-content`, `Post Types: page, wp_template`) built from section patterns, plus the `page-no-title` custom template (header, `post-content`, footer) so the pattern can supply the H1. `artifact/page-services` is page-hero, services-grid, a wide separator, work-process, a wide separator, project-cta. `artifact/page-hero` labels the page with a `post-title` block at `level: 0`.
 - `index`, `archive`, and `search` are main-query loops (blog cards with featured image, author avatar, date, time to read) with pagination and the hidden `artifact/hidden-no-results` pattern. `404` uses `artifact/hidden-404` with a search. `single` has title, meta, featured image, content, terms, a two-post latest articles query, and threaded, paginated comments. `page` is title and content.
-- Hidden patterns are named `hidden-*.php` and have `Inserter: no`. Every other pattern has categories.
-- Theme CSS lives in `theme.json` `styles.css`, scoped to `artifact-*` classes and core block classes (post content, comments, query pagination, forms). It uses presets and `rgba()`, never hex. Breakpoints are 1024px, 781px, and 600px. Respect `prefers-reduced-motion`.
+- Hidden patterns are named `hidden-*.php` and have `Inserter: no`. Every other pattern uses core pattern categories (`services`, `banner`, `featured`, …); do not register theme categories.
+- Card links with repeated text ("Learn More") carry a `screen-reader-text` span naming their target, so link names are unique.
+- Theme CSS lives in `theme.json` `styles.css`, scoped to `artifact-*` classes and core block classes (post content, comments, query pagination, forms). It uses presets and `rgba()`, never hex. Breakpoints are 1024px, 781px, and 600px. Respect `prefers-reduced-motion`. Blog article typography (`.wp-block-post-content`, `.entry-content`) is wrapped in `:where(body:not(.page-template-page-no-title))` so it never restyles pattern-built pages.
 - Block style variations are JSON in `styles/blocks/` (files with `blockTypes`, currently `button-rounded.json`). No theme style variation JSON.
 - `style.css` is the theme header only, with no rules.
 - Fonts are self-hosted Poppins WOFF2 (400, 500, 600, 700) in `assets/fonts/` with `OFL.txt`. No TTF, no font CDN.
-- Images in `assets/images/` are original artwork and Figma exports (GPL as part of the theme), plus Apache 2.0 Material Symbols icons. List every bundled file with source and licence in `readme.txt`. Do not use Unsplash, Pixabay, Freepik, Flaticon, Shutterstock, or other non-GPL asset services. No remote images or scripts at runtime.
+- Images in `assets/images/` are original artwork and Figma exports (GPL as part of the theme). Every icon (`icon-*.svg`, `stars-rating.svg`) is a Material Symbol (Apache 2.0) listed by file and symbol name in the `readme.txt` Material Symbols entry. Figma icon layers named `fi_<number>` are Flaticon downloads: never export them. Do not use Unsplash, Pixabay, Freepik, Flaticon, Shutterstock, or other non-GPL asset services. No remote images or scripts at runtime.
 - No theme JavaScript. Interactive sections use core blocks (the accordion uses core's own script) and CSS.
 - `.distignore` keeps dev files (`.agents`, `.claude`, `tests`, configs, `CLAUDE.md`, `AGENTS.md`, `README.md`) out of the release zip.
 
@@ -51,7 +54,7 @@ WordPress caches compiled global styles. If an edit does not show, hard-refresh.
 
 ## Tests
 
-`composer test:unit` (files only), `composer test:integration` (needs the `artifact_tests` MySQL database, which it wipes), `npm run test:e2e` (Playwright and axe-core; needs Artifact active on `WP_BASE_URL`, default `http://fse-theme-dev.test`, and `WP_PATH` for WP-CLI). E2E global setup creates and then deletes its own posts, page, category, and administrator. When you add a token slug, pattern or template, update the expected lists in `tests/phpunit/unit` so the suite keeps guarding the contract. See `README.md` for setup.
+`composer test:unit` (files only), `composer test:integration` (needs the `artifact_tests` MySQL database, which it wipes), `npm run test:e2e` (Playwright and axe-core; needs Artifact active on `WP_BASE_URL`, default `http://fse-theme-dev.test`, and `WP_PATH` for WP-CLI). E2E global setup creates and then deletes its own posts, pages (one built from `artifact/page-services`), category, administrator, and a navigation menu, which the header shows because it is the newest. When you add a token slug, pattern or template, update the expected lists in `tests/phpunit/unit` so the suite keeps guarding the contract. See `README.md` for setup.
 
 Also run `wp theme-check run artifact` (Theme Check plugin) and `bash .claude/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify` (Theme Unit Test settings and endpoints). The script's `import` and `settings` commands change the site's options, permalinks, and plugins, so ask first.
 

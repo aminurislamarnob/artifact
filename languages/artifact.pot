@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-24T19:46:55+00:00\n"
+"POT-Creation-Date: 2026-10-25T17:08:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -51,6 +51,7 @@ msgstr ""
 #: patterns/hero.php:12
 #: patterns/latest-articles.php:11
 #: patterns/project-cta.php:12
+#: patterns/services-grid.php:12
 #: patterns/services.php:12
 #: patterns/team.php:11
 #: patterns/work-process.php:13
@@ -108,6 +109,7 @@ msgid "24/7 Customer Support for Client Satisfaction."
 msgstr ""
 
 #: patterns/features.php:24
+#: patterns/services-grid.php:67
 msgid "Support"
 msgstr ""
 
@@ -153,7 +155,6 @@ msgid "Site links left"
 msgstr ""
 
 #: patterns/footer.php:66
-#: patterns/header.php:24
 msgid "Home"
 msgstr ""
 
@@ -260,29 +261,7 @@ msgstr ""
 msgid "Primary menu"
 msgstr ""
 
-#: patterns/header.php:25
-msgid "About"
-msgstr ""
-
-#: patterns/header.php:26
-#: patterns/services.php:53
-msgid "Services"
-msgstr ""
-
-#: patterns/header.php:27
-msgid "Portfolio"
-msgstr ""
-
 #: patterns/header.php:28
-#: patterns/latest-articles.php:24
-msgid "Blog"
-msgstr ""
-
-#: patterns/header.php:29
-msgid "Contacts"
-msgstr ""
-
-#: patterns/header.php:35
 #: patterns/project-cta.php:15
 #: patterns/work-process.php:100
 msgid "Start A Project"
@@ -370,18 +349,46 @@ msgctxt "Pattern title"
 msgid "Latest articles"
 msgstr ""
 
+#: patterns/latest-articles.php:24
+msgid "Blog"
+msgstr ""
+
 #: patterns/latest-articles.php:27
 msgid "Our latest<br>articles"
 msgstr ""
 
 #: patterns/latest-articles.php:35
-#: patterns/services.php:143
+#: patterns/services.php:145
 #: patterns/team.php:47
 msgid "View All"
 msgstr ""
 
-#: patterns/latest-articles.php:55
-msgid "Read more"
+#: patterns/page-hero.php
+msgctxt "Pattern title"
+msgid "Page hero"
+msgstr ""
+
+#: patterns/page-hero.php
+msgctxt "Pattern description"
+msgid "Page title as a label, a large heading and a short introduction."
+msgstr ""
+
+#: patterns/page-hero.php:21
+msgid "We build bridges between companies and customers"
+msgstr ""
+
+#: patterns/page-hero.php:29
+msgid "From a single storefront to a full product platform, we plan, design, build and look after the websites and tools that connect your business with the people it serves."
+msgstr ""
+
+#: patterns/page-services.php
+msgctxt "Pattern title"
+msgid "Services page"
+msgstr ""
+
+#: patterns/page-services.php
+msgctxt "Pattern description"
+msgid "A services list page: page hero, service grid, work process and a call to action. Use it with the Page No Title template."
 msgstr ""
 
 #: patterns/project-cta.php
@@ -397,6 +404,132 @@ msgstr ""
 msgid "Got A Project? Lets Talk."
 msgstr ""
 
+#: patterns/services-grid.php
+msgctxt "Pattern title"
+msgid "Services grid"
+msgstr ""
+
+#: patterns/services-grid.php
+msgctxt "Pattern description"
+msgid "Nine service cards with an icon, a title, a short description and a link."
+msgstr ""
+
+#: patterns/services-grid.php:13
+#: patterns/services.php:14
+msgid "Learn More"
+msgstr ""
+
+#. translators: %s: service name.
+#: patterns/services-grid.php:15
+#: patterns/services.php:16
+#, php-format
+msgid "about %s"
+msgstr ""
+
+#: patterns/services-grid.php:19
+msgid "Storefront"
+msgstr ""
+
+#: patterns/services-grid.php:20
+msgid "Single-Store E-Commerce"
+msgstr ""
+
+#: patterns/services-grid.php:21
+msgid "Launches a fast, secure online store that turns visitors into loyal, returning customers."
+msgstr ""
+
+#: patterns/services-grid.php:25
+msgid "Marketplace"
+msgstr ""
+
+#: patterns/services-grid.php:26
+msgid "Multi-Vendor E-Commerce"
+msgstr ""
+
+#: patterns/services-grid.php:27
+msgid "Builds marketplaces where many sellers list, sell and get paid from one shared platform."
+msgstr ""
+
+#: patterns/services-grid.php:31
+msgid "API"
+msgstr ""
+
+#: patterns/services-grid.php:32
+msgid "Headless E-Commerce"
+msgstr ""
+
+#: patterns/services-grid.php:33
+msgid "Pairs a flexible commerce back end with a fast, custom front end on any channel you need."
+msgstr ""
+
+#: patterns/services-grid.php:37
+msgid "Speed"
+msgstr ""
+
+#: patterns/services-grid.php:38
+msgid "Page Speed Optimization"
+msgstr ""
+
+#: patterns/services-grid.php:39
+msgid "Trims load times and improves Core Web Vitals so pages feel instant on every device."
+msgstr ""
+
+#: patterns/services-grid.php:43
+msgid "Plugin"
+msgstr ""
+
+#: patterns/services-grid.php:44
+msgid "WordPress Plugin Development"
+msgstr ""
+
+#: patterns/services-grid.php:45
+msgid "Writes custom plugins that add exactly the features your site needs, built to last."
+msgstr ""
+
+#: patterns/services-grid.php:49
+msgid "Theme"
+msgstr ""
+
+#: patterns/services-grid.php:50
+msgid "WordPress Theme Development"
+msgstr ""
+
+#: patterns/services-grid.php:51
+msgid "Designs and builds block themes that match your brand and are easy for your team to edit."
+msgstr ""
+
+#: patterns/services-grid.php:55
+msgid "Mobile app"
+msgstr ""
+
+#: patterns/services-grid.php:56
+msgid "E-Commerce Mobile App"
+msgstr ""
+
+#: patterns/services-grid.php:57
+msgid "Brings your store to iOS and Android with apps that stay in sync with your catalogue."
+msgstr ""
+
+#: patterns/services-grid.php:61
+msgid "Automation"
+msgstr ""
+
+#: patterns/services-grid.php:62
+msgid "Business Process Automation"
+msgstr ""
+
+#: patterns/services-grid.php:63
+msgid "Connects your tools and automates repeat tasks so your team can focus on real work."
+msgstr ""
+
+#: patterns/services-grid.php:68
+msgid "Support & Maintenance"
+msgstr ""
+
+#: patterns/services-grid.php:69
+msgid "Keeps your site updated, backed up, monitored and secure, with help when you need it."
+msgstr ""
+
 #: patterns/services.php
 msgctxt "Pattern title"
 msgid "Services"
@@ -406,59 +539,59 @@ msgstr ""
 msgid "Creates tailored websites to reflect your brand and engage your audience effectively."
 msgstr ""
 
-#: patterns/services.php:14
-msgid "Learn More"
-msgstr ""
-
-#: patterns/services.php:18
+#: patterns/services.php:20
 msgid "Theme Development & Customization"
 msgstr ""
 
-#: patterns/services.php:19
+#: patterns/services.php:21
 msgid "Theme development"
 msgstr ""
 
-#: patterns/services.php:23
+#: patterns/services.php:25
 msgid "Plugin Development & Customization"
 msgstr ""
 
-#: patterns/services.php:24
+#: patterns/services.php:26
 msgid "Plugin development"
 msgstr ""
 
-#: patterns/services.php:28
+#: patterns/services.php:30
 msgid "E-commerce Development"
 msgstr ""
 
-#: patterns/services.php:29
+#: patterns/services.php:31
 msgid "E-commerce"
 msgstr ""
 
-#: patterns/services.php:33
+#: patterns/services.php:35
 msgid "Custom WordPress Development"
 msgstr ""
 
-#: patterns/services.php:34
+#: patterns/services.php:36
 msgid "WordPress"
 msgstr ""
 
-#: patterns/services.php:38
+#: patterns/services.php:40
 msgid "Custom APIS & Integration"
 msgstr ""
 
-#: patterns/services.php:39
+#: patterns/services.php:41
 msgid "APIs"
 msgstr ""
 
-#: patterns/services.php:43
+#: patterns/services.php:45
 msgid "Website Security & Performance"
 msgstr ""
 
-#: patterns/services.php:44
+#: patterns/services.php:46
 msgid "Security"
 msgstr ""
 
-#: patterns/services.php:57
+#: patterns/services.php:55
+msgid "Services"
+msgstr ""
+
+#: patterns/services.php:59
 msgid "Top notch digital services"
 msgstr ""
 
@@ -643,6 +776,11 @@ msgstr ""
 
 #: patterns/work-process.php:110
 msgid "Laptop, notebook, and coffee on a desk"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page No Title"
 msgstr ""
 
 #: theme.json
