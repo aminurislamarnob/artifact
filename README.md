@@ -17,5 +17,5 @@ Tooling only; none of it ships (see `.distignore`).
 **Playwright** (`npm install && npx playwright install chromium` first)
 
 - `npm run test:e2e` drives a real site with Artifact active: homepage content and computed design tokens, generic templates, comments, search, 404, keyboard access, axe WCAG scans, the mobile menu, and block validity of every pattern in the block and site editors.
-- Defaults to the Herd site `http://fse-theme-dev.test` at `~/Herd/fse-theme-dev`. Override with `WP_BASE_URL`, `WP_PATH` (same install, used by WP-CLI) and `WP_CLI_BIN`. Global setup creates and afterwards deletes its own posts, page, category and administrator.
+- Defaults to the Herd site `https://woocommerce.test` at `~/Herd/woocommerce`. Override with `WP_BASE_URL` (also passed to WP-CLI as `--url`), `WP_PATH` (same install, used by WP-CLI) and `WP_CLI_BIN`. Runs 1 worker, since Herd returns 502s under parallel load. Global setup creates and afterwards deletes its own posts, page, category and administrator.
 

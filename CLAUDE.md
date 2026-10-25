@@ -2,7 +2,7 @@
 
 Artifact is a WordPress block theme (full site editing) for company websites, aimed at WordPress.org. Default look is black. Requires WordPress 6.9+ (the work process section uses `core/accordion`) and PHP 7.4+. `theme.json` schema version 3. Text domain `artifact`, domain path `/languages`.
 
-Local site: `http://fse-theme-dev.test` (Herd root `/Users/aiarnob/Herd/fse-theme-dev`, whose `wp-content/themes/artifact` symlinks to this repo). No build step. Activate the theme and load the site.
+Local site: `https://woocommerce.test` (Herd root `/Users/aiarnob/Herd/woocommerce`; this repo is its `wp-content/themes/artifact`). Run WP-CLI there with `--url=https://woocommerce.test`, because its `wp-config.php` builds the site URL from the request host. No build step. Activate the theme and load the site.
 
 ## Scope
 
@@ -55,7 +55,7 @@ WordPress caches compiled global styles. If an edit does not show, hard-refresh.
 
 ## Tests
 
-`composer test:unit` (files only), `composer test:integration` (needs the `artifact_tests` MySQL database, which it wipes), `npm run test:e2e` (Playwright and axe-core; needs Artifact active on `WP_BASE_URL`, default `http://fse-theme-dev.test`, and `WP_PATH` for WP-CLI). E2E global setup creates and then deletes its own posts, pages (one built from `artifact/page-services`, one from `artifact/page-about`, one from `artifact/page-portfolio`, a child service using the Service Details template, and a child project using the Portfolio Details template), category, administrator, and a navigation menu, which the header shows because it is the newest. When you add a token slug, pattern or template, update the expected lists in `tests/phpunit/unit` so the suite keeps guarding the contract. See `README.md` for setup.
+`composer test:unit` (files only), `composer test:integration` (needs the `artifact_tests` MySQL database, which it wipes), `npm run test:e2e` (Playwright and axe-core; needs Artifact active on `WP_BASE_URL`, default `https://woocommerce.test`, and `WP_PATH` for WP-CLI, default `~/Herd/woocommerce`; it runs 1 worker because Herd's PHP pool returns 502s under parallel load). E2E global setup creates and then deletes its own posts, pages (one built from `artifact/page-services`, one from `artifact/page-about`, one from `artifact/page-portfolio`, a child service using the Service Details template, and a child project using the Portfolio Details template), category, administrator, and a navigation menu, which the header shows because it is the newest. When you add a token slug, pattern or template, update the expected lists in `tests/phpunit/unit` so the suite keeps guarding the contract. See `README.md` for setup.
 
 Also run `wp theme-check run artifact` (Theme Check plugin) and `bash .claude/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify` (Theme Unit Test settings and endpoints). The script's `import` and `settings` commands change the site's options, permalinks, and plugins, so ask first.
 

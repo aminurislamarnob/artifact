@@ -22,7 +22,14 @@ function wp( args ) {
 	try {
 		return execFileSync(
 			process.env.WP_CLI_BIN || 'wp',
-			[ `--path=${ wpPath }`, '--skip-plugins', ...args ],
+			// --url lets wp-config.php files that build WP_HOME from the
+			// request host work outside a web request.
+			[
+				`--path=${ wpPath }`,
+				...( process.env.WP_BASE_URL ? [ `--url=${ process.env.WP_BASE_URL }` ] : [] ),
+				'--skip-plugins',
+				...args,
+			],
 			{ encoding: 'utf8', stdio: [ 'ignore', 'pipe', 'pipe' ] }
 		).trim();
 	} catch ( error ) {

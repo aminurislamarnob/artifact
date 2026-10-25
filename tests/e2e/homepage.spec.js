@@ -183,6 +183,8 @@ test.describe( 'Homepage', () => {
 		} );
 		await page.reload( { waitUntil: 'networkidle' } );
 
+		// Author avatars come from core's avatar block and Gravatar, not the theme.
+		hosts.delete( 'secure.gravatar.com' );
 		expect( [ ...hosts ] ).toEqual( [ new URL( baseURL ).host ] );
 	} );
 } );

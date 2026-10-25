@@ -15,6 +15,12 @@ XML_FILE="${DATA_DIR}/themeunittestdata.wordpress.xml"
 
 COMMAND="${1:-help}"
 
+# Run from the WordPress root. Set WP_BASE_URL when the site's wp-config.php
+# needs a URL to build its own (the e2e suite reads the same variable).
+wp() {
+    command wp ${WP_BASE_URL:+--url="${WP_BASE_URL}"} "$@"
+}
+
 mkdir -p "${DATA_DIR}"
 
 ensure_xml() {
@@ -87,7 +93,7 @@ cmd_verify() {
     
     # 1. Verify blog index pagination
     echo -n "  [1/6] Blog pagination (page/2): "
-    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${SITE_URL}/page/2/" || true)
+    HTTP_CODE=$(curl -sk -o /dev/null -w "%{http_code}" "${SITE_URL}/page/2/" || true)
     if [[ "${HTTP_CODE}" == "200" || "${HTTP_CODE}" == "301" ]]; then
         echo "PASS (HTTP ${HTTP_CODE})"
     else
@@ -96,7 +102,7 @@ cmd_verify() {
 
     # 2. Verify search page
     echo -n "  [2/6] Search query handling: "
-    SEARCH_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${SITE_URL}/?s=test" || true)
+    SEARCH_CODE=$(curl -sk -o /dev/null -w "%{http_code}" "${SITE_URL}/?s=test" || true)
     if [[ "${SEARCH_CODE}" == "200" ]]; then
         echo "PASS (HTTP ${SEARCH_CODE})"
     else
@@ -105,7 +111,7 @@ cmd_verify() {
 
     # 3. Verify 404 fallback
     echo -n "  [3/6] 404 error page: "
-    NOT_FOUND_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${SITE_URL}/not-found-unit-test-check/" || true)
+    NOT_FOUND_CODE=$(curl -sk -o /dev/null -w "%{http_code}" "${SITE_URL}/not-found-unit-test-check/" || true)
     if [[ "${NOT_FOUND_CODE}" == "404" ]]; then
         echo "PASS (HTTP 404 as expected)"
     else
