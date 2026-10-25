@@ -57,9 +57,18 @@ final class Artifact_Theme_Files {
 	);
 
 	/**
+	 * Sections of the Portfolio starter page, in page order.
+	 */
+	const PORTFOLIO_PAGE_PATTERNS = array(
+		'artifact/page-hero',
+		'artifact/portfolio-grid',
+		'artifact/project-cta',
+	);
+
+	/**
 	 * Full-page starter patterns offered when a page is created.
 	 */
-	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details', 'artifact/page-about' );
+	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details', 'artifact/page-about', 'artifact/page-portfolio', 'artifact/page-portfolio-details' );
 
 	/**
 	 * Theme root, without a trailing slash.

@@ -125,7 +125,11 @@ class PatternsTest extends Artifact_Test_Case {
 				$src = $image->getAttribute( 'src' );
 				$this->assertStringStartsWith( get_template_directory_uri() . '/assets/images/', $src, "{$slug}: images must be bundled" );
 				$this->assertFileExists( get_theme_file_path( 'assets/images/' . basename( $src ) ) );
-				$this->assertNotSame( '', trim( $image->getAttribute( 'alt' ) ), "{$slug}: {$src} needs alt text" );
+				$this->assertTrue( $image->hasAttribute( 'alt' ), "{$slug}: {$src} needs an alt attribute" );
+				// Icons may be decorative (alt=""); photos and artwork need a description.
+				if ( 0 !== strpos( basename( $src ), 'icon-' ) ) {
+					$this->assertNotSame( '', trim( $image->getAttribute( 'alt' ) ), "{$slug}: {$src} needs alt text" );
+				}
 				++$checked;
 			}
 		}

@@ -51,11 +51,11 @@ class TemplatesTest extends Artifact_Test_Case {
 			}
 		}
 
-		$this->assertEqualsCanonicalizing( array( 'index', 'front-page', 'page', 'page-no-title', 'page-service-details', 'single', 'archive', 'search', '404' ), $slugs );
+		$this->assertEqualsCanonicalizing( array( 'index', 'front-page', 'page', 'page-no-title', 'page-service-details', 'page-portfolio-details', 'single', 'archive', 'search', '404' ), $slugs );
 	}
 
 	public function test_template_content_matches_the_template_files() {
-		foreach ( array( 'index', 'front-page', 'page', 'page-no-title', 'page-service-details', 'single', 'archive', 'search', '404' ) as $slug ) {
+		foreach ( array( 'index', 'front-page', 'page', 'page-no-title', 'page-service-details', 'page-portfolio-details', 'single', 'archive', 'search', '404' ) as $slug ) {
 			$template = get_block_template( "artifact//{$slug}", 'wp_template' );
 
 			$this->assertNotNull( $template, "{$slug} template missing" );

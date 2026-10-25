@@ -64,6 +64,36 @@ class ThemeJsonTest extends TestCase {
 		);
 	}
 
+	public function test_it_offers_the_portfolio_details_template_for_pages() {
+		$this->assertContains(
+			array(
+				'name'      => 'page-portfolio-details',
+				'title'     => 'Portfolio Details',
+				'postTypes' => array( 'page' ),
+			),
+			$this->json['customTemplates']
+		);
+	}
+
+	/**
+	 * Blog article typography must not restyle pages built from patterns.
+	 *
+	 * @dataProvider pattern_built_page_templates
+	 *
+	 * @param string $template Template slug.
+	 */
+	public function test_article_typography_skips_pattern_built_page_templates( $template ) {
+		$this->assertStringContainsString( ":not(.page-template-{$template})", $this->json['styles']['css'] );
+	}
+
+	public static function pattern_built_page_templates() {
+		return array(
+			'page-no-title'          => array( 'page-no-title' ),
+			'page-service-details'   => array( 'page-service-details' ),
+			'page-portfolio-details' => array( 'page-portfolio-details' ),
+		);
+	}
+
 	public function test_it_switches_off_every_core_default_preset() {
 		$settings = $this->json['settings'];
 

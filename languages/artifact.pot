@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-25T18:09:58+00:00\n"
+"POT-Creation-Date: 2026-10-25T18:40:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -165,6 +165,7 @@ msgid "Phone"
 msgstr ""
 
 #: patterns/footer.php:21
+#: patterns/page-portfolio-details.php:32
 msgid "Location"
 msgstr ""
 
@@ -518,6 +519,146 @@ msgstr ""
 msgid "From a single storefront to a full product platform, we plan, design, build and look after the websites and tools that connect your business with the people it serves."
 msgstr ""
 
+#: patterns/page-portfolio-details.php
+msgctxt "Pattern title"
+msgid "Portfolio details page"
+msgstr ""
+
+#: patterns/page-portfolio-details.php
+msgctxt "Pattern description"
+msgid "Body of a single project page: the page title with an introduction and project facts, photos, the brief, challenges and solutions, process and results. Use it with the Portfolio Details template."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:20
+msgid "Category"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:21
+#: patterns/portfolio-grid.php:17
+msgid "Theme Development"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:24
+msgid "Client"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:25
+msgid "BuildX"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:28
+msgid "Date"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:29
+msgid "August 27, 2024"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:33
+msgid "New York, USA"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:38
+msgid "Challenges"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:40
+msgid "Hundreds of listings were updated by hand in an old theme that only one developer could change."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:41
+msgid "Listing pages took more than six seconds to load on a phone, and visitors left before the photos appeared."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:42
+msgid "Agents had no simple way to feature new homes or collect viewing requests from the site."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:46
+msgid "Solutions"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:48
+msgid "A block theme with listing, neighbourhood and agent patterns that the office team edits in the Site Editor."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:49
+msgid "Responsive images, lazy loading and a lean stylesheet that bring listing pages under two seconds."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:50
+msgid "Featured home sections and a viewing request form on every listing, sent straight to the right agent."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:56
+msgid "Our process"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:58
+msgid "Two workshops with the BuildX sales and marketing teams to map how buyers search, compare and get in touch, and which pages matter most to them."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:59
+msgid "A design system in theme.json built from the BuildX brand, followed by templates and patterns tested with real listings on a private staging site."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:60
+msgid "Training for the office team, a content migration of every listing, and a launch with our developers on hand for the first busy week."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:64
+msgid "Result driven"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:66
+msgid "Listing pages load in under two seconds on a phone, and visitors now view twice as many homes per visit."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:67
+msgid "Viewing requests through the website grew by 40 percent in the first three months after launch."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:68
+msgid "The office team publishes new listings in minutes, without waiting for a developer."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:82
+msgid "A fast, easy-to-edit block theme that helps BuildX show every home at its best and turn visitors into viewing requests."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:112
+#: patterns/portfolio-grid.php:27
+msgid "Team working on laptops around a shared table"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:118
+msgid "About project"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:122
+msgid "BuildX is a New York real estate agency with more than three hundred homes for sale and rent at any time. Their old website was slow, hard to update and gave buyers no easy way to book a viewing. They asked us for a new site that shows every listing at its best, loads quickly on a phone and lets their office team add homes, neighbourhood guides and news without calling a developer. We designed and built a custom block theme, moved every listing across, and trained the team to run the site on their own."
+msgstr ""
+
+#: patterns/page-portfolio-details.php:156
+#: patterns/portfolio-grid.php:45
+msgid "Developer at a desk with several monitors"
+msgstr ""
+
+#: patterns/page-portfolio-details.php:164
+#: patterns/portfolio-grid.php:15
+msgid "Laptop screen showing lines of code in the dark"
+msgstr ""
+
+#: patterns/page-portfolio.php
+msgctxt "Pattern title"
+msgid "Portfolio page"
+msgstr ""
+
+#: patterns/page-portfolio.php
+msgctxt "Pattern description"
+msgid "A portfolio page: page hero, eight project cards and a call to action. Use it with the Page No Title template."
+msgstr ""
+
 #: patterns/page-service-details.php
 msgctxt "Pattern title"
 msgid "Service details page"
@@ -642,6 +783,101 @@ msgctxt "Pattern description"
 msgid "A services list page: page hero, service grid, work process and a call to action. Use it with the Page No Title template."
 msgstr ""
 
+#: patterns/portfolio-grid.php
+msgctxt "Pattern title"
+msgid "Portfolio grid"
+msgstr ""
+
+#: patterns/portfolio-grid.php
+msgctxt "Pattern description"
+msgid "Eight project cards in alternating wide and narrow rows, each with a photo, a linked title and a category."
+msgstr ""
+
+#: patterns/portfolio-grid.php:16
+msgid "Real estate website for BuildX"
+msgstr ""
+
+#: patterns/portfolio-grid.php:21
+msgid "Hands typing on a laptop keyboard"
+msgstr ""
+
+#: patterns/portfolio-grid.php:22
+msgid "Seller marketplace for Velora"
+msgstr ""
+
+#: patterns/portfolio-grid.php:23
+#: patterns/services-grid.php:26
+msgid "Multi-Vendor E-Commerce"
+msgstr ""
+
+#: patterns/portfolio-grid.php:28
+msgid "Team workspace for Orbitly"
+msgstr ""
+
+#: patterns/portfolio-grid.php:29
+msgid "Plugin Development"
+msgstr ""
+
+#: patterns/portfolio-grid.php:33
+msgid "Person wearing a virtual reality headset"
+msgstr ""
+
+#: patterns/portfolio-grid.php:34
+msgid "VR product launch for Lumenix"
+msgstr ""
+
+#: patterns/portfolio-grid.php:35
+#: patterns/services-grid.php:32
+msgid "Headless E-Commerce"
+msgstr ""
+
+#: patterns/portfolio-grid.php:39
+msgid "Hands on a laptop on a wooden desk"
+msgstr ""
+
+#: patterns/portfolio-grid.php:40
+msgid "Online store for Goldmere"
+msgstr ""
+
+#: patterns/portfolio-grid.php:41
+#: patterns/services-grid.php:20
+msgid "Single-Store E-Commerce"
+msgstr ""
+
+#: patterns/portfolio-grid.php:46
+msgid "Operations dashboard for Zentro"
+msgstr ""
+
+#: patterns/portfolio-grid.php:47
+msgid "API Integration"
+msgstr ""
+
+#: patterns/portfolio-grid.php:51
+msgid "Laptop and monitor lit by a desk lamp in a home office"
+msgstr ""
+
+#: patterns/portfolio-grid.php:52
+msgid "Speed overhaul for Kyanor"
+msgstr ""
+
+#: patterns/portfolio-grid.php:53
+#: patterns/services-grid.php:38
+msgid "Page Speed Optimization"
+msgstr ""
+
+#: patterns/portfolio-grid.php:57
+msgid "Laptop on a desk beside a potted plant"
+msgstr ""
+
+#: patterns/portfolio-grid.php:58
+msgid "Mobile shop app for Brightleaf"
+msgstr ""
+
+#: patterns/portfolio-grid.php:59
+#: patterns/services-grid.php:56
+msgid "E-Commerce Mobile App"
+msgstr ""
+
 #: patterns/project-cta.php
 msgctxt "Pattern title"
 msgid "Project call to action"
@@ -681,20 +917,12 @@ msgstr ""
 msgid "Storefront"
 msgstr ""
 
-#: patterns/services-grid.php:20
-msgid "Single-Store E-Commerce"
-msgstr ""
-
 #: patterns/services-grid.php:21
 msgid "Launches a fast, secure online store that turns visitors into loyal, returning customers."
 msgstr ""
 
 #: patterns/services-grid.php:25
 msgid "Marketplace"
-msgstr ""
-
-#: patterns/services-grid.php:26
-msgid "Multi-Vendor E-Commerce"
 msgstr ""
 
 #: patterns/services-grid.php:27
@@ -705,20 +933,12 @@ msgstr ""
 msgid "API"
 msgstr ""
 
-#: patterns/services-grid.php:32
-msgid "Headless E-Commerce"
-msgstr ""
-
 #: patterns/services-grid.php:33
 msgid "Pairs a flexible commerce back end with a fast, custom front end on any channel you need."
 msgstr ""
 
 #: patterns/services-grid.php:37
 msgid "Speed"
-msgstr ""
-
-#: patterns/services-grid.php:38
-msgid "Page Speed Optimization"
 msgstr ""
 
 #: patterns/services-grid.php:39
@@ -751,10 +971,6 @@ msgstr ""
 
 #: patterns/services-grid.php:55
 msgid "Mobile app"
-msgstr ""
-
-#: patterns/services-grid.php:56
-msgid "E-Commerce Mobile App"
 msgstr ""
 
 #: patterns/services-grid.php:57
@@ -1103,6 +1319,11 @@ msgstr ""
 #: theme.json
 msgctxt "Custom template name"
 msgid "Service Details"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Portfolio Details"
 msgstr ""
 
 #: theme.json

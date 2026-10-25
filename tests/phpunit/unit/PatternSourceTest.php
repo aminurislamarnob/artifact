@@ -20,6 +20,7 @@ class PatternSourceTest extends TestCase {
 					Artifact_Theme_Files::HOMEPAGE_PATTERNS,
 					Artifact_Theme_Files::SERVICES_PAGE_PATTERNS,
 					Artifact_Theme_Files::ABOUT_PAGE_PATTERNS,
+					Artifact_Theme_Files::PORTFOLIO_PAGE_PATTERNS,
 					Artifact_Theme_Files::PAGE_PATTERNS,
 					Artifact_Theme_Files::HIDDEN_PATTERNS
 				)
@@ -102,6 +103,47 @@ class PatternSourceTest extends TestCase {
 		$this->assertSame( 1, $count );
 	}
 
+	public function test_the_portfolio_page_is_offered_as_a_starter_for_new_pages() {
+		$headers = Artifact_Theme_Files::pattern_headers( 'patterns/page-portfolio.php' );
+
+		$this->assertSame( 'core/post-content', $headers['block types'] );
+		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
+	}
+
+	public function test_the_portfolio_page_composes_its_sections_in_order() {
+		$this->assertSame(
+			Artifact_Theme_Files::PORTFOLIO_PAGE_PATTERNS,
+			Artifact_Theme_Files::referenced_patterns( 'patterns/page-portfolio.php' )
+		);
+	}
+
+	public function test_the_portfolio_page_has_exactly_one_h1() {
+		$count = substr_count( Artifact_Theme_Files::read( 'patterns/page-portfolio.php' ), '<h1' );
+		foreach ( Artifact_Theme_Files::PORTFOLIO_PAGE_PATTERNS as $slug ) {
+			$count += substr_count( Artifact_Theme_Files::read( 'patterns/' . substr( $slug, strlen( 'artifact/' ) ) . '.php' ), '<h1' );
+		}
+
+		$this->assertSame( 1, $count );
+	}
+
+	public function test_the_portfolio_details_body_is_offered_as_a_starter_for_new_pages() {
+		$headers = Artifact_Theme_Files::pattern_headers( 'patterns/page-portfolio-details.php' );
+
+		$this->assertSame( 'core/post-content', $headers['block types'] );
+		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
+	}
+
+	/**
+	 * Each project's facts differ, so its hero lives in the body, and the
+	 * H1 is the page title so the two never drift apart.
+	 */
+	public function test_the_portfolio_details_h1_is_the_page_title() {
+		$source = Artifact_Theme_Files::read( 'patterns/page-portfolio-details.php' );
+
+		$this->assertSame( 1, substr_count( $source, '<!-- wp:post-title {"level":1' ) );
+		$this->assertStringNotContainsString( '<h1', $source );
+	}
+
 	public function test_the_page_hero_label_is_the_page_title_rendered_as_a_paragraph() {
 		$this->assertStringContainsString( '<!-- wp:post-title {"level":0', Artifact_Theme_Files::read( 'patterns/page-hero.php' ) );
 	}
@@ -118,6 +160,25 @@ class PatternSourceTest extends TestCase {
 		$categories = array_map( 'trim', explode( ',', Artifact_Theme_Files::pattern_headers( $file )['categories'] ) );
 
 		$this->assertContains( 'services', $categories );
+	}
+
+	/**
+	 * @dataProvider portfolio_category_patterns
+	 *
+	 * @param string $file Pattern path.
+	 */
+	public function test_portfolio_patterns_use_the_core_portfolio_category( $file ) {
+		$categories = array_map( 'trim', explode( ',', Artifact_Theme_Files::pattern_headers( $file )['categories'] ) );
+
+		$this->assertContains( 'portfolio', $categories );
+	}
+
+	public static function portfolio_category_patterns() {
+		return array(
+			'page-portfolio'         => array( 'patterns/page-portfolio.php' ),
+			'portfolio-grid'         => array( 'patterns/portfolio-grid.php' ),
+			'page-portfolio-details' => array( 'patterns/page-portfolio-details.php' ),
+		);
 	}
 
 	public static function services_category_patterns() {

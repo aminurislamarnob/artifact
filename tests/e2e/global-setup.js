@@ -121,6 +121,40 @@ module.exports = async function globalSetup( config ) {
 		] )
 	);
 
+	// The Portfolio page and one project under it, built the same way.
+	const portfolioTitle = `Artifact E2E Portfolio ${ RUN }`;
+	const portfolioId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=page',
+			'--post_status=publish',
+			`--post_title=${ portfolioTitle }`,
+			'--page_template=page-no-title',
+			`--post_content=${ wpEval(
+				"echo WP_Block_Patterns_Registry::get_instance()->get_registered( 'artifact/page-portfolio' )['content'];"
+			) }`,
+			'--porcelain',
+		] )
+	);
+
+	const projectTitle = `Artifact E2E Project ${ RUN }`;
+	const projectId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=page',
+			'--post_status=publish',
+			`--post_title=${ projectTitle }`,
+			`--post_parent=${ portfolioId }`,
+			'--page_template=page-portfolio-details',
+			`--post_content=${ wpEval(
+				"echo WP_Block_Patterns_Registry::get_instance()->get_registered( 'artifact/page-portfolio-details' )['content'];"
+			) }`,
+			'--porcelain',
+		] )
+	);
+
 	const permalink = ( id ) =>
 		wp( [ 'eval', `echo get_permalink( ${ id } );` ] );
 
@@ -141,7 +175,7 @@ module.exports = async function globalSetup( config ) {
 			'--post_type=wp_navigation',
 			'--post_status=publish',
 			`--post_title=Artifact E2E menu ${ RUN }`,
-			`--post_content=${ menuLink( 'About', aboutId ) }${ menuLink( 'Services', servicesId ) }`,
+			`--post_content=${ menuLink( 'About', aboutId ) }${ menuLink( 'Services', servicesId ) }${ menuLink( 'Portfolio', portfolioId ) }`,
 			'--porcelain',
 		] )
 	);
@@ -188,7 +222,17 @@ module.exports = async function globalSetup( config ) {
 			title: aboutTitle,
 			url: permalink( aboutId ),
 		},
-		menu: { id: menuId, labels: [ 'About', 'Services' ] },
+		portfolio: {
+			id: portfolioId,
+			title: portfolioTitle,
+			url: permalink( portfolioId ),
+		},
+		project: {
+			id: projectId,
+			title: projectTitle,
+			url: permalink( projectId ),
+		},
+		menu: { id: menuId, labels: [ 'About', 'Services', 'Portfolio' ] },
 		category: {
 			id: categoryId,
 			name: categoryInfo.name,

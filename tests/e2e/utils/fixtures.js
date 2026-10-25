@@ -11,6 +11,9 @@ const AUTH_FILE = path.join( __dirname, '..', '.auth', 'admin.json' );
  * @property {{id:number,title:string,slug:string,url:string}} page   Published page.
  * @property {{id:number,title:string,url:string}}             services Page built from the Services starter pattern.
  * @property {{id:number,title:string,url:string}}             service  Child of services using the Service Details template.
+ * @property {{id:number,title:string,url:string}}             about    Page built from the About starter pattern.
+ * @property {{id:number,title:string,url:string}}             portfolio Page built from the Portfolio starter pattern.
+ * @property {{id:number,title:string,url:string}}             project  Child of portfolio using the Portfolio Details template.
  * @property {{id:number,labels:string[]}}                       menu   Newest saved menu, so the header shows these labels.
  * @property {{id:number,name:string,slug:string,url:string}}  category Category the post belongs to.
  * @property {{login:string,password:string,id:number}}        admin  Administrator created for the run.
