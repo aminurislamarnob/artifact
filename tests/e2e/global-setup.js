@@ -85,6 +85,25 @@ module.exports = async function globalSetup( config ) {
 		] )
 	);
 
+	// A single service: a child of the Services page using the Service
+	// Details template and the matching starter body.
+	const serviceTitle = `Artifact E2E Service ${ RUN }`;
+	const serviceId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=page',
+			'--post_status=publish',
+			`--post_title=${ serviceTitle }`,
+			`--post_parent=${ servicesId }`,
+			'--page_template=page-service-details',
+			`--post_content=${ wpEval(
+				"echo WP_Block_Patterns_Registry::get_instance()->get_registered( 'artifact/page-service-details' )['content'];"
+			) }`,
+			'--porcelain',
+		] )
+	);
+
 	const permalink = ( id ) =>
 		wp( [ 'eval', `echo get_permalink( ${ id } );` ] );
 
@@ -141,6 +160,11 @@ module.exports = async function globalSetup( config ) {
 			id: servicesId,
 			title: servicesTitle,
 			url: permalink( servicesId ),
+		},
+		service: {
+			id: serviceId,
+			title: serviceTitle,
+			url: permalink( serviceId ),
 		},
 		menu: { id: menuId, labels: [ 'About', 'Services' ] },
 		category: {

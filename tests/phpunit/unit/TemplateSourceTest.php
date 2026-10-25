@@ -100,6 +100,15 @@ class TemplateSourceTest extends TestCase {
 		$this->assertStringNotContainsString( 'wp:post-title', $source );
 	}
 
+	public function test_the_service_details_template_frames_the_page_content() {
+		$source = Artifact_Theme_Files::read( 'templates/page-service-details.html' );
+
+		$this->assertSame( array( 'artifact/hidden-service-hero', 'artifact/project-cta' ), Artifact_Theme_Files::referenced_patterns( 'templates/page-service-details.html' ) );
+		$this->assertLessThan( strpos( $source, 'wp:post-content' ), strpos( $source, 'artifact/hidden-service-hero' ) );
+		$this->assertGreaterThan( strpos( $source, 'wp:post-content' ), strpos( $source, 'artifact/project-cta' ) );
+		$this->assertStringNotContainsString( 'wp:post-title', $source, 'The hero pattern renders the title' );
+	}
+
 	public function test_homepage_has_exactly_one_h1() {
 		$count = 0;
 		foreach ( Artifact_Theme_Files::HOMEPAGE_PATTERNS as $slug ) {

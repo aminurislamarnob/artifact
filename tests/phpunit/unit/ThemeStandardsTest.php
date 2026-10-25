@@ -181,6 +181,20 @@ class ThemeStandardsTest extends TestCase {
 		}
 	}
 
+	/**
+	 * Service photos come from StockSnap, whose photos are all CC0.
+	 */
+	public function test_service_photos_are_cc0_and_credited_in_the_readme() {
+		$credit = $this->readme_entry( 'StockSnap' );
+		$photos = glob( Artifact_Theme_Files::path( 'assets/images/service-*.jpg' ) );
+
+		$this->assertStringContainsString( 'CC0', $credit );
+		$this->assertNotEmpty( $photos );
+		foreach ( $photos as $photo ) {
+			$this->assertStringContainsString( basename( $photo ), $credit, basename( $photo ) . ' is not credited to StockSnap' );
+		}
+	}
+
 	public function test_icons_carry_no_traces_of_a_figma_or_flaticon_export() {
 		$icons = array_merge( glob( Artifact_Theme_Files::path( 'assets/images/icon-*.svg' ) ), array( Artifact_Theme_Files::path( 'assets/images/stars-rating.svg' ) ) );
 

@@ -53,6 +53,17 @@ class ThemeJsonTest extends TestCase {
 		);
 	}
 
+	public function test_it_offers_the_service_details_template_for_pages() {
+		$this->assertContains(
+			array(
+				'name'      => 'page-service-details',
+				'title'     => 'Service Details',
+				'postTypes' => array( 'page' ),
+			),
+			$this->json['customTemplates']
+		);
+	}
+
 	public function test_it_switches_off_every_core_default_preset() {
 		$settings = $this->json['settings'];
 

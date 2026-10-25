@@ -8,8 +8,8 @@ Instructions and guidelines for AI coding agents operating on the **Artifact** W
 - **Requirements**: WordPress 6.9+, PHP 7.4+.
 - **Configuration**: `theme.json` (schema v3).
 - **Text Domain**: `artifact`, domain path `/languages`.
-- **Design**: Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark (node `9100:115184`) and Services list page (node `9153:182157`). Other pages wait for their frames.
-- **Pages**: non-front pages ship as starter page patterns plus the `page-no-title` template, not as slug templates.
+- **Design**: Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark (node `9100:115184`) Services list page (node `9153:182157`) and Service Details page (node `9153:182446`). Other pages wait for their frames.
+- **Pages**: non-front pages ship as starter page patterns plus a custom template (`page-no-title`, or `page-service-details` for each service, a child page of Services), not as slug templates. Template text lives in hidden patterns.
 
 ## Local Theme Review Agent
 This repository contains a dedicated repo-specific review agent and skill:

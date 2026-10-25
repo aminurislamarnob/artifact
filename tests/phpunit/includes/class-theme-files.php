@@ -16,7 +16,7 @@ final class Artifact_Theme_Files {
 	/**
 	 * Patterns that exist only to be referenced by templates and parts.
 	 */
-	const HIDDEN_PATTERNS = array( 'artifact/header', 'artifact/footer', 'artifact/hidden-404', 'artifact/hidden-no-results' );
+	const HIDDEN_PATTERNS = array( 'artifact/header', 'artifact/footer', 'artifact/hidden-404', 'artifact/hidden-no-results', 'artifact/hidden-service-hero' );
 
 	/**
 	 * Homepage section patterns, in page order.
@@ -47,7 +47,7 @@ final class Artifact_Theme_Files {
 	/**
 	 * Full-page starter patterns offered when a page is created.
 	 */
-	const PAGE_PATTERNS = array( 'artifact/page-services' );
+	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details' );
 
 	/**
 	 * Theme root, without a trailing slash.

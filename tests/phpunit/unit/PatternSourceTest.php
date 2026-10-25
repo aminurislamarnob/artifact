@@ -45,6 +45,22 @@ class PatternSourceTest extends TestCase {
 		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
 	}
 
+	public function test_the_service_details_body_is_offered_as_a_starter_for_new_pages() {
+		$headers = Artifact_Theme_Files::pattern_headers( 'patterns/page-service-details.php' );
+
+		$this->assertSame( 'core/post-content', $headers['block types'] );
+		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
+	}
+
+	/**
+	 * The template supplies the H1 from the page title, so the starter body
+	 * must not add another.
+	 */
+	public function test_the_service_details_h1_is_the_page_title() {
+		$this->assertStringContainsString( '<!-- wp:post-title {"level":1', Artifact_Theme_Files::read( 'patterns/hidden-service-hero.php' ) );
+		$this->assertStringNotContainsString( '<h1', Artifact_Theme_Files::read( 'patterns/page-service-details.php' ) );
+	}
+
 	public function test_the_services_page_composes_its_sections_in_order() {
 		$this->assertSame(
 			Artifact_Theme_Files::SERVICES_PAGE_PATTERNS,
@@ -84,6 +100,7 @@ class PatternSourceTest extends TestCase {
 			'page-services' => array( 'patterns/page-services.php' ),
 			'services-grid' => array( 'patterns/services-grid.php' ),
 			'services'      => array( 'patterns/services.php' ),
+			'page-service-details' => array( 'patterns/page-service-details.php' ),
 		);
 	}
 
