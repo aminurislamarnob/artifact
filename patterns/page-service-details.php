@@ -28,16 +28,16 @@ $artifact_problems      = array(
 	__( 'Outdated code that breaks with each WordPress update.', 'artifact' ),
 );
 $artifact_deliverables  = array(
-	__( 'A production-ready block theme with templates, template parts and patterns.', 'artifact' ),
-	__( 'A design system in theme.json that matches your brand guidelines.', 'artifact' ),
-	__( 'Documentation and a short training session for the people who edit your site.', 'artifact' ),
-	__( 'Thirty days of fixes after launch.', 'artifact' ),
+	__( 'A production-ready block theme with every template, template part and pattern your site needs, built to WordPress.org coding standards, tested on current browsers and devices, and ready to install on your live site.', 'artifact' ),
+	__( 'A design system in theme.json that turns your brand guidelines into colours, fonts, spacing and block styles, so every new page your team builds looks consistent without anyone touching code.', 'artifact' ),
+	__( 'Clear documentation and a recorded training session that show the people who edit your site how to create pages, reuse patterns and change global styles with confidence from day one.', 'artifact' ),
+	__( 'Thirty days of fixes and adjustments after launch, so anything that comes up once real visitors and real content arrive is handled quickly and at no extra cost to you.', 'artifact' ),
 );
 $artifact_steps         = array(
-	__( 'Tell us about your site and what is holding it back.', 'artifact' ),
-	__( 'Get a scoped plan, a timeline and a fixed quote within a week.', 'artifact' ),
-	__( 'Review progress on a staging site while we build.', 'artifact' ),
-	__( 'Launch, then keep improving with one of our support plans.', 'artifact' ),
+	__( 'Tell us about your site, your audience and what is holding it back today, whether that is slow pages, a theme that is hard to edit or a design that no longer fits your brand.', 'artifact' ),
+	__( 'Within a week you get a scoped plan with clear milestones, a realistic timeline and a fixed quote, so you know exactly what you are paying for before any work begins.', 'artifact' ),
+	__( 'Follow progress on a private staging site while we build, share feedback at each milestone, and see your real content in the new theme long before launch day.', 'artifact' ),
+	__( 'Launch with our team on hand, then keep improving the site with one of our support plans for updates, new patterns, performance checks and help whenever you need it.', 'artifact' ),
 );
 $artifact_sections      = array(
 	array(

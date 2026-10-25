@@ -104,6 +104,23 @@ module.exports = async function globalSetup( config ) {
 		] )
 	);
 
+	// The About page, built from its starter pattern the same way.
+	const aboutTitle = `Artifact E2E About ${ RUN }`;
+	const aboutId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=page',
+			'--post_status=publish',
+			`--post_title=${ aboutTitle }`,
+			'--page_template=page-no-title',
+			`--post_content=${ wpEval(
+				"echo WP_Block_Patterns_Registry::get_instance()->get_registered( 'artifact/page-about' )['content'];"
+			) }`,
+			'--porcelain',
+		] )
+	);
+
 	const permalink = ( id ) =>
 		wp( [ 'eval', `echo get_permalink( ${ id } );` ] );
 
@@ -124,7 +141,7 @@ module.exports = async function globalSetup( config ) {
 			'--post_type=wp_navigation',
 			'--post_status=publish',
 			`--post_title=Artifact E2E menu ${ RUN }`,
-			`--post_content=${ menuLink( 'About', pageId ) }${ menuLink( 'Services', servicesId ) }`,
+			`--post_content=${ menuLink( 'About', aboutId ) }${ menuLink( 'Services', servicesId ) }`,
 			'--porcelain',
 		] )
 	);
@@ -165,6 +182,11 @@ module.exports = async function globalSetup( config ) {
 			id: serviceId,
 			title: serviceTitle,
 			url: permalink( serviceId ),
+		},
+		about: {
+			id: aboutId,
+			title: aboutTitle,
+			url: permalink( aboutId ),
 		},
 		menu: { id: menuId, labels: [ 'About', 'Services' ] },
 		category: {

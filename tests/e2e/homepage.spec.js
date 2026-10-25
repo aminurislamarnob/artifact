@@ -83,6 +83,26 @@ test.describe( 'Homepage', () => {
 		await expect( header.getByRole( 'link', { name: 'Start A Project' } ) ).toBeVisible();
 	} );
 
+	test( 'a long site menu never squeezes the call to action onto two lines', async ( {
+		page,
+	} ) => {
+		await page.setViewportSize( { width: 1600, height: 900 } );
+		const button = page.locator( 'header' ).getByRole( 'link', { name: 'Start A Project' } );
+		const oneLine = ( await button.boundingBox() ).height;
+
+		// Ten pages' worth of links, like a shop site's default menu.
+		await page.locator( 'header .wp-block-navigation__container' ).evaluate( ( list ) => {
+			const item = list.querySelector( 'li' );
+			for ( let i = 0; i < 10; i++ ) {
+				const copy = item.cloneNode( true );
+				copy.querySelector( '.wp-block-navigation-item__label' ).textContent = `Storefront Dashboard ${ i }`;
+				list.append( copy );
+			}
+		} );
+
+		expect( ( await button.boundingBox() ).height ).toBe( oneLine );
+	} );
+
 	test( 'the logo links back to the home page', async ( { page, fixtures } ) => {
 		await page.goto( fixtures.post.url );
 		await page.locator( 'header' ).getByRole( 'link', { name: 'Artifact' } ).click();

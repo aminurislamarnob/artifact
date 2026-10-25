@@ -182,11 +182,12 @@ class ThemeStandardsTest extends TestCase {
 	}
 
 	/**
-	 * Service photos come from StockSnap, whose photos are all CC0.
+	 * Service and About page photos come from StockSnap, whose photos are all
+	 * CC0.
 	 */
-	public function test_service_photos_are_cc0_and_credited_in_the_readme() {
+	public function test_stock_photos_are_cc0_and_credited_in_the_readme() {
 		$credit = $this->readme_entry( 'StockSnap' );
-		$photos = glob( Artifact_Theme_Files::path( 'assets/images/service-*.jpg' ) );
+		$photos = array_merge( glob( Artifact_Theme_Files::path( 'assets/images/service-*.jpg' ) ), glob( Artifact_Theme_Files::path( 'assets/images/company-*.jpg' ) ) );
 
 		$this->assertStringContainsString( 'CC0', $credit );
 		$this->assertNotEmpty( $photos );

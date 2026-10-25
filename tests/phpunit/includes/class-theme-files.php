@@ -45,9 +45,21 @@ final class Artifact_Theme_Files {
 	);
 
 	/**
+	 * Sections of the About starter page, in page order.
+	 */
+	const ABOUT_PAGE_PATTERNS = array(
+		'artifact/page-hero',
+		'artifact/brands',
+		'artifact/values',
+		'artifact/fun-facts-grid',
+		'artifact/team',
+		'artifact/project-cta',
+	);
+
+	/**
 	 * Full-page starter patterns offered when a page is created.
 	 */
-	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details' );
+	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details', 'artifact/page-about' );
 
 	/**
 	 * Theme root, without a trailing slash.

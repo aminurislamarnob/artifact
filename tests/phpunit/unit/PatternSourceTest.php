@@ -19,6 +19,7 @@ class PatternSourceTest extends TestCase {
 				array_merge(
 					Artifact_Theme_Files::HOMEPAGE_PATTERNS,
 					Artifact_Theme_Files::SERVICES_PAGE_PATTERNS,
+					Artifact_Theme_Files::ABOUT_PAGE_PATTERNS,
 					Artifact_Theme_Files::PAGE_PATTERNS,
 					Artifact_Theme_Files::HIDDEN_PATTERNS
 				)
@@ -71,6 +72,30 @@ class PatternSourceTest extends TestCase {
 	public function test_the_services_page_has_exactly_one_h1() {
 		$count = 0;
 		foreach ( Artifact_Theme_Files::SERVICES_PAGE_PATTERNS as $slug ) {
+			$count += substr_count( Artifact_Theme_Files::read( 'patterns/' . substr( $slug, strlen( 'artifact/' ) ) . '.php' ), '<h1' );
+		}
+
+		$this->assertSame( 1, $count );
+	}
+
+	public function test_the_about_page_is_offered_as_a_starter_for_new_pages() {
+		$headers = Artifact_Theme_Files::pattern_headers( 'patterns/page-about.php' );
+
+		$this->assertSame( 'core/post-content', $headers['block types'] );
+		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
+		$this->assertContains( 'about', array_map( 'trim', explode( ',', $headers['categories'] ) ) );
+	}
+
+	public function test_the_about_page_composes_its_sections_in_order() {
+		$this->assertSame(
+			Artifact_Theme_Files::ABOUT_PAGE_PATTERNS,
+			Artifact_Theme_Files::referenced_patterns( 'patterns/page-about.php' )
+		);
+	}
+
+	public function test_the_about_page_has_exactly_one_h1() {
+		$count = substr_count( Artifact_Theme_Files::read( 'patterns/page-about.php' ), '<h1' );
+		foreach ( Artifact_Theme_Files::ABOUT_PAGE_PATTERNS as $slug ) {
 			$count += substr_count( Artifact_Theme_Files::read( 'patterns/' . substr( $slug, strlen( 'artifact/' ) ) . '.php' ), '<h1' );
 		}
 

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-25T17:38:07+00:00\n"
+"POT-Creation-Date: 2026-10-25T18:09:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -81,6 +81,44 @@ msgstr ""
 
 #: patterns/about.php:55
 msgid "More about us"
+msgstr ""
+
+#: patterns/brands.php
+msgctxt "Pattern title"
+msgid "Brands"
+msgstr ""
+
+#: patterns/brands.php
+msgctxt "Pattern description"
+msgid "A \"trusted by\" label above a row of client names, then a divider. Swap any name for an Image block with your client's logo."
+msgstr ""
+
+#: patterns/brands.php:12
+msgid "Orbitly"
+msgstr ""
+
+#: patterns/brands.php:13
+msgid "Velora"
+msgstr ""
+
+#: patterns/brands.php:14
+msgid "Lumenix"
+msgstr ""
+
+#: patterns/brands.php:15
+msgid "Goldmere"
+msgstr ""
+
+#: patterns/brands.php:16
+msgid "Zentro"
+msgstr ""
+
+#: patterns/brands.php:17
+msgid "Kyanor"
+msgstr ""
+
+#: patterns/brands.php:23
+msgid "2K brands trust us"
 msgstr ""
 
 #: patterns/features.php
@@ -215,6 +253,81 @@ msgstr ""
 msgid "© 2026 Artifact, All Rights Reserved."
 msgstr ""
 
+#: patterns/fun-facts-grid.php
+msgctxt "Pattern title"
+msgid "Fun facts grid"
+msgstr ""
+
+#: patterns/fun-facts-grid.php
+msgctxt "Pattern description"
+msgid "Five company figures in icon tiles around a team photo."
+msgstr ""
+
+#: patterns/fun-facts-grid.php:15
+msgid "Light bulb"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:16
+msgid "20"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:17
+msgid "Generic Solutions"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:22
+msgid "Calendar"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:23
+msgid "12+"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:24
+#: patterns/fun-facts.php:24
+msgid "Years of Experience"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:29
+msgid "Briefcase"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:30
+msgid "1000"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:31
+msgid "Projects Completed"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:36
+msgid "Smiling face"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:37
+msgid "1M+"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:38
+msgid "Happy Customers"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:44
+msgid "Globe"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:45
+msgid "160+"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:46
+msgid "Countries"
+msgstr ""
+
+#: patterns/fun-facts-grid.php:58
+msgid "Colleagues cheering and clapping around a meeting table"
+msgstr ""
+
 #: patterns/fun-facts.php
 msgctxt "Pattern title"
 msgid "Fun facts"
@@ -222,10 +335,6 @@ msgstr ""
 
 #: patterns/fun-facts.php:21
 msgid "10+"
-msgstr ""
-
-#: patterns/fun-facts.php:24
-msgid "Years of Experience"
 msgstr ""
 
 #: patterns/fun-facts.php:32
@@ -377,6 +486,20 @@ msgstr ""
 msgid "View All"
 msgstr ""
 
+#: patterns/page-about.php
+msgctxt "Pattern title"
+msgid "About page"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern description"
+msgid "An about page: page hero, team photo, client names, values, company figures, team and a call to action. Use it with the Page No Title template."
+msgstr ""
+
+#: patterns/page-about.php:21
+msgid "Three colleagues smiling around a meeting table with a laptop and a tablet"
+msgstr ""
+
 #: patterns/page-hero.php
 msgctxt "Pattern title"
 msgid "Page hero"
@@ -438,35 +561,35 @@ msgid "Outdated code that breaks with each WordPress update."
 msgstr ""
 
 #: patterns/page-service-details.php:31
-msgid "A production-ready block theme with templates, template parts and patterns."
+msgid "A production-ready block theme with every template, template part and pattern your site needs, built to WordPress.org coding standards, tested on current browsers and devices, and ready to install on your live site."
 msgstr ""
 
 #: patterns/page-service-details.php:32
-msgid "A design system in theme.json that matches your brand guidelines."
+msgid "A design system in theme.json that turns your brand guidelines into colours, fonts, spacing and block styles, so every new page your team builds looks consistent without anyone touching code."
 msgstr ""
 
 #: patterns/page-service-details.php:33
-msgid "Documentation and a short training session for the people who edit your site."
+msgid "Clear documentation and a recorded training session that show the people who edit your site how to create pages, reuse patterns and change global styles with confidence from day one."
 msgstr ""
 
 #: patterns/page-service-details.php:34
-msgid "Thirty days of fixes after launch."
+msgid "Thirty days of fixes and adjustments after launch, so anything that comes up once real visitors and real content arrive is handled quickly and at no extra cost to you."
 msgstr ""
 
 #: patterns/page-service-details.php:37
-msgid "Tell us about your site and what is holding it back."
+msgid "Tell us about your site, your audience and what is holding it back today, whether that is slow pages, a theme that is hard to edit or a design that no longer fits your brand."
 msgstr ""
 
 #: patterns/page-service-details.php:38
-msgid "Get a scoped plan, a timeline and a fixed quote within a week."
+msgid "Within a week you get a scoped plan with clear milestones, a realistic timeline and a fixed quote, so you know exactly what you are paying for before any work begins."
 msgstr ""
 
 #: patterns/page-service-details.php:39
-msgid "Review progress on a staging site while we build."
+msgid "Follow progress on a private staging site while we build, share feedback at each milestone, and see your real content in the new theme long before launch day."
 msgstr ""
 
 #: patterns/page-service-details.php:40
-msgid "Launch, then keep improving with one of our support plans."
+msgid "Launch with our team on hand, then keep improving the site with one of our support plans for updates, new patterns, performance checks and help whenever you need it."
 msgstr ""
 
 #: patterns/page-service-details.php:44
@@ -867,6 +990,72 @@ msgstr ""
 
 #: patterns/testimonials.php:66
 msgid "Our client stories"
+msgstr ""
+
+#: patterns/values.php
+msgctxt "Pattern title"
+msgid "Values"
+msgstr ""
+
+#: patterns/values.php
+msgctxt "Pattern description"
+msgid "A heading and introduction beside four values, each with an icon, a title and a short description."
+msgstr ""
+
+#: patterns/values.php:14
+msgid "Route"
+msgstr ""
+
+#: patterns/values.php:15
+msgid "Expertise"
+msgstr ""
+
+#: patterns/values.php:16
+msgid "Years of building WordPress and commerce sites, so we know what works before we write any code."
+msgstr ""
+
+#: patterns/values.php:20
+msgid "Chat"
+msgstr ""
+
+#: patterns/values.php:21
+msgid "Communication"
+msgstr ""
+
+#: patterns/values.php:22
+msgid "Clear updates at every milestone and a real person to talk to whenever a question comes up."
+msgstr ""
+
+#: patterns/values.php:26
+msgid "Thumbs up"
+msgstr ""
+
+#: patterns/values.php:27
+msgid "Reliability"
+msgstr ""
+
+#: patterns/values.php:28
+msgid "Tested, documented work delivered on the date we promised, and supported long after launch."
+msgstr ""
+
+#: patterns/values.php:32
+msgid "Rocket"
+msgstr ""
+
+#: patterns/values.php:33
+msgid "Growth driven"
+msgstr ""
+
+#: patterns/values.php:34
+msgid "Every decision is measured against one goal: more visitors, more leads and more sales for you."
+msgstr ""
+
+#: patterns/values.php:45
+msgid "Our values"
+msgstr ""
+
+#: patterns/values.php:49
+msgid "We are a small team of designers and developers who treat every project as a long partnership. We listen first, explain our choices in plain language and build sites your team can run on its own. Honest timelines, careful work and steady support are how we earn the trust of the businesses we work with."
 msgstr ""
 
 #: patterns/work-process.php
