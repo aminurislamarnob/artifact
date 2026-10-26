@@ -4,6 +4,8 @@ const { test, expect } = require( './utils/test' );
 
 const PRIMARY = 'rgb(255, 72, 1)';
 const WHITE = 'rgb(255, 255, 255)';
+const LIGHT_BG = 'rgb(17, 17, 17)';
+const BORDER = 'rgb(36, 36, 36)';
 
 // Theme buttons are white on the orange accent, a known contrast gap shared
 // by every page, so only other contrast failures count.
@@ -144,13 +146,22 @@ test.describe( 'Contact page with a Contact Form 7 form', () => {
 		expect( submit.y ).toBeGreaterThan( message.y );
 	} );
 
-	test( 'draws fields as underlined lines and the submit as the orange button with an arrow', async ( { page } ) => {
-		const input = field( page, 'first-name' );
-		await expect( input ).toHaveCSS( 'border-top-width', '0px' );
-		await expect( input ).toHaveCSS( 'border-bottom-width', '1px' );
-		await expect( input ).toHaveCSS( 'background-color', 'rgba(0, 0, 0, 0)' );
-		await expect( input ).toHaveCSS( 'color', WHITE );
-		await expect( page.locator( 'main .artifact-contact-form label' ).first() ).toHaveCSS( 'color', WHITE );
+	test( 'draws fields like the blog comment form and the submit as the orange button with an arrow', async ( { page } ) => {
+		const comment = { background: LIGHT_BG, border: BORDER, radius: '12px', padding: '14px 18px', fontSize: '15px' };
+		for ( const name of [ 'first-name', 'your-message' ] ) {
+			const input = field( page, name );
+			await expect( input ).toHaveCSS( 'background-color', comment.background );
+			await expect( input ).toHaveCSS( 'border-top-color', comment.border );
+			await expect( input ).toHaveCSS( 'border-left-width', '1px' );
+			await expect( input ).toHaveCSS( 'border-radius', comment.radius );
+			await expect( input ).toHaveCSS( 'padding', comment.padding );
+			await expect( input ).toHaveCSS( 'font-size', comment.fontSize );
+			await expect( input ).toHaveCSS( 'color', WHITE );
+		}
+		const label = page.locator( 'main .artifact-contact-form label' ).first();
+		await expect( label ).toHaveCSS( 'color', WHITE );
+		await expect( label ).toHaveCSS( 'font-size', '14px' );
+		await expect( label ).toHaveCSS( 'font-weight', '600' );
 
 		const submit = page.locator( 'main .artifact-contact-form .wpcf7-submit' );
 		await expect( submit ).toHaveCSS( 'background-color', PRIMARY );
@@ -158,11 +169,11 @@ test.describe( 'Contact page with a Contact Form 7 form', () => {
 		await expect( submit ).toHaveCSS( 'background-image', /data:image\/svg/ );
 	} );
 
-	test( 'shows a visible focus ring on fields and the button', async ( { page } ) => {
+	test( 'marks the focused field with an orange border, like the comment form, and rings the button', async ( { page } ) => {
 		const input = field( page, 'first-name' );
 		await input.focus();
-		await expect( input ).toHaveCSS( 'outline-style', 'solid' );
-		await expect( input ).toHaveCSS( 'outline-color', PRIMARY );
+		await expect( input ).toHaveCSS( 'border-top-color', PRIMARY );
+		await expect( input ).toHaveCSS( 'border-bottom-color', PRIMARY );
 
 		await page.keyboard.press( 'Tab' );
 		await expect( field( page, 'last-name' ) ).toBeFocused();
@@ -178,7 +189,7 @@ test.describe( 'Contact page with a Contact Form 7 form', () => {
 		const tips = page.locator( 'main .artifact-contact-form .wpcf7-not-valid-tip' );
 		await expect( tips ).toHaveCount( 2 );
 		await expect( tips.first() ).toHaveCSS( 'color', PRIMARY );
-		await expect( field( page, 'your-email' ) ).toHaveCSS( 'border-bottom-color', PRIMARY );
+		await expect( field( page, 'your-email' ) ).toHaveCSS( 'border-top-color', PRIMARY );
 
 		const response = page.locator( 'main .artifact-contact-form .wpcf7-response-output' );
 		await expect( response ).toBeVisible();
