@@ -97,6 +97,10 @@ test.describe( 'Patterns in the block editor', () => {
 		'artifact/footer',
 		'artifact/hidden-404',
 		'artifact/hidden-no-results',
+		'artifact/hidden-blog-heading',
+		'artifact/hidden-archive-heading',
+		'artifact/hidden-similar-posts-heading',
+		'artifact/hidden-search',
 	];
 
 	for ( const slug of slugs ) {

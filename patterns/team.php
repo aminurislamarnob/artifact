@@ -8,7 +8,6 @@
  */
 
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
-$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 $artifact_names = array(
 	__( 'Jacob McDany', 'artifact' ),
 	__( 'Aliah Lane', 'artifact' ),
@@ -44,7 +43,7 @@ foreach ( array( 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ) as $artifact_index => 
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"artifact-button-icon"} -->
-			<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
+			<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -65,7 +64,7 @@ foreach ( array( 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ) as $artifact_index => 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"12px","margin":{"top":"16px"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 			<div class="wp-block-group" style="margin-top:16px">
 				<!-- wp:image {"width":"20px","height":"20px","sizeSlug":"full","linkDestination":"none"} -->
-				<figure class="wp-block-image size-full is-resized"><img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" style="width:20px;height:20px"/></figure>
+				<figure class="wp-block-image size-full is-resized"><img src="<?php echo $artifact_arrow; ?>" alt="" style="width:20px;height:20px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:group {"style":{"spacing":{"blockGap":"4px"}},"layout":{"type":"constrained","justifyContent":"left"}} -->

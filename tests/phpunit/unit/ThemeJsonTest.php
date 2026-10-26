@@ -86,6 +86,25 @@ class ThemeJsonTest extends TestCase {
 		$this->assertStringContainsString( ":not(.page-template-{$template})", $this->json['styles']['css'] );
 	}
 
+	/**
+	 * Theme CSS is scoped to theme classes and the forms it styles, so it
+	 * never restyles every control a plugin prints.
+	 */
+	public function test_form_controls_are_only_restyled_inside_scoped_selectors() {
+		preg_match_all( '/([^{}]+)\{/', $this->json['styles']['css'], $preludes );
+		$bare = array();
+		foreach ( $preludes[1] as $prelude ) {
+			// Split on commas outside parentheses, so :is() lists stay whole.
+			foreach ( preg_split( '/,(?![^(]*\))/', $prelude ) as $selector ) {
+				if ( preg_match( '/^\s*(input|select|textarea)\b/', $selector ) ) {
+					$bare[] = trim( $selector );
+				}
+			}
+		}
+
+		$this->assertSame( array(), $bare, 'Scope form control rules to a theme class or a form the theme styles' );
+	}
+
 	public static function pattern_built_page_templates() {
 		return array(
 			'page-no-title'          => array( 'page-no-title' ),

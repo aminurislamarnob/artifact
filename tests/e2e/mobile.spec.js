@@ -21,7 +21,7 @@ test.describe( 'Mobile (375px)', () => {
 		const header = page.locator( 'header' );
 		await expect( header.getByRole( 'button', { name: 'Open menu' } ) ).toBeVisible();
 		await expect( header.getByRole( 'link', { name: fixtures.menu.labels[ 0 ], exact: true } ) ).toBeHidden();
-		await expect( header.getByRole( 'img', { name: 'Artifact' } ) ).toBeVisible();
+		await expect( header.locator( '.artifact-site-brand a:visible' ).first() ).toBeVisible();
 	} );
 
 	test( 'the menu opens as a dialog with every link, and closes with the close button', async ( {

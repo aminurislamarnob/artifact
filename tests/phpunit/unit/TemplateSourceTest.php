@@ -47,6 +47,22 @@ class TemplateSourceTest extends TestCase {
 	}
 
 	/**
+	 * Text in an HTML template cannot be translated, so it lives in hidden
+	 * patterns instead.
+	 *
+	 * @dataProvider all_templates_and_parts
+	 *
+	 * @param string $file Template or part path.
+	 */
+	public function test_templates_carry_no_text_of_their_own( $file ) {
+		$source = Artifact_Theme_Files::read( $file );
+		$text   = trim( strip_tags( preg_replace( '/<!--.*?-->/s', '', $source ) ) );
+
+		$this->assertSame( '', $text, "{$file} shows untranslatable text; move it to a hidden pattern" );
+		$this->assertDoesNotMatchRegularExpression( '/"(label|buttonText|placeholder|moreText|prefix|suffix)":"[^"]/', $source, "{$file} has untranslatable block text" );
+	}
+
+	/**
 	 * @dataProvider all_templates_and_parts
 	 *
 	 * @param string $file Template or part path.

@@ -9,9 +9,8 @@
 
 $artifact_bg = esc_url( get_parent_theme_file_uri( 'assets/images/cta-bg.png' ) );
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
-$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 $artifact_subtitle = esc_html__( 'Let’s Collaborate', 'artifact' );
-$artifact_title = esc_html__( 'Got A Project? Lets Talk.', 'artifact' );
+$artifact_title = esc_html__( 'Got A Project? Let’s Talk.', 'artifact' );
 $artifact_button = esc_html__( 'Start A Project', 'artifact' );
 ?>
 <!-- wp:group {"align":"full","className":"artifact-cta","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"backgroundColor":"main-bg","layout":{"type":"constrained"}} -->
@@ -33,7 +32,7 @@ $artifact_button = esc_html__( 'Start A Project', 'artifact' );
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"backgroundColor":"main-bg","textColor":"text-white","className":"artifact-button-icon"} -->
-			<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-main-bg-background-color has-text-color has-background wp-element-button" href="#"><?php echo $artifact_button; ?> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
+			<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-main-bg-background-color has-text-color has-background wp-element-button" href="#"><?php echo $artifact_button; ?> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

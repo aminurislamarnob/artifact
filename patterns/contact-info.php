@@ -10,7 +10,7 @@
  * @package Artifact
  */
 
-$artifact_email          = __( 'contact@artifact.dev', 'artifact' );
+$artifact_email          = __( 'contact@example.com', 'artifact' );
 $artifact_phone          = __( '+254 659 546', 'artifact' );
 $artifact_icon_phone     = esc_url( get_parent_theme_file_uri( 'assets/images/icon-phone.svg' ) );
 $artifact_icon_mail      = esc_url( get_parent_theme_file_uri( 'assets/images/icon-mail.svg' ) );

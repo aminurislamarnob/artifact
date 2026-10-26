@@ -9,7 +9,6 @@
 
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-right.svg' ) );
 $artifact_arrow_out = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
-$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 $artifact_copy = __( 'Creates tailored websites to reflect your brand and engage your audience effectively.', 'artifact' );
 $artifact_learn = __( 'Learn More', 'artifact' );
 /* translators: %s: service name. */
@@ -88,7 +87,7 @@ $artifact_services = array(
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"28px"}},"textColor":"text-white","fontSize":"medium-paragraph"} -->
-					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?><span class="screen-reader-text"> <?php echo esc_html( sprintf( $artifact_about, $artifact_service['title'] ) ); ?></span> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
+					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?><span class="screen-reader-text"> <?php echo esc_html( sprintf( $artifact_about, $artifact_service['title'] ) ); ?></span> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -127,7 +126,7 @@ $artifact_services = array(
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"style":{"typography":{"lineHeight":"28px"}},"textColor":"text-white","fontSize":"medium-paragraph"} -->
-					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?><span class="screen-reader-text"> <?php echo esc_html( sprintf( $artifact_about, $artifact_service['title'] ) ); ?></span> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
+					<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?><span class="screen-reader-text"> <?php echo esc_html( sprintf( $artifact_about, $artifact_service['title'] ) ); ?></span> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -142,7 +141,7 @@ $artifact_services = array(
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons">
 		<!-- wp:button {"backgroundColor":"light-bg","textColor":"text-white","className":"artifact-button-icon","style":{"border":{"width":"1px","color":"var:preset|color|border"}},"fontSize":"button-large"} -->
-		<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-light-bg-background-color has-text-color has-background has-border-color has-button-large-font-size has-custom-font-size wp-element-button" href="#" style="border-color:var(--wp--preset--color--border);border-width:1px"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_out; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></div>
+		<div class="wp-block-button artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-light-bg-background-color has-text-color has-background has-border-color has-button-large-font-size has-custom-font-size wp-element-button" href="#" style="border-color:var(--wp--preset--color--border);border-width:1px"><?php echo esc_html__( 'View All', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_out; ?>" alt="" width="24" height="24"/></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

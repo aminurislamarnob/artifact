@@ -9,7 +9,6 @@
  */
 
 $artifact_arrow = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-right.svg' ) );
-$artifact_icon_alt = esc_attr__( 'Arrow', 'artifact' );
 $artifact_learn = __( 'Learn More', 'artifact' );
 /* translators: %s: service name. */
 $artifact_about = __( 'about %s', 'artifact' );
@@ -97,7 +96,7 @@ $artifact_services = array(
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"style":{"typography":{"lineHeight":"28px"}},"textColor":"text-white","fontSize":"medium-paragraph"} -->
-				<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?><span class="screen-reader-text"> <?php echo esc_html( sprintf( $artifact_about, $artifact_service['title'] ) ); ?></span> <img src="<?php echo $artifact_arrow; ?>" alt="<?php echo $artifact_icon_alt; ?>" width="24" height="24"/></a></p>
+				<p class="has-text-white-color has-text-color has-medium-paragraph-font-size" style="line-height:28px"><a class="artifact-service-link" href="#"><?php echo esc_html( $artifact_learn ); ?><span class="screen-reader-text"> <?php echo esc_html( sprintf( $artifact_about, $artifact_service['title'] ) ); ?></span> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

@@ -6,8 +6,9 @@
  */
 
 /**
- * The Contact page is designed for Contact Form 7, so the theme recommends it,
- * and only it, without ever requiring or installing it on its own.
+ * The Contact page is designed for Contact Form 7 and the footer newsletter
+ * for Brevo, so the theme recommends those two, without ever requiring or
+ * installing them on its own.
  */
 class RecommendedPluginsTest extends Artifact_Test_Case {
 
@@ -27,14 +28,16 @@ class RecommendedPluginsTest extends Artifact_Test_Case {
 		$this->assertSame( 10, has_action( 'tgmpa_register', 'artifact_register_recommended_plugins' ) );
 	}
 
-	public function test_contact_form_7_is_the_only_recommended_plugin_and_it_is_optional() {
+	public function test_contact_form_7_and_brevo_are_the_only_recommended_plugins_and_both_are_optional() {
 		artifact_register_recommended_plugins();
 		$plugins = $GLOBALS['tgmpa']->plugins;
 
-		$this->assertSame( array( 'contact-form-7' ), array_keys( $plugins ) );
-		$this->assertSame( 'repo', $plugins['contact-form-7']['source'] );
-		$this->assertFalse( $plugins['contact-form-7']['required'] );
-		$this->assertFalse( $plugins['contact-form-7']['force_activation'] );
+		$this->assertSame( array( 'contact-form-7', 'mailin' ), array_keys( $plugins ) );
+		foreach ( $plugins as $plugin ) {
+			$this->assertSame( 'repo', $plugin['source'] );
+			$this->assertFalse( $plugin['required'] );
+			$this->assertFalse( $plugin['force_activation'] );
+		}
 	}
 
 	public function test_the_recommendation_is_a_dismissable_notice_that_installs_nothing_by_itself() {

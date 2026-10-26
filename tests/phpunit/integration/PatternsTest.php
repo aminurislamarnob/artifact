@@ -102,6 +102,8 @@ class PatternsTest extends Artifact_Test_Case {
 		$html = do_blocks( $this->pattern_markup( $slug ) );
 
 		$this->assertNotSame( '', trim( $html ) );
+		// Social profile links lead to the networks themselves.
+		$html = preg_replace( '#<ul class="wp-block-social-links.*?</ul>#s', '', $html );
 		preg_match_all( '#\b(?:src|href|srcset|action)=["\']([^"\']+)["\']#i', $html, $matches );
 		foreach ( $matches[1] as $url ) {
 			if ( preg_match( '#^(\#|mailto:|tel:)#', $url ) ) {
@@ -134,7 +136,7 @@ class PatternsTest extends Artifact_Test_Case {
 			}
 		}
 
-		// header + footer logos, hero, about, and four team portraits.
+		// Hero, about, team portraits and testimonials.
 		$this->assertGreaterThanOrEqual( 8, $checked );
 	}
 
@@ -210,12 +212,54 @@ class PatternsTest extends Artifact_Test_Case {
 		$this->assertSame( 1, $xpath->query( '//div[contains(@class,"is-style-rounded")]' )->length );
 	}
 
-	public function test_header_links_the_logo_to_the_home_url_and_has_a_navigation() {
+	public function test_header_brands_the_site_with_its_own_title_linking_home_and_has_a_navigation() {
 		$xpath = $this->xpath( do_blocks( $this->pattern_markup( 'artifact/header' ) ) );
 
-		$logo_link = $xpath->query( '//figure[contains(@class,"wp-block-image")]/a' )->item( 0 );
-		$this->assertSame( home_url( '/' ), $logo_link->getAttribute( 'href' ) );
+		$title_link = $xpath->query( '//*[contains(@class,"artifact-site-brand")]//*[contains(@class,"wp-block-site-title")]/a' )->item( 0 );
+		$this->assertNotNull( $title_link, 'Without a site logo the header shows the site title' );
+		$this->assertSame( get_bloginfo( 'name' ), trim( $title_link->textContent ) );
+		$this->assertSame( home_url( '/' ), trailingslashit( $title_link->getAttribute( 'href' ) ) );
+		$this->assertSame( 0, $xpath->query( '//img[contains(@src,"/themes/")]' )->length, 'The header carries no theme brand image' );
 		$this->assertSame( 1, $xpath->query( '//nav[contains(@class,"wp-block-navigation")]' )->length );
+	}
+
+	public function test_header_and_footer_calls_to_action_open_an_email() {
+		foreach ( array( 'artifact/header', 'artifact/footer' ) as $slug ) {
+			$xpath = $this->xpath( do_blocks( $this->pattern_markup( $slug ) ) );
+			$cta   = $xpath->query( '//a[normalize-space()="Start A Project" or normalize-space()="Start a Project"]' )->item( 0 );
+
+			$this->assertNotNull( $cta, "{$slug} has a Start a Project link" );
+			$this->assertStringStartsWith( 'mailto:', $cta->getAttribute( 'href' ) );
+		}
+	}
+
+	public function test_footer_offers_the_feed_instead_of_a_form_that_goes_nowhere() {
+		$xpath = $this->xpath( do_blocks( $this->pattern_markup( 'artifact/footer' ) ) );
+
+		$this->assertSame( 0, $xpath->query( '//form' )->length );
+		$this->assertSame( get_feed_link(), $xpath->query( '//a[normalize-space()="Subscribe via RSS"]' )->item( 0 )->getAttribute( 'href' ) );
+	}
+
+	public function test_footer_links_the_privacy_policy_only_when_the_site_has_one() {
+		$privacy = function () {
+			$xpath = $this->xpath( do_blocks( $this->pattern_markup( 'artifact/footer' ) ) );
+			return $xpath->query( '//a[normalize-space()="Privacy Policy"]' );
+		};
+
+		update_option( 'wp_page_for_privacy_policy', 0 );
+		$this->assertSame( 0, $privacy()->length );
+
+		$page = self::factory()->post->create( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Privacy Policy' ) );
+		update_option( 'wp_page_for_privacy_policy', $page );
+		$this->assertSame( get_permalink( $page ), $privacy()->item( 0 )->getAttribute( 'href' ) );
+	}
+
+	public function test_footer_social_links_point_somewhere_real() {
+		$xpath = $this->xpath( do_blocks( $this->pattern_markup( 'artifact/footer' ) ) );
+
+		foreach ( $xpath->query( '//ul[contains(@class,"wp-block-social-links")]//a' ) as $link ) {
+			$this->assertStringStartsWith( 'https://', $link->getAttribute( 'href' ) );
+		}
 	}
 
 	public function test_footer_contact_links_are_valid_mailto_and_tel_urls() {

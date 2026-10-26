@@ -106,7 +106,9 @@ class ThemeStandardsTest extends TestCase {
 	 * @param string $file Theme-relative path.
 	 */
 	public function test_markup_loads_nothing_from_remote_hosts( $file ) {
-		preg_match_all( '#(?:https?:)?//[a-z0-9.-]+\.[a-z]{2,}[^\s"\'<>)]*#i', Artifact_Theme_Files::read( $file ), $matches );
+		// Social profile links are places to go, not assets the page loads.
+		$source = preg_replace( '#<!-- wp:social-link \{[^}]*\} /-->#', '', Artifact_Theme_Files::read( $file ) );
+		preg_match_all( '#(?:https?:)?//[a-z0-9.-]+\.[a-z]{2,}[^\s"\'<>)]*#i', $source, $matches );
 
 		$this->assertSame( array(), $matches[0], "{$file} references a remote URL" );
 	}

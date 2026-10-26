@@ -23,7 +23,7 @@ composer test:unit        # theme standards, presets, patterns & licensing
 composer test:integration # template hierarchy & rendering
 npm run test:e2e          # Playwright + axe WCAG 2.1 A/AA, keyboard, mobile & editor
 wp theme-check run artifact # Official WordPress.org Theme Check plugin scan
-bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify # Theme Unit Test data audit
+(cd ~/Herd/woocommerce && WP_BASE_URL=https://woocommerce.test bash wp-content/themes/artifact/.agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify) # Theme Unit Test data audit
 ```
 
 ## WordPress.org Compliance Rules
@@ -42,8 +42,9 @@ bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify # Theme 
    - All custom functions and variables must be prefixed with `artifact_`.
 3. **Plugin Territory**:
    - No Custom Post Types (CPTs), taxonomies, custom blocks, or shortcodes in the theme.
-   - Contact forms are plugin territory. Patterns use core blocks only, with no plugin blocks or shortcodes. The Contact page's message panel is a `mailto:` button that site owners swap for a Contact Form 7 block; the theme styles `.wpcf7` output in `theme.json`.
-   - Contact Form 7 is recommended, never required, through TGM Plugin Activation (`inc/tgmpa.php`, `inc/class-tgm-plugin-activation.php`). `functions.php` loads the text domain, requires `inc/tgmpa.php`, and keeps WooCommerce blocks out of the header; nothing else.
+   - Forms are plugin territory. Patterns use core blocks only, with no plugin blocks or shortcodes. The Contact page's message panel is a `mailto:` button that site owners swap for a Contact Form 7 block, and the footer's Subscribe Us column is an RSS feed link they swap for a Brevo Shortcode block; the theme styles `.wpcf7` and `.sib_signup_form` output in `theme.json`.
+   - Templates and parts carry no text; it lives in hidden patterns so it can be translated. The header and footer brand the site with core `site-logo` and `site-title`, never a theme logo.
+   - Contact Form 7 and Brevo are recommended, never required, through TGM Plugin Activation (`inc/tgmpa.php`, `inc/class-tgm-plugin-activation.php`). `functions.php` loads the text domain, requires `inc/tgmpa.php`, and keeps WooCommerce blocks out of the header; nothing else.
    - Block styles belong in `styles/blocks/`. Patterns belong in `patterns/`.
 4. **Branding**:
    - Always spell "WordPress" with a capital "P".

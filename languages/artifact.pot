@@ -9,15 +9,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T05:17:22+00:00\n"
+"POT-Creation-Date: 2026-10-26T09:19:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
 
 #. Theme Name of the theme
 #: style.css
-#: patterns/footer.php:34
-#: patterns/header.php:20
 msgid "Artifact"
 msgstr ""
 
@@ -327,7 +325,7 @@ msgid "No plugins to install, update or activate."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:2638
-#: patterns/services-grid.php:43
+#: patterns/services-grid.php:42
 msgid "Plugin"
 msgstr ""
 
@@ -479,14 +477,14 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/tgmpa.php:38
-msgid "This theme recommends Contact Form 7 for the contact page form."
+#: inc/tgmpa.php:44
+msgid "This theme recommends Contact Form 7 for the contact page form and Brevo for the footer newsletter form."
 msgstr ""
 
 #. translators: 1: plugin name(s).
-#: inc/tgmpa.php:41
+#: inc/tgmpa.php:47
 #, php-format
-msgid "This theme recommends %1$s for the contact page form."
+msgid "This theme recommends this plugin: %1$s."
 msgid_plural "This theme recommends these plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
@@ -496,40 +494,28 @@ msgctxt "Pattern title"
 msgid "About"
 msgstr ""
 
-#: patterns/about.php:12
-#: patterns/footer.php:15
-#: patterns/hero.php:12
-#: patterns/latest-articles.php:11
-#: patterns/project-cta.php:12
-#: patterns/services-grid.php:12
-#: patterns/services.php:12
-#: patterns/team.php:11
-#: patterns/work-process.php:13
-msgid "Arrow"
-msgstr ""
-
-#: patterns/about.php:19
-#: patterns/footer.php:67
+#: patterns/about.php:18
+#: patterns/footer.php:71
 msgid "About Us"
 msgstr ""
 
-#: patterns/about.php:23
+#: patterns/about.php:22
 msgid "We help to accelerate your business growth"
 msgstr ""
 
-#: patterns/about.php:33
+#: patterns/about.php:32
 msgid "Three colleagues reviewing work on a laptop"
 msgstr ""
 
-#: patterns/about.php:43
+#: patterns/about.php:42
 msgid "We develop disruptive solutions for organisations. We’ve built a reputation for excellent clients satisfaction as evidenced by our service."
 msgstr ""
 
-#: patterns/about.php:47
+#: patterns/about.php:46
 msgid "Seamlessly formulate exceptional “outside the box” thinking business e-commerce. Phosfluorescently engage end-to-end platforms before integrated functionalities."
 msgstr ""
 
-#: patterns/about.php:55
+#: patterns/about.php:54
 msgid "More about us"
 msgstr ""
 
@@ -582,12 +568,13 @@ msgid "Contact details, social links and a message panel. Replace the panel's te
 msgstr ""
 
 #: patterns/contact-info.php:13
-#: patterns/footer.php:22
-msgid "contact@artifact.dev"
+#: patterns/footer.php:20
+#: patterns/header.php:12
+msgid "contact@example.com"
 msgstr ""
 
 #: patterns/contact-info.php:14
-#: patterns/footer.php:23
+#: patterns/footer.php:21
 msgid "+254 659 546"
 msgstr ""
 
@@ -604,7 +591,7 @@ msgid "Sunday (Closed)"
 msgstr ""
 
 #: patterns/contact-info.php:48
-#: patterns/footer.php:52
+#: patterns/footer.php:56
 msgid "Dhaka, Bangladesh"
 msgstr ""
 
@@ -613,22 +600,22 @@ msgid "Follow Us"
 msgstr ""
 
 #: patterns/contact-info.php:63
-#: patterns/footer.php:112
+#: patterns/footer.php:119
 msgid "Facebook"
 msgstr ""
 
 #: patterns/contact-info.php:64
-#: patterns/footer.php:109
+#: patterns/footer.php:116
 msgid "X"
 msgstr ""
 
 #: patterns/contact-info.php:65
-#: patterns/footer.php:110
+#: patterns/footer.php:117
 msgid "LinkedIn"
 msgstr ""
 
 #: patterns/contact-info.php:66
-#: patterns/footer.php:111
+#: patterns/footer.php:118
 msgid "Instagram"
 msgstr ""
 
@@ -670,7 +657,7 @@ msgid "24/7 Customer Support for Client Satisfaction."
 msgstr ""
 
 #: patterns/features.php:24
-#: patterns/services-grid.php:67
+#: patterns/services-grid.php:66
 msgid "Support"
 msgstr ""
 
@@ -679,73 +666,68 @@ msgctxt "Pattern title"
 msgid "Footer"
 msgstr ""
 
-#: patterns/footer.php:17
+#: patterns/footer.php:15
 msgid "Email"
 msgstr ""
 
-#: patterns/footer.php:19
+#: patterns/footer.php:17
 msgid "Phone"
 msgstr ""
 
-#: patterns/footer.php:21
+#: patterns/footer.php:19
 #: patterns/page-portfolio-details.php:32
 msgid "Location"
 msgstr ""
 
-#: patterns/footer.php:38
-msgid "Delivering modern software and custom development services worldwide."
-msgstr ""
-
-#: patterns/footer.php:62
-msgid "Site Links"
-msgstr ""
-
-#: patterns/footer.php:65
-msgid "Site links left"
-msgstr ""
-
-#: patterns/footer.php:66
-msgid "Home"
-msgstr ""
-
-#: patterns/footer.php:68
-msgid "Our Services"
-msgstr ""
-
-#: patterns/footer.php:76
-msgid "Explore"
-msgstr ""
-
-#: patterns/footer.php:79
-msgid "Site links right"
-msgstr ""
-
-#: patterns/footer.php:80
-msgid "Start a Project"
-msgstr ""
-
-#: patterns/footer.php:81
+#: patterns/footer.php:23
 msgid "Privacy Policy"
 msgstr ""
 
-#: patterns/footer.php:82
-msgid "Terms & Conditions"
+#: patterns/footer.php:42
+msgid "Delivering modern software and custom development services worldwide."
 msgstr ""
 
-#: patterns/footer.php:90
+#: patterns/footer.php:66
+msgid "Site Links"
+msgstr ""
+
+#: patterns/footer.php:69
+msgid "Site links left"
+msgstr ""
+
+#: patterns/footer.php:70
+msgid "Home"
+msgstr ""
+
+#: patterns/footer.php:72
+msgid "Our Services"
+msgstr ""
+
+#: patterns/footer.php:80
+msgid "Explore"
+msgstr ""
+
+#: patterns/footer.php:83
+msgid "Site links right"
+msgstr ""
+
+#: patterns/footer.php:84
+msgid "Start a Project"
+msgstr ""
+
+#: patterns/footer.php:95
 msgid "Subscribe Us"
 msgstr ""
 
-#: patterns/footer.php:97
-#: patterns/footer.php:98
-msgid "Enter email address..."
+#: patterns/footer.php:101
+msgid "Follow our latest articles in your feed reader."
 msgstr ""
 
-#: patterns/footer.php:99
-msgid "Subscribe"
+#: patterns/footer.php:107
+msgid "Subscribe via RSS"
 msgstr ""
 
-#: patterns/footer.php:125
+#: patterns/footer.php:132
 msgid "© 2026 Artifact, All Rights Reserved."
 msgstr ""
 
@@ -862,13 +844,13 @@ msgctxt "Pattern title"
 msgid "Header"
 msgstr ""
 
-#: patterns/header.php:23
+#: patterns/header.php:26
 msgid "Primary menu"
 msgstr ""
 
-#: patterns/header.php:28
-#: patterns/project-cta.php:15
-#: patterns/work-process.php:100
+#: patterns/header.php:31
+#: patterns/project-cta.php:14
+#: patterns/work-process.php:99
 msgid "Start A Project"
 msgstr ""
 
@@ -882,41 +864,41 @@ msgctxt "Pattern description"
 msgid "Homepage dark hero with headline, supporting copy, and a call to action."
 msgstr ""
 
-#: patterns/hero.php:14
+#: patterns/hero.php:13
 msgid "Sparkle"
 msgstr ""
 
-#: patterns/hero.php:16
+#: patterns/hero.php:15
 msgid "2K+ Successful Projects"
 msgstr ""
 
-#: patterns/hero.php:18
+#: patterns/hero.php:17
 msgid "Product team at a workstation"
 msgstr ""
 
-#: patterns/hero.php:20
+#: patterns/hero.php:19
 msgid "Decorative swirl"
 msgstr ""
 
-#: patterns/hero.php:22
+#: patterns/hero.php:21
 msgid "100% Client Satisfaction"
 msgstr ""
 
-#: patterns/hero.php:24
-#: patterns/work-process.php:24
+#: patterns/hero.php:23
+#: patterns/work-process.php:23
 msgid "How we work"
 msgstr ""
 
-#: patterns/hero.php:33
+#: patterns/hero.php:32
 msgid "Creating<br>Software &amp; Digital Excellence"
 msgstr ""
 
-#: patterns/hero.php:37
+#: patterns/hero.php:36
 msgid "We transform businesses of most major sectors with powerful and adaptable digital solutions."
 msgstr ""
 
-#: patterns/hero.php:43
-msgid "Lets Talk With US"
+#: patterns/hero.php:42
+msgid "Let’s Talk With Us"
 msgstr ""
 
 #: patterns/hidden-404.php
@@ -933,11 +915,40 @@ msgid "The page you are looking for does not exist, or it has been moved. Try a 
 msgstr ""
 
 #: patterns/hidden-404.php:18
+#: patterns/hidden-search.php:10
 msgid "Search"
 msgstr ""
 
 #: patterns/hidden-404.php:18
+#: patterns/hidden-search.php:10
 msgid "Search…"
+msgstr ""
+
+#: patterns/hidden-archive-heading.php
+msgctxt "Pattern title"
+msgid "Archive heading"
+msgstr ""
+
+#: patterns/hidden-archive-heading.php:15
+msgid "Archive"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php
+msgctxt "Pattern title"
+msgid "Blog heading"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:15
+#: patterns/latest-articles.php:23
+msgid "Blog"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:18
+msgid "Our latest articles that might help you"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:25
+msgid "Guides, ideas and lessons from our team on building websites, software and digital products that grow a business."
 msgstr ""
 
 #: patterns/hidden-no-results.php
@@ -947,6 +958,11 @@ msgstr ""
 
 #: patterns/hidden-no-results.php:11
 msgid "No posts were found."
+msgstr ""
+
+#: patterns/hidden-search.php
+msgctxt "Pattern title"
+msgid "Search form"
 msgstr ""
 
 #: patterns/hidden-service-hero.php
@@ -963,22 +979,27 @@ msgstr ""
 msgid "Service Details"
 msgstr ""
 
+#: patterns/hidden-similar-posts-heading.php
+msgctxt "Pattern title"
+msgid "Similar posts heading"
+msgstr ""
+
+#: patterns/hidden-similar-posts-heading.php:11
+msgid "Similar posts"
+msgstr ""
+
 #: patterns/latest-articles.php
 msgctxt "Pattern title"
 msgid "Latest articles"
 msgstr ""
 
-#: patterns/latest-articles.php:24
-msgid "Blog"
-msgstr ""
-
-#: patterns/latest-articles.php:27
+#: patterns/latest-articles.php:26
 msgid "Our latest<br>articles"
 msgstr ""
 
-#: patterns/latest-articles.php:35
-#: patterns/services.php:145
-#: patterns/team.php:47
+#: patterns/latest-articles.php:34
+#: patterns/services.php:144
+#: patterns/team.php:46
 msgid "View All"
 msgstr ""
 
@@ -1319,7 +1340,7 @@ msgid "Seller marketplace for Velora"
 msgstr ""
 
 #: patterns/portfolio-grid.php:23
-#: patterns/services-grid.php:26
+#: patterns/services-grid.php:25
 msgid "Multi-Vendor E-Commerce"
 msgstr ""
 
@@ -1340,7 +1361,7 @@ msgid "VR product launch for Lumenix"
 msgstr ""
 
 #: patterns/portfolio-grid.php:35
-#: patterns/services-grid.php:32
+#: patterns/services-grid.php:31
 msgid "Headless E-Commerce"
 msgstr ""
 
@@ -1353,7 +1374,7 @@ msgid "Online store for Goldmere"
 msgstr ""
 
 #: patterns/portfolio-grid.php:41
-#: patterns/services-grid.php:20
+#: patterns/services-grid.php:19
 msgid "Single-Store E-Commerce"
 msgstr ""
 
@@ -1374,7 +1395,7 @@ msgid "Speed overhaul for Kyanor"
 msgstr ""
 
 #: patterns/portfolio-grid.php:53
-#: patterns/services-grid.php:38
+#: patterns/services-grid.php:37
 msgid "Page Speed Optimization"
 msgstr ""
 
@@ -1387,7 +1408,7 @@ msgid "Mobile shop app for Brightleaf"
 msgstr ""
 
 #: patterns/portfolio-grid.php:59
-#: patterns/services-grid.php:56
+#: patterns/services-grid.php:55
 msgid "E-Commerce Mobile App"
 msgstr ""
 
@@ -1396,12 +1417,12 @@ msgctxt "Pattern title"
 msgid "Project call to action"
 msgstr ""
 
-#: patterns/project-cta.php:13
+#: patterns/project-cta.php:12
 msgid "Let’s Collaborate"
 msgstr ""
 
-#: patterns/project-cta.php:14
-msgid "Got A Project? Lets Talk."
+#: patterns/project-cta.php:13
+msgid "Got A Project? Let’s Talk."
 msgstr ""
 
 #: patterns/services-grid.php
@@ -1414,95 +1435,95 @@ msgctxt "Pattern description"
 msgid "Nine service cards with an icon, a title, a short description and a link."
 msgstr ""
 
-#: patterns/services-grid.php:13
-#: patterns/services.php:14
+#: patterns/services-grid.php:12
+#: patterns/services.php:13
 msgid "Learn More"
 msgstr ""
 
 #. translators: %s: service name.
-#: patterns/services-grid.php:15
-#: patterns/services.php:16
+#: patterns/services-grid.php:14
+#: patterns/services.php:15
 #, php-format
 msgid "about %s"
 msgstr ""
 
-#: patterns/services-grid.php:19
+#: patterns/services-grid.php:18
 msgid "Storefront"
 msgstr ""
 
-#: patterns/services-grid.php:21
+#: patterns/services-grid.php:20
 msgid "Launches a fast, secure online store that turns visitors into loyal, returning customers."
 msgstr ""
 
-#: patterns/services-grid.php:25
+#: patterns/services-grid.php:24
 msgid "Marketplace"
 msgstr ""
 
-#: patterns/services-grid.php:27
+#: patterns/services-grid.php:26
 msgid "Builds marketplaces where many sellers list, sell and get paid from one shared platform."
 msgstr ""
 
-#: patterns/services-grid.php:31
+#: patterns/services-grid.php:30
 msgid "API"
 msgstr ""
 
-#: patterns/services-grid.php:33
+#: patterns/services-grid.php:32
 msgid "Pairs a flexible commerce back end with a fast, custom front end on any channel you need."
 msgstr ""
 
-#: patterns/services-grid.php:37
+#: patterns/services-grid.php:36
 msgid "Speed"
 msgstr ""
 
-#: patterns/services-grid.php:39
+#: patterns/services-grid.php:38
 msgid "Trims load times and improves Core Web Vitals so pages feel instant on every device."
 msgstr ""
 
-#: patterns/services-grid.php:44
+#: patterns/services-grid.php:43
 msgid "WordPress Plugin Development"
 msgstr ""
 
-#: patterns/services-grid.php:45
+#: patterns/services-grid.php:44
 msgid "Writes custom plugins that add exactly the features your site needs, built to last."
 msgstr ""
 
-#: patterns/services-grid.php:49
+#: patterns/services-grid.php:48
 msgid "Theme"
 msgstr ""
 
-#: patterns/services-grid.php:50
+#: patterns/services-grid.php:49
 msgid "WordPress Theme Development"
 msgstr ""
 
-#: patterns/services-grid.php:51
+#: patterns/services-grid.php:50
 msgid "Designs and builds block themes that match your brand and are easy for your team to edit."
 msgstr ""
 
-#: patterns/services-grid.php:55
+#: patterns/services-grid.php:54
 msgid "Mobile app"
 msgstr ""
 
-#: patterns/services-grid.php:57
+#: patterns/services-grid.php:56
 msgid "Brings your store to iOS and Android with apps that stay in sync with your catalogue."
 msgstr ""
 
-#: patterns/services-grid.php:61
+#: patterns/services-grid.php:60
 msgid "Automation"
 msgstr ""
 
-#: patterns/services-grid.php:62
+#: patterns/services-grid.php:61
 msgid "Business Process Automation"
 msgstr ""
 
-#: patterns/services-grid.php:63
+#: patterns/services-grid.php:62
 msgid "Connects your tools and automates repeat tasks so your team can focus on real work."
 msgstr ""
 
-#: patterns/services-grid.php:68
+#: patterns/services-grid.php:67
 msgid "Support & Maintenance"
 msgstr ""
 
-#: patterns/services-grid.php:69
+#: patterns/services-grid.php:68
 msgid "Keeps your site updated, backed up, monitored and secure, with help when you need it."
 msgstr ""
 
@@ -1511,63 +1532,63 @@ msgctxt "Pattern title"
 msgid "Services"
 msgstr ""
 
-#: patterns/services.php:13
+#: patterns/services.php:12
 msgid "Creates tailored websites to reflect your brand and engage your audience effectively."
 msgstr ""
 
-#: patterns/services.php:20
+#: patterns/services.php:19
 msgid "Theme Development & Customization"
 msgstr ""
 
-#: patterns/services.php:21
+#: patterns/services.php:20
 msgid "Theme development"
 msgstr ""
 
-#: patterns/services.php:25
+#: patterns/services.php:24
 msgid "Plugin Development & Customization"
 msgstr ""
 
-#: patterns/services.php:26
+#: patterns/services.php:25
 msgid "Plugin development"
 msgstr ""
 
-#: patterns/services.php:30
+#: patterns/services.php:29
 msgid "E-commerce Development"
 msgstr ""
 
-#: patterns/services.php:31
+#: patterns/services.php:30
 msgid "E-commerce"
 msgstr ""
 
-#: patterns/services.php:35
+#: patterns/services.php:34
 msgid "Custom WordPress Development"
 msgstr ""
 
-#: patterns/services.php:36
+#: patterns/services.php:35
 msgid "WordPress"
 msgstr ""
 
-#: patterns/services.php:40
+#: patterns/services.php:39
 msgid "Custom APIS & Integration"
 msgstr ""
 
-#: patterns/services.php:41
+#: patterns/services.php:40
 msgid "APIs"
 msgstr ""
 
-#: patterns/services.php:45
+#: patterns/services.php:44
 msgid "Website Security & Performance"
 msgstr ""
 
-#: patterns/services.php:46
+#: patterns/services.php:45
 msgid "Security"
 msgstr ""
 
-#: patterns/services.php:55
+#: patterns/services.php:54
 msgid "Services"
 msgstr ""
 
-#: patterns/services.php:59
+#: patterns/services.php:58
 msgid "Top notch digital services"
 msgstr ""
 
@@ -1576,31 +1597,31 @@ msgctxt "Pattern title"
 msgid "Team"
 msgstr ""
 
-#: patterns/team.php:13
+#: patterns/team.php:12
 msgid "Jacob McDany"
 msgstr ""
 
-#: patterns/team.php:14
+#: patterns/team.php:13
 msgid "Aliah Lane"
 msgstr ""
 
-#: patterns/team.php:15
+#: patterns/team.php:14
 msgid "Loki Bright"
 msgstr ""
 
-#: patterns/team.php:16
+#: patterns/team.php:15
 msgid "Rosalee Melvin"
 msgstr ""
 
-#: patterns/team.php:18
+#: patterns/team.php:17
 msgid "CEO of Rackspace"
 msgstr ""
 
-#: patterns/team.php:36
+#: patterns/team.php:35
 msgid "Team Member"
 msgstr ""
 
-#: patterns/team.php:39
+#: patterns/team.php:38
 msgid "Meet our<br>expert team"
 msgstr ""
 
@@ -1788,35 +1809,35 @@ msgctxt "Pattern title"
 msgid "Work process"
 msgstr ""
 
-#: patterns/work-process.php:20
+#: patterns/work-process.php:19
 msgid "Work Process"
 msgstr ""
 
-#: patterns/work-process.php:38
+#: patterns/work-process.php:37
 msgid "Submit a proposal for your awesome project."
 msgstr ""
 
-#: patterns/work-process.php:44
-#: patterns/work-process.php:64
-#: patterns/work-process.php:84
+#: patterns/work-process.php:43
+#: patterns/work-process.php:63
+#: patterns/work-process.php:83
 msgid "Get your thoughts to paper faster with our step-by-step AI copywriter. Get your thoughts to paper faster with our step-by-step AI copywriter."
 msgstr ""
 
-#: patterns/work-process.php:48
-#: patterns/work-process.php:68
-#: patterns/work-process.php:88
+#: patterns/work-process.php:47
+#: patterns/work-process.php:67
+#: patterns/work-process.php:87
 msgid "Get Started"
 msgstr ""
 
-#: patterns/work-process.php:58
+#: patterns/work-process.php:57
 msgid "Our expert developer team is ready to do all."
 msgstr ""
 
-#: patterns/work-process.php:78
+#: patterns/work-process.php:77
 msgid "Get full support from us through the project."
 msgstr ""
 
-#: patterns/work-process.php:110
+#: patterns/work-process.php:109
 msgid "Laptop, notebook, and coffee on a desk"
 msgstr ""
 

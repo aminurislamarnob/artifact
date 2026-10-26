@@ -74,7 +74,7 @@ test.describe( 'Homepage', () => {
 		fixtures,
 	} ) => {
 		const header = page.locator( 'header' );
-		await expect( header.getByRole( 'img', { name: 'Artifact' } ) ).toBeVisible();
+		await expect( header.locator( '.artifact-site-brand a:visible' ).first() ).toBeVisible();
 
 		const nav = header.getByRole( 'navigation', { name: 'Primary menu' } );
 		for ( const label of fixtures.menu.labels ) {
@@ -103,9 +103,9 @@ test.describe( 'Homepage', () => {
 		expect( ( await button.boundingBox() ).height ).toBe( oneLine );
 	} );
 
-	test( 'the logo links back to the home page', async ( { page, fixtures } ) => {
+	test( 'the site logo, or the site title without one, links back to the home page', async ( { page, fixtures } ) => {
 		await page.goto( fixtures.post.url );
-		await page.locator( 'header' ).getByRole( 'link', { name: 'Artifact' } ).click();
+		await page.locator( 'header .artifact-site-brand a:visible' ).first().click();
 
 		await expect( page ).toHaveURL( /\/$/ );
 		await expect( page.getByRole( 'heading', { level: 1 } ) ).toContainText( 'Creating' );
@@ -132,7 +132,7 @@ test.describe( 'Homepage', () => {
 	} ) => {
 		const footer = page.locator( 'footer' );
 
-		await expect( footer.locator( 'a[href^="mailto:"]' ) ).toHaveAttribute(
+		await expect( footer.locator( '.artifact-footer-contact a[href^="mailto:"]' ) ).toHaveAttribute(
 			'href',
 			/^mailto:[^@\s]+@[^@\s]+\.[a-z]+$/i
 		);
@@ -141,6 +141,33 @@ test.describe( 'Homepage', () => {
 		for ( const network of [ 'Facebook', 'X', 'LinkedIn', 'Instagram' ] ) {
 			await expect( footer.getByRole( 'link', { name: network, exact: true } ) ).toBeVisible();
 		}
+	} );
+
+	test( 'the footer newsletter is a Brevo form styled like the theme, or a feed link without Brevo', async ( {
+		page,
+	} ) => {
+		const column = page.locator( 'footer .artifact-footer-newsletter' );
+		await expect( column.locator( 'form:not(.sib_signup_form)' ) ).toHaveCount( 0 );
+
+		const brevo = column.locator( '.sib_signup_form' );
+		if ( ! ( await brevo.count() ) ) {
+			await expect( column.getByRole( 'link', { name: 'Subscribe via RSS' } ) ).toHaveAttribute( 'href', /feed/ );
+			return;
+		}
+
+		const email = brevo.locator( 'input[type=email]' );
+		const submit = brevo.locator( 'input[type=submit]' );
+		await expect( email ).toHaveCSS( 'background-color', 'rgb(17, 17, 17)' );
+		await expect( email ).toHaveCSS( 'border-radius', '12px' );
+		await expect( submit ).toHaveCSS( 'background-color', 'rgb(255, 72, 1)' );
+		await expect( submit ).toHaveCSS( 'background-image', /data:image\/svg/ );
+		await expect( submit ).toHaveAccessibleName( /\S/ );
+
+		const field = await email.boundingBox();
+		const button = await submit.boundingBox();
+		expect( Math.round( button.height ) ).toBe( Math.round( field.height ) );
+		expect( Math.round( button.y ) ).toBe( Math.round( field.y ) );
+		expect( button.x ).toBeGreaterThan( field.x + field.width );
 	} );
 
 	test( 'every image on the page is bundled and actually loads', async ( {
@@ -162,7 +189,11 @@ test.describe( 'Homepage', () => {
 		);
 		expect( images.length ).toBeGreaterThanOrEqual( 8 );
 		for ( const image of images ) {
-			expect( image.alt, `${ image.src } has alt text` ).toBeTruthy();
+			expect( image.alt, `${ image.src } has an alt attribute` ).not.toBeNull();
+			// Icons beside text are decorative; photos and artwork need a description.
+			if ( ! /\/icon-[^/]+\.svg$/.test( image.src ) ) {
+				expect( image.alt, `${ image.src } has alt text` ).toBeTruthy();
+			}
 		}
 
 		await expect
@@ -185,6 +216,10 @@ test.describe( 'Homepage', () => {
 
 		// Author avatars come from core's avatar block and Gravatar, not the theme.
 		hosts.delete( 'secure.gravatar.com' );
+		// Brevo, when active for the footer newsletter, loads its own tracking and push scripts.
+		for ( const host of [ 'in-automate.brevo.com', 'cdn.brevo.com', 'cdn.by.wonderpush.com', 'sibautomation.com' ] ) {
+			hosts.delete( host );
+		}
 		expect( [ ...hosts ] ).toEqual( [ new URL( baseURL ).host ] );
 	} );
 } );
@@ -234,7 +269,7 @@ test.describe( 'Homepage design tokens', () => {
 	} );
 
 	test( 'links are white and turn orange on hover', async ( { page } ) => {
-		const link = page.locator( 'footer a[href^="mailto:"]' );
+		const link = page.locator( 'footer .artifact-footer-contact a[href^="mailto:"]' );
 		expect( await link.evaluate( ( node ) => getComputedStyle( node ).color ) ).toBe( 'rgb(255, 255, 255)' );
 
 		await link.hover();
