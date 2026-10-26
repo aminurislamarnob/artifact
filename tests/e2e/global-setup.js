@@ -155,6 +155,80 @@ module.exports = async function globalSetup( config ) {
 		] )
 	);
 
+	// The Contact page, built from its starter pattern with the mailto panel.
+	const contactTitle = `Artifact E2E Contact ${ RUN }`;
+	const contactId = Number(
+		wp( [
+			'post',
+			'create',
+			'--post_type=page',
+			'--post_status=publish',
+			`--post_title=${ contactTitle }`,
+			'--page_template=page-no-title',
+			`--post_content=${ wpEval(
+				"echo WP_Block_Patterns_Registry::get_instance()->get_registered( 'artifact/page-contact' )['content'];"
+			) }`,
+			'--porcelain',
+		] )
+	);
+
+	// With Contact Form 7 active, a second Contact page whose message panel
+	// holds a CF7 form, the way the readme tells site owners to set it up.
+	// WP-CLI runs without plugins, so the form is stored as CF7 stores it.
+	let contactForm = null;
+	if ( wp( [ 'option', 'get', 'active_plugins', '--format=json' ] ).includes( 'wp-contact-form-7.php' ) ) {
+		const formTitle = `Artifact E2E form ${ RUN }`;
+		const formId = Number(
+			wp( [
+				'post',
+				'create',
+				'--post_type=wpcf7_contact_form',
+				'--post_status=publish',
+				`--post_title=${ formTitle }`,
+				'--porcelain',
+			] )
+		);
+		wp( [
+			'post',
+			'meta',
+			'update',
+			String( formId ),
+			'_form',
+			[
+				'<label> First Name [text first-name placeholder "Enter first name"] </label>',
+				'<label> Last Name [text last-name placeholder "Enter last name"] </label>',
+				'<label> Company Name [text company-name placeholder "Your company"] </label>',
+				'<label> Email [email* your-email placeholder "Enter email"] </label>',
+				'<label> Your Message [textarea* your-message placeholder "Tell us about your idea"] </label>',
+				'[submit "Send Inquiry"]',
+			].join( '\n\n' ),
+		] );
+
+		const formPageTitle = `Artifact E2E Contact Form ${ RUN }`;
+		const formPageId = Number(
+			wp( [
+				'post',
+				'create',
+				'--post_type=page',
+				'--post_status=publish',
+				`--post_title=${ formPageTitle }`,
+				'--page_template=page-no-title',
+				`--post_content=${ wpEval( `
+					$registry = WP_Block_Patterns_Registry::get_instance();
+					$block    = '<!-- wp:contact-form-7/contact-form-selector {"id":${ formId },"title":"${ formTitle }"} --><div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="${ formId }" title="${ formTitle }"]</div><!-- /wp:contact-form-7/contact-form-selector -->';
+					$panel    = preg_replace( '/(<!-- \\/wp:heading -->\\s*)<!-- wp:paragraph.*?<!-- \\/wp:buttons -->/s', '$1' . $block, $registry->get_registered( 'artifact/contact-info' )['content'], 1 );
+					if ( false === strpos( $panel, 'wp:contact-form-7' ) ) {
+						fwrite( STDERR, 'The contact-info panel markup changed; update the CF7 fixture in global-setup.js.' );
+						exit( 1 );
+					}
+					echo str_replace( '<!-- wp:pattern {"slug":"artifact/contact-info"} /-->', $panel, $registry->get_registered( 'artifact/page-contact' )['content'] );
+				` ) }`,
+				'--porcelain',
+			] )
+		);
+		contactForm = { id: formPageId, formId, title: formPageTitle, url: '' };
+	}
+
 	const permalink = ( id ) =>
 		wp( [ 'eval', `echo get_permalink( ${ id } );` ] );
 
@@ -175,7 +249,7 @@ module.exports = async function globalSetup( config ) {
 			'--post_type=wp_navigation',
 			'--post_status=publish',
 			`--post_title=Artifact E2E menu ${ RUN }`,
-			`--post_content=${ menuLink( 'About', aboutId ) }${ menuLink( 'Services', servicesId ) }${ menuLink( 'Portfolio', portfolioId ) }`,
+			`--post_content=${ menuLink( 'About', aboutId ) }${ menuLink( 'Services', servicesId ) }${ menuLink( 'Portfolio', portfolioId ) }${ menuLink( 'Contact', contactId ) }`,
 			'--porcelain',
 		] )
 	);
@@ -232,7 +306,13 @@ module.exports = async function globalSetup( config ) {
 			title: projectTitle,
 			url: permalink( projectId ),
 		},
-		menu: { id: menuId, labels: [ 'About', 'Services', 'Portfolio' ] },
+		contact: {
+			id: contactId,
+			title: contactTitle,
+			url: permalink( contactId ),
+		},
+		contactForm: contactForm && { ...contactForm, url: permalink( contactForm.id ) },
+		menu: { id: menuId, labels: [ 'About', 'Services', 'Portfolio', 'Contact' ] },
 		category: {
 			id: categoryId,
 			name: categoryInfo.name,

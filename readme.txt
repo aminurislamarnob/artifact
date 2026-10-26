@@ -22,6 +22,17 @@ The theme uses self-hosted Poppins (WOFF2), tokens in theme.json, and PHP block 
 3. Click Install Now, then Activate.
 4. Open Appearance → Editor to customise templates, parts, and styles.
 
+== Recommended plugins ==
+
+Artifact works fully without plugins. Its Contact page pattern is designed for Contact Form 7 (https://wordpress.org/plugins/contact-form-7/), which the theme recommends in a dismissable admin notice and under Appearance → Install Plugins. Installing it is optional.
+
+To take messages on the Contact page:
+
+1. Install and activate Contact Form 7, then create a form under Contact → Contact Forms.
+2. Edit your Contact page. In the message panel, keep the "Send us a message" heading, remove the paragraph under it and the "Send Inquiry" button, and add a Contact Form 7 block for your form in their place.
+
+The theme styles Contact Form 7 forms everywhere, and lays them out in two columns inside the message panel. Fields holding a message box or the submit button span both columns.
+
 == Changelog ==
 
 = 1.0.0 =
@@ -53,6 +64,14 @@ License: SIL Open Font License, Version 1.1 (https://openfontlicense.org)
 License file: assets/fonts/OFL.txt
 Files: assets/fonts/Poppins-Regular.woff2, Poppins-Medium.woff2, Poppins-SemiBold.woff2, Poppins-Bold.woff2
 
+= Code =
+
+TGM Plugin Activation
+Copyright Thomas Griffin, Gary Jones, Juliette Reinders Folmer
+Source: http://tgmpluginactivation.com/
+License: GPL-2.0-or-later (https://www.gnu.org/licenses/gpl-2.0.html)
+Files: inc/class-tgm-plugin-activation.php (version 2.6.1, text domain set to artifact)
+
 = Images =
 
 logo.svg, artifact-logo.svg
@@ -62,7 +81,7 @@ Material Symbols
 Copyright Google LLC
 Source: https://fonts.google.com/icons
 License: Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
-Files: icon-arrow-outward.svg (arrow_outward), icon-arrow-right.svg (arrow_forward), icon-service-theme.svg (palette), icon-service-plugin.svg (extension), icon-service-commerce.svg (shopping_cart), icon-service-wordpress.svg (web), icon-service-api.svg (api), icon-service-security.svg (shield_lock), icon-service-single-store.svg (storefront), icon-service-multi-vendor.svg (store), icon-service-speed.svg (speed), icon-service-mobile-app.svg (phone_iphone), icon-service-automation.svg (account_tree), icon-service-support.svg (support_agent), icon-feature-care.svg (volunteer_activism), icon-feature-team.svg (groups), icon-feature-support.svg (support_agent), icon-mail.svg (mail), icon-phone.svg (call), icon-location.svg (location_on), icon-value-expertise.svg (route), icon-value-communication.svg (chat), icon-value-reliability.svg (thumb_up), icon-value-growth.svg (rocket_launch), icon-fact-solutions.svg (lightbulb), icon-fact-experience.svg (calendar_month), icon-fact-projects.svg (work), icon-fact-customers.svg (sentiment_satisfied), icon-fact-countries.svg (public), stars-rating.svg (star, filled)
+Files: icon-arrow-outward.svg (arrow_outward, also inlined in theme.json as the Contact Form 7 submit arrow), icon-arrow-right.svg (arrow_forward), icon-service-theme.svg (palette), icon-service-plugin.svg (extension), icon-service-commerce.svg (shopping_cart), icon-service-wordpress.svg (web), icon-service-api.svg (api), icon-service-security.svg (shield_lock), icon-service-single-store.svg (storefront), icon-service-multi-vendor.svg (store), icon-service-speed.svg (speed), icon-service-mobile-app.svg (phone_iphone), icon-service-automation.svg (account_tree), icon-service-support.svg (support_agent), icon-feature-care.svg (volunteer_activism), icon-feature-team.svg (groups), icon-feature-support.svg (support_agent), icon-mail.svg (mail), icon-phone.svg (call), icon-location.svg (location_on), icon-schedule.svg (schedule), icon-value-expertise.svg (route), icon-value-communication.svg (chat), icon-value-reliability.svg (thumb_up), icon-value-growth.svg (rocket_launch), icon-fact-solutions.svg (lightbulb), icon-fact-experience.svg (calendar_month), icon-fact-projects.svg (work), icon-fact-customers.svg (sentiment_satisfied), icon-fact-countries.svg (public), stars-rating.svg (star, filled)
 
 StockSnap
 License: CC0 1.0 Universal, public domain dedication (https://stocksnap.io/license)

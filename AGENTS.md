@@ -8,7 +8,7 @@ Instructions and guidelines for AI coding agents operating on the **Artifact** W
 - **Requirements**: WordPress 6.9+, PHP 7.4+.
 - **Configuration**: `theme.json` (schema v3).
 - **Text Domain**: `artifact`, domain path `/languages`.
-- **Design**: Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark (node `9100:115184`) Services list page (node `9153:182157`), Service Details page (node `9153:182446`), About page (node `9146:115186`), Portfolio page (node `4300:79702`) and Portfolio Details page (node `4307:127482`), built dark although those two frames are light. Other pages wait for their frames.
+- **Design**: Figma `rhXpPSv3HxiGpTiN733snB`, Homepage dark (node `9100:115184`) Services list page (node `9153:182157`), Service Details page (node `9153:182446`), About page (node `9146:115186`), Portfolio page (node `4300:79702`), Portfolio Details page (node `4307:127482`) and Contact page (node `4292:66454`), built dark although those three frames are light. Other pages wait for their frames.
 - **Pages**: non-front pages ship as starter page patterns plus a custom template (`page-no-title`, `page-service-details` for each service, a child page of Services, or `page-portfolio-details` for each project, a child page of Portfolio), not as slug templates. Template text lives in hidden patterns.
 
 ## Local Theme Review Agent
@@ -42,6 +42,8 @@ bash .agents/skills/wp-theme-reviewer/scripts/theme-unit-test.sh verify # Theme 
    - All custom functions and variables must be prefixed with `artifact_`.
 3. **Plugin Territory**:
    - No Custom Post Types (CPTs), taxonomies, custom blocks, or shortcodes in the theme.
+   - Contact forms are plugin territory. Patterns use core blocks only, with no plugin blocks or shortcodes. The Contact page's message panel is a `mailto:` button that site owners swap for a Contact Form 7 block; the theme styles `.wpcf7` output in `theme.json`.
+   - Contact Form 7 is recommended, never required, through TGM Plugin Activation (`inc/tgmpa.php`, `inc/class-tgm-plugin-activation.php`). `functions.php` loads the text domain, requires `inc/tgmpa.php`, and keeps WooCommerce blocks out of the header; nothing else.
    - Block styles belong in `styles/blocks/`. Patterns belong in `patterns/`.
 4. **Branding**:
    - Always spell "WordPress" with a capital "P".

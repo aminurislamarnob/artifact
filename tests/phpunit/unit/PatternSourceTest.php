@@ -21,6 +21,7 @@ class PatternSourceTest extends TestCase {
 					Artifact_Theme_Files::SERVICES_PAGE_PATTERNS,
 					Artifact_Theme_Files::ABOUT_PAGE_PATTERNS,
 					Artifact_Theme_Files::PORTFOLIO_PAGE_PATTERNS,
+					Artifact_Theme_Files::CONTACT_PAGE_PATTERNS,
 					Artifact_Theme_Files::PAGE_PATTERNS,
 					Artifact_Theme_Files::HIDDEN_PATTERNS
 				)
@@ -144,6 +145,47 @@ class PatternSourceTest extends TestCase {
 		$this->assertStringNotContainsString( '<h1', $source );
 	}
 
+	public function test_the_contact_page_is_offered_as_a_starter_for_new_pages() {
+		$headers = Artifact_Theme_Files::pattern_headers( 'patterns/page-contact.php' );
+
+		$this->assertSame( 'core/post-content', $headers['block types'] );
+		$this->assertContains( 'page', array_map( 'trim', explode( ',', $headers['post types'] ) ) );
+		$this->assertContains( 'contact', array_map( 'trim', explode( ',', $headers['categories'] ) ) );
+	}
+
+	public function test_the_contact_page_composes_its_sections_in_order() {
+		$this->assertSame(
+			Artifact_Theme_Files::CONTACT_PAGE_PATTERNS,
+			Artifact_Theme_Files::referenced_patterns( 'patterns/page-contact.php' )
+		);
+	}
+
+	/**
+	 * The Contact hero labels the page with its title and carries the only H1.
+	 */
+	public function test_the_contact_page_has_exactly_one_h1_after_the_page_title_label() {
+		$source = Artifact_Theme_Files::read( 'patterns/page-contact.php' );
+		$count  = substr_count( $source, '<h1' );
+		foreach ( Artifact_Theme_Files::CONTACT_PAGE_PATTERNS as $slug ) {
+			$count += substr_count( Artifact_Theme_Files::read( 'patterns/' . substr( $slug, strlen( 'artifact/' ) ) . '.php' ), '<h1' );
+		}
+
+		$this->assertSame( 1, $count );
+		$this->assertStringContainsString( '<!-- wp:post-title {"level":0', $source );
+	}
+
+	/**
+	 * Contact forms are plugin territory, and a form plugin's block or
+	 * shortcode only works on the site that made the form. The message panel
+	 * ships a mailto button that works without any plugin.
+	 */
+	public function test_the_contact_message_panel_works_without_a_form_plugin() {
+		$source = Artifact_Theme_Files::read( 'patterns/contact-info.php' );
+
+		$this->assertStringNotContainsString( '<form', $source );
+		$this->assertMatchesRegularExpression( '/<a class="wp-block-button__link[^"]*" href="<\?php echo esc_url\( \'mailto:/', $source );
+	}
+
 	public function test_the_page_hero_label_is_the_page_title_rendered_as_a_paragraph() {
 		$this->assertStringContainsString( '<!-- wp:post-title {"level":0', Artifact_Theme_Files::read( 'patterns/page-hero.php' ) );
 	}
@@ -188,6 +230,23 @@ class PatternSourceTest extends TestCase {
 			'services'      => array( 'patterns/services.php' ),
 			'page-service-details' => array( 'patterns/page-service-details.php' ),
 		);
+	}
+
+	/**
+	 * Patterns must work on any site, so they use core blocks only: no
+	 * plugin blocks and no shortcodes, which print as raw text when the
+	 * plugin is missing.
+	 *
+	 * @dataProvider pattern_files
+	 *
+	 * @param string $file Pattern path.
+	 */
+	public function test_patterns_use_only_core_blocks_and_no_shortcodes( $file ) {
+		$source = Artifact_Theme_Files::read( $file );
+
+		preg_match_all( '/<!-- \/?wp:([a-z0-9-]+)\//', $source, $namespaced );
+		$this->assertSame( array(), array_diff( array_unique( $namespaced[1] ), array( 'core' ) ), "{$file} uses a plugin block" );
+		$this->assertDoesNotMatchRegularExpression( '/\[[a-z][a-z0-9_-]*(\s[^\]]*)?\]/', preg_replace( '/<\?php.*?\?>/s', '', $source ), "{$file} uses a shortcode" );
 	}
 
 	/**

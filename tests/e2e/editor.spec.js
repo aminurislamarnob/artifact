@@ -91,6 +91,8 @@ test.describe( 'Patterns in the block editor', () => {
 		'artifact/testimonials',
 		'artifact/latest-articles',
 		'artifact/project-cta',
+		'artifact/contact-info',
+		'artifact/page-contact',
 		'artifact/header',
 		'artifact/footer',
 		'artifact/hidden-404',

@@ -14,6 +14,8 @@ const AUTH_FILE = path.join( __dirname, '..', '.auth', 'admin.json' );
  * @property {{id:number,title:string,url:string}}             about    Page built from the About starter pattern.
  * @property {{id:number,title:string,url:string}}             portfolio Page built from the Portfolio starter pattern.
  * @property {{id:number,title:string,url:string}}             project  Child of portfolio using the Portfolio Details template.
+ * @property {{id:number,title:string,url:string}}             contact  Page built from the Contact starter pattern.
+ * @property {?{id:number,formId:number,title:string,url:string}} contactForm Contact page with a Contact Form 7 form in its panel; null when CF7 is inactive.
  * @property {{id:number,labels:string[]}}                       menu   Newest saved menu, so the header shows these labels.
  * @property {{id:number,name:string,slug:string,url:string}}  category Category the post belongs to.
  * @property {{login:string,password:string,id:number}}        admin  Administrator created for the run.

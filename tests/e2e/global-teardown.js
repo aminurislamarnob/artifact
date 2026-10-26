@@ -13,8 +13,11 @@ module.exports = async function globalTeardown() {
 	const fixtures = JSON.parse( fs.readFileSync( FIXTURE_FILE, 'utf8' ) );
 
 	// Deleting a post also deletes the comments the specs left on it.
-	for ( const id of [ fixtures.post.id, fixtures.page.id, fixtures.service.id, fixtures.services.id, fixtures.about.id, fixtures.project.id, fixtures.portfolio.id, fixtures.menu.id ] ) {
+	for ( const id of [ fixtures.post.id, fixtures.page.id, fixtures.service.id, fixtures.services.id, fixtures.about.id, fixtures.project.id, fixtures.portfolio.id, fixtures.contact.id, fixtures.menu.id ] ) {
 		wp( [ 'post', 'delete', String( id ), '--force' ] );
+	}
+	if ( fixtures.contactForm ) {
+		wp( [ 'post', 'delete', String( fixtures.contactForm.id ), String( fixtures.contactForm.formId ), '--force' ] );
 	}
 	wp( [ 'term', 'delete', 'category', String( fixtures.category.id ) ] );
 	wp( [ 'user', 'delete', String( fixtures.admin.id ), '--yes' ] );

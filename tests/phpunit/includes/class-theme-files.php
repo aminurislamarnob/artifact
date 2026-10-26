@@ -66,9 +66,18 @@ final class Artifact_Theme_Files {
 	);
 
 	/**
+	 * Sections of the Contact starter page, in page order. Its hero copy is
+	 * contact-specific, so it lives in the starter pattern itself.
+	 */
+	const CONTACT_PAGE_PATTERNS = array(
+		'artifact/contact-info',
+		'artifact/project-cta',
+	);
+
+	/**
 	 * Full-page starter patterns offered when a page is created.
 	 */
-	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details', 'artifact/page-about', 'artifact/page-portfolio', 'artifact/page-portfolio-details' );
+	const PAGE_PATTERNS = array( 'artifact/page-services', 'artifact/page-service-details', 'artifact/page-about', 'artifact/page-portfolio', 'artifact/page-portfolio-details', 'artifact/page-contact' );
 
 	/**
 	 * Theme root, without a trailing slash.
