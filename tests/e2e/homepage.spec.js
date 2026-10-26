@@ -190,8 +190,8 @@ test.describe( 'Homepage', () => {
 		expect( images.length ).toBeGreaterThanOrEqual( 8 );
 		for ( const image of images ) {
 			expect( image.alt, `${ image.src } has an alt attribute` ).not.toBeNull();
-			// Icons beside text are decorative; photos and artwork need a description.
-			if ( ! /\/icon-[^/]+\.svg$/.test( image.src ) ) {
+			// Icons and ornaments are decorative; photos and artwork need a description.
+			if ( ! /\/(icon-[^/]+|hero-sparkle|hero-vector-pink)\.svg$/.test( image.src ) ) {
 				expect( image.alt, `${ image.src } has alt text` ).toBeTruthy();
 			}
 		}

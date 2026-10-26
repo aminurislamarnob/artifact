@@ -44,7 +44,7 @@ $artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"textColor":"text-white"} -->
-						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="" width="16" height="16"/></a></p>
+						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?><span class="screen-reader-text"> <?php echo esc_html__( 'with your proposal', 'artifact' ); ?></span> <img src="<?php echo $artifact_arrow_right; ?>" alt="" width="16" height="16"/></a></p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:accordion-panel -->
@@ -64,7 +64,7 @@ $artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"textColor":"text-white"} -->
-						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="" width="16" height="16"/></a></p>
+						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?><span class="screen-reader-text"> <?php echo esc_html__( 'with our development team', 'artifact' ); ?></span> <img src="<?php echo $artifact_arrow_right; ?>" alt="" width="16" height="16"/></a></p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:accordion-panel -->
@@ -84,7 +84,7 @@ $artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-
 						<!-- /wp:paragraph -->
 
 						<!-- wp:paragraph {"textColor":"text-white"} -->
-						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?> <img src="<?php echo $artifact_arrow_right; ?>" alt="" width="16" height="16"/></a></p>
+						<p class="has-text-white-color has-text-color"><a href="#"><?php echo esc_html__( 'Get Started', 'artifact' ); ?><span class="screen-reader-text"> <?php echo esc_html__( 'with project support', 'artifact' ); ?></span> <img src="<?php echo $artifact_arrow_right; ?>" alt="" width="16" height="16"/></a></p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:accordion-panel -->
@@ -106,7 +106,7 @@ $artifact_arrow_right = esc_url( get_parent_theme_file_uri( 'assets/images/icon-
 		<!-- wp:column {"width":"58%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%">
 			<!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"24px"}}} -->
-			<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo $artifact_desk; ?>" alt="<?php echo esc_attr__( 'Laptop, notebook, and coffee on a desk', 'artifact' ); ?>" style="border-radius:24px"/></figure>
+			<figure class="wp-block-image size-full has-custom-border"><img src="<?php echo $artifact_desk; ?>" alt="<?php echo esc_attr__( 'Developer coding on a laptop beside a coffee and a phone', 'artifact' ); ?>" style="border-radius:24px"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

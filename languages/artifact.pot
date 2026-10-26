@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T09:19:26+00:00\n"
+"POT-Creation-Date: 2026-10-26T10:30:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: artifact\n"
@@ -478,7 +478,7 @@ msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/tgmpa.php:44
-msgid "This theme recommends Contact Form 7 for the contact page form and Brevo for the footer newsletter form."
+msgid "This theme recommends Contact Form 7 for the contact page form and Brevo for an email sign-up form in the footer."
 msgstr ""
 
 #. translators: 1: plugin name(s).
@@ -504,7 +504,7 @@ msgid "We help to accelerate your business growth"
 msgstr ""
 
 #: patterns/about.php:32
-msgid "Three colleagues reviewing work on a laptop"
+msgid "Colleagues discussing a project around an office table"
 msgstr ""
 
 #: patterns/about.php:42
@@ -570,6 +570,8 @@ msgstr ""
 #: patterns/contact-info.php:13
 #: patterns/footer.php:20
 #: patterns/header.php:12
+#: patterns/hero.php:12
+#: patterns/project-cta.php:15
 msgid "contact@example.com"
 msgstr ""
 
@@ -727,8 +729,10 @@ msgstr ""
 msgid "Subscribe via RSS"
 msgstr ""
 
+#. translators: 1: current year, 2: site name.
 #: patterns/footer.php:132
-msgid "© 2026 Artifact, All Rights Reserved."
+#, php-format
+msgid "© %1$s %2$s, All Rights Reserved."
 msgstr ""
 
 #: patterns/fun-facts-grid.php
@@ -864,40 +868,32 @@ msgctxt "Pattern description"
 msgid "Homepage dark hero with headline, supporting copy, and a call to action."
 msgstr ""
 
-#: patterns/hero.php:13
-msgid "Sparkle"
-msgstr ""
-
 #: patterns/hero.php:15
 msgid "2K+ Successful Projects"
 msgstr ""
 
 #: patterns/hero.php:17
-msgid "Product team at a workstation"
+msgid "Developer working on a laptop at a bright desk"
 msgstr ""
 
-#: patterns/hero.php:19
-msgid "Decorative swirl"
-msgstr ""
-
-#: patterns/hero.php:21
+#: patterns/hero.php:20
 msgid "100% Client Satisfaction"
 msgstr ""
 
-#: patterns/hero.php:23
+#: patterns/hero.php:22
 #: patterns/work-process.php:23
 msgid "How we work"
 msgstr ""
 
-#: patterns/hero.php:32
+#: patterns/hero.php:31
 msgid "Creating<br>Software &amp; Digital Excellence"
 msgstr ""
 
-#: patterns/hero.php:36
+#: patterns/hero.php:35
 msgid "We transform businesses of most major sectors with powerful and adaptable digital solutions."
 msgstr ""
 
-#: patterns/hero.php:42
+#: patterns/hero.php:41
 msgid "Let’s Talk With Us"
 msgstr ""
 
@@ -951,6 +947,15 @@ msgstr ""
 msgid "Guides, ideas and lessons from our team on building websites, software and digital products that grow a business."
 msgstr ""
 
+#: patterns/hidden-more-articles-heading.php
+msgctxt "Pattern title"
+msgid "More articles heading"
+msgstr ""
+
+#: patterns/hidden-more-articles-heading.php:11
+msgid "More articles"
+msgstr ""
+
 #: patterns/hidden-no-results.php
 msgctxt "Pattern title"
 msgid "No results"
@@ -977,15 +982,6 @@ msgstr ""
 
 #: patterns/hidden-service-hero.php:17
 msgid "Service Details"
-msgstr ""
-
-#: patterns/hidden-similar-posts-heading.php
-msgctxt "Pattern title"
-msgid "Similar posts heading"
-msgstr ""
-
-#: patterns/hidden-similar-posts-heading.php:11
-msgid "Similar posts"
 msgstr ""
 
 #: patterns/latest-articles.php
@@ -1829,16 +1825,28 @@ msgstr ""
 msgid "Get Started"
 msgstr ""
 
+#: patterns/work-process.php:47
+msgid "with your proposal"
+msgstr ""
+
 #: patterns/work-process.php:57
 msgid "Our expert developer team is ready to do all."
+msgstr ""
+
+#: patterns/work-process.php:67
+msgid "with our development team"
 msgstr ""
 
 #: patterns/work-process.php:77
 msgid "Get full support from us through the project."
 msgstr ""
 
+#: patterns/work-process.php:87
+msgid "with project support"
+msgstr ""
+
 #: patterns/work-process.php:109
-msgid "Laptop, notebook, and coffee on a desk"
+msgid "Developer coding on a laptop beside a coffee and a phone"
 msgstr ""
 
 #: theme.json

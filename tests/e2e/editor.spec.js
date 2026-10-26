@@ -99,7 +99,7 @@ test.describe( 'Patterns in the block editor', () => {
 		'artifact/hidden-no-results',
 		'artifact/hidden-blog-heading',
 		'artifact/hidden-archive-heading',
-		'artifact/hidden-similar-posts-heading',
+		'artifact/hidden-more-articles-heading',
 		'artifact/hidden-search',
 	];
 

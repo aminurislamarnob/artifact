@@ -11,42 +11,42 @@ $artifact_stars = esc_url( get_parent_theme_file_uri( 'assets/images/stars-ratin
 $artifact_icon_alt = esc_attr__( '5 stars', 'artifact' );
 $artifact_stories = array(
 	array(
-		'photo' => 'story-wade-a.png',
+		'photo' => 'story-wade-a.jpg',
 		'name'  => __( 'Wade Warren', 'artifact' ),
 		'role'  => __( 'CEO, ABC Corporation', 'artifact' ),
 		'quote' => __( '“I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage.”', 'artifact' ),
 		'alt'   => __( 'Portrait of Wade Warren', 'artifact' ),
 	),
 	array(
-		'photo' => 'team-b.png',
+		'photo' => 'team-b.jpg',
 		'name'  => __( 'Esther Howard', 'artifact' ),
 		'role'  => __( 'VP of Marketing, TechFlow', 'artifact' ),
 		'quote' => __( '“It’s all good. It was worth a fortune to my company. It is the most valuable business resource we have ever invested in. The turnaround time was incredible.”', 'artifact' ),
 		'alt'   => __( 'Portrait of Esther Howard', 'artifact' ),
 	),
 	array(
-		'photo' => 'story-wade-b.png',
+		'photo' => 'story-wade-b.jpg',
 		'name'  => __( 'Cameron Williamson', 'artifact' ),
 		'role'  => __( 'Founder, StudioDesign', 'artifact' ),
 		'quote' => __( '“Artifact exceeded our expectations on every single front. Their engineering standard, attention to typography, and performance is world-class. Our core web vitals went from red to straight 100s across mobile and desktop. I cannot recommend them highly enough.”', 'artifact' ),
 		'alt'   => __( 'Portrait of Cameron Williamson', 'artifact' ),
 	),
 	array(
-		'photo' => 'team-d.png',
+		'photo' => 'team-d.jpg',
 		'name'  => __( 'Jenny Wilson', 'artifact' ),
 		'role'  => __( 'Head of Product, Apex Global', 'artifact' ),
 		'quote' => __( '“The seamless integration and responsive design delivered exactly what we needed to scale our enterprise platform effortlessly.”', 'artifact' ),
 		'alt'   => __( 'Portrait of Jenny Wilson', 'artifact' ),
 	),
 	array(
-		'photo' => 'story-wade-c.png',
+		'photo' => 'story-wade-c.jpg',
 		'name'  => __( 'Robert Fox', 'artifact' ),
 		'role'  => __( 'CTO, CloudSphere', 'artifact' ),
 		'quote' => __( '“Working with Artifact felt like having an elite engineering team in-house. They understood complex requirements immediately and executed with flawless precision. Truly exceptional work from start to finish.”', 'artifact' ),
 		'alt'   => __( 'Portrait of Robert Fox', 'artifact' ),
 	),
 	array(
-		'photo' => 'team-f.png',
+		'photo' => 'team-f.jpg',
 		'name'  => __( 'Leslie Alexander', 'artifact' ),
 		'role'  => __( 'Managing Director, Horizon Media', 'artifact' ),
 		'quote' => __( '“Outstanding quality, clear communication, and impeccable design sense. They turned our ambitious vision into reality faster than we thought possible.”', 'artifact' ),

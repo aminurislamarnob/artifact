@@ -60,10 +60,10 @@ $artifact_arrow          = esc_url( get_parent_theme_file_uri( 'assets/images/ic
 
 				<!-- wp:social-links {"iconColor":"text-color","size":"has-normal-icon-size","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"left":"16px"}}}} -->
 				<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only">
-					<!-- wp:social-link {"url":"#","service":"facebook","label":"<?php echo esc_attr__( 'Facebook', 'artifact' ); ?>"} /-->
-					<!-- wp:social-link {"url":"#","service":"x","label":"<?php echo esc_attr__( 'X', 'artifact' ); ?>"} /-->
-					<!-- wp:social-link {"url":"#","service":"linkedin","label":"<?php echo esc_attr__( 'LinkedIn', 'artifact' ); ?>"} /-->
-					<!-- wp:social-link {"url":"#","service":"instagram","label":"<?php echo esc_attr__( 'Instagram', 'artifact' ); ?>"} /-->
+					<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook","label":"<?php echo esc_attr__( 'Facebook', 'artifact' ); ?>"} /-->
+					<!-- wp:social-link {"url":"https://x.com/","service":"x","label":"<?php echo esc_attr__( 'X', 'artifact' ); ?>"} /-->
+					<!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin","label":"<?php echo esc_attr__( 'LinkedIn', 'artifact' ); ?>"} /-->
+					<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram","label":"<?php echo esc_attr__( 'Instagram', 'artifact' ); ?>"} /-->
 				</ul>
 				<!-- /wp:social-links -->
 			</div>

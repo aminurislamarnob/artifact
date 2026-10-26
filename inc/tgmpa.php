@@ -41,7 +41,7 @@ function artifact_register_recommended_plugins() {
 		'has_notices'  => true,
 		'dismissable'  => true,
 		'is_automatic' => false,
-		'message'      => '<p>' . esc_html__( 'This theme recommends Contact Form 7 for the contact page form and Brevo for the footer newsletter form.', 'artifact' ) . '</p>',
+		'message'      => '<p>' . esc_html__( 'This theme recommends Contact Form 7 for the contact page form and Brevo for an email sign-up form in the footer.', 'artifact' ) . '</p>',
 		'strings'      => array(
 			/* translators: 1: plugin name(s). */
 			'notice_can_install_recommended' => _n_noop(

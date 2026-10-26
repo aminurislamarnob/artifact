@@ -128,8 +128,8 @@ class PatternsTest extends Artifact_Test_Case {
 				$this->assertStringStartsWith( get_template_directory_uri() . '/assets/images/', $src, "{$slug}: images must be bundled" );
 				$this->assertFileExists( get_theme_file_path( 'assets/images/' . basename( $src ) ) );
 				$this->assertTrue( $image->hasAttribute( 'alt' ), "{$slug}: {$src} needs an alt attribute" );
-				// Icons may be decorative (alt=""); photos and artwork need a description.
-				if ( 0 !== strpos( basename( $src ), 'icon-' ) ) {
+				// Icons and ornaments may be decorative (alt=""); photos and artwork need a description.
+				if ( ! preg_match( '/^(icon-.*|hero-sparkle|hero-vector-pink)\.svg$/', basename( $src ) ) ) {
 					$this->assertNotSame( '', trim( $image->getAttribute( 'alt' ) ), "{$slug}: {$src} needs alt text" );
 				}
 				++$checked;

@@ -129,7 +129,7 @@ $artifact_privacy_label = esc_html__( 'Privacy Policy', 'artifact' );
 	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}},"border":{"top":{"color":"var:preset|color|border","style":"solid","width":"1px"}}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignfull" style="border-top-color:var(--wp--preset--color--border);border-top-style:solid;border-top-width:1px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 		<!-- wp:paragraph {"align":"center","textColor":"text-color","fontSize":"small-paragraph"} -->
-		<p class="has-text-align-center has-text-color-color has-text-color has-small-paragraph-font-size"><?php echo esc_html__( '© 2026 Artifact, All Rights Reserved.', 'artifact' ); ?></p>
+		<p class="has-text-align-center has-text-color-color has-text-color has-small-paragraph-font-size"><?php echo esc_html( sprintf( /* translators: 1: current year, 2: site name. */ __( '© %1$s %2$s, All Rights Reserved.', 'artifact' ), gmdate( 'Y' ), get_bloginfo( 'name' ) ) ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

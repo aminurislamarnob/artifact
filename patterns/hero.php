@@ -9,14 +9,13 @@
  */
 
 $artifact_arrow        = esc_url( get_parent_theme_file_uri( 'assets/images/icon-arrow-outward.svg' ) );
+$artifact_email        = __( 'contact@example.com', 'artifact' );
 $artifact_sparkle      = esc_url( get_parent_theme_file_uri( 'assets/images/hero-sparkle.svg' ) );
-$artifact_sparkle_alt  = esc_attr__( 'Sparkle', 'artifact' );
 $artifact_badge        = esc_url( get_parent_theme_file_uri( 'assets/images/hero-badge-projects.svg' ) );
 $artifact_badge_alt    = esc_attr__( '2K+ Successful Projects', 'artifact' );
-$artifact_main         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-illustration-main.png' ) );
-$artifact_main_alt     = esc_attr__( 'Product team at a workstation', 'artifact' );
+$artifact_main         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-illustration-main.webp' ) );
+$artifact_main_alt     = esc_attr__( 'Developer working on a laptop at a bright desk', 'artifact' );
 $artifact_pink         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-vector-pink.svg' ) );
-$artifact_pink_alt     = esc_attr__( 'Decorative swirl', 'artifact' );
 $artifact_card         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-card-client.svg' ) );
 $artifact_card_alt     = esc_attr__( '100% Client Satisfaction', 'artifact' );
 $artifact_pill         = esc_url( get_parent_theme_file_uri( 'assets/images/hero-pill-work.svg' ) );
@@ -39,7 +38,7 @@ $artifact_pill_alt     = esc_attr__( 'How we work', 'artifact' );
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"backgroundColor":"primary","textColor":"text-white","className":"is-style-rounded artifact-button-icon","fontSize":"button-large"} -->
-				<div class="wp-block-button is-style-rounded artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="#"><?php echo esc_html__( 'Let’s Talk With Us', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></div>
+				<div class="wp-block-button is-style-rounded artifact-button-icon"><a class="wp-block-button__link has-text-white-color has-primary-background-color has-text-color has-background has-button-large-font-size has-custom-font-size wp-element-button" href="<?php echo esc_url( 'mailto:' . $artifact_email ); ?>"><?php echo esc_html__( 'Let’s Talk With Us', 'artifact' ); ?> <img src="<?php echo $artifact_arrow; ?>" alt="" width="24" height="24"/></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->
@@ -51,7 +50,7 @@ $artifact_pill_alt     = esc_attr__( 'How we work', 'artifact' );
 			<!-- wp:group {"className":"artifact-hero-illustration","layout":{"type":"default"}} -->
 			<div class="wp-block-group artifact-hero-illustration">
 				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__sparkle"} -->
-				<figure class="wp-block-image size-full artifact-hero-illust__sparkle"><img src="<?php echo $artifact_sparkle; ?>" alt="<?php echo $artifact_sparkle_alt; ?>"/></figure>
+				<figure class="wp-block-image size-full artifact-hero-illust__sparkle"><img src="<?php echo $artifact_sparkle; ?>" alt=""/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__badge"} -->
@@ -63,7 +62,7 @@ $artifact_pill_alt     = esc_attr__( 'How we work', 'artifact' );
 				<!-- /wp:image -->
 
 				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__pink"} -->
-				<figure class="wp-block-image size-full artifact-hero-illust__pink"><img src="<?php echo $artifact_pink; ?>" alt="<?php echo $artifact_pink_alt; ?>"/></figure>
+				<figure class="wp-block-image size-full artifact-hero-illust__pink"><img src="<?php echo $artifact_pink; ?>" alt=""/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"artifact-hero-illust__card"} -->

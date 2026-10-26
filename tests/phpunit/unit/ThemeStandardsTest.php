@@ -151,7 +151,7 @@ class ThemeStandardsTest extends TestCase {
 	public function test_bundled_images_are_documented_in_the_readme() {
 		$readme = Artifact_Theme_Files::read( 'readme.txt' );
 		$images = Artifact_Theme_Files::files_in( 'assets/images', 'jpg' );
-		$images = array_merge( $images, Artifact_Theme_Files::files_in( 'assets/images', 'svg' ), Artifact_Theme_Files::files_in( 'assets/images', 'png' ) );
+		$images = array_merge( $images, Artifact_Theme_Files::files_in( 'assets/images', 'svg' ), Artifact_Theme_Files::files_in( 'assets/images', 'png' ), Artifact_Theme_Files::files_in( 'assets/images', 'webp' ) );
 
 		$this->assertNotEmpty( $images );
 		foreach ( $images as $image ) {
@@ -184,17 +184,17 @@ class ThemeStandardsTest extends TestCase {
 	}
 
 	/**
-	 * Service, About and Portfolio page photos come from StockSnap, whose
-	 * photos are all CC0.
+	 * Every photo, people included, comes from StockSnap, whose photos are
+	 * all CC0, and is credited with its page.
 	 */
 	public function test_stock_photos_are_cc0_and_credited_in_the_readme() {
 		$credit = $this->readme_entry( 'StockSnap' );
-		$photos = array_merge( glob( Artifact_Theme_Files::path( 'assets/images/service-*.jpg' ) ), glob( Artifact_Theme_Files::path( 'assets/images/company-*.jpg' ) ), glob( Artifact_Theme_Files::path( 'assets/images/portfolio-*.jpg' ) ) );
+		$photos = array_merge( Artifact_Theme_Files::files_in( 'assets/images', 'jpg' ), array( Artifact_Theme_Files::path( 'assets/images/hero-illustration-main.webp' ) ) );
 
 		$this->assertStringContainsString( 'CC0', $credit );
 		$this->assertNotEmpty( $photos );
 		foreach ( $photos as $photo ) {
-			$this->assertStringContainsString( basename( $photo ), $credit, basename( $photo ) . ' is not credited to StockSnap' );
+			$this->assertMatchesRegularExpression( '#' . preg_quote( basename( $photo ), '#' ) . ' \(https://stocksnap\.io/photo/[a-z0-9-]+-[A-Z0-9]{10}\b#', $credit, basename( $photo ) . ' is not credited to a StockSnap page' );
 		}
 	}
 
