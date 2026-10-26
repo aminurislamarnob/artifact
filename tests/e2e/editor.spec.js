@@ -100,6 +100,7 @@ test.describe( 'Patterns in the block editor', () => {
 		'artifact/hidden-blog-heading',
 		'artifact/hidden-archive-heading',
 		'artifact/hidden-more-articles-heading',
+		'artifact/hidden-post-tags',
 		'artifact/hidden-search',
 	];
 

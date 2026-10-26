@@ -16,7 +16,7 @@ final class Artifact_Theme_Files {
 	/**
 	 * Patterns that exist only to be referenced by templates and parts.
 	 */
-	const HIDDEN_PATTERNS = array( 'artifact/header', 'artifact/footer', 'artifact/hidden-404', 'artifact/hidden-no-results', 'artifact/hidden-service-hero', 'artifact/hidden-blog-heading', 'artifact/hidden-archive-heading', 'artifact/hidden-more-articles-heading', 'artifact/hidden-search' );
+	const HIDDEN_PATTERNS = array( 'artifact/header', 'artifact/footer', 'artifact/hidden-404', 'artifact/hidden-no-results', 'artifact/hidden-service-hero', 'artifact/hidden-blog-heading', 'artifact/hidden-archive-heading', 'artifact/hidden-more-articles-heading', 'artifact/hidden-post-tags', 'artifact/hidden-search' );
 
 	/**
 	 * Homepage section patterns, in page order.

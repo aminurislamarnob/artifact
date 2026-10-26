@@ -99,7 +99,9 @@ class PatternsTest extends Artifact_Test_Case {
 	 * @param string $slug Pattern slug.
 	 */
 	public function test_pattern_renders_without_remote_urls( $slug ) {
-		$html = do_blocks( $this->pattern_markup( $slug ) );
+		// Render inside a tagged post, as templates do, so post blocks have output to check.
+		$GLOBALS['post'] = get_post( self::factory()->post->create( array( 'tags_input' => array( 'Pattern' ) ) ) );
+		$html            = do_blocks( $this->pattern_markup( $slug ) );
 
 		$this->assertNotSame( '', trim( $html ) );
 		// Social profile links lead to the networks themselves.
@@ -252,6 +254,26 @@ class PatternsTest extends Artifact_Test_Case {
 		$page = self::factory()->post->create( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Privacy Policy' ) );
 		update_option( 'wp_page_for_privacy_policy', $page );
 		$this->assertSame( get_permalink( $page ), $privacy()->item( 0 )->getAttribute( 'href' ) );
+	}
+
+	public function test_latest_articles_links_view_all_to_the_posts_page_only_when_the_site_has_one() {
+		$view_all = function () {
+			$xpath = $this->xpath( do_blocks( $this->pattern_markup( 'artifact/latest-articles' ) ) );
+			return $xpath->query( '//a[normalize-space()="View All"]' );
+		};
+
+		update_option( 'show_on_front', 'posts' );
+		update_option( 'page_for_posts', 0 );
+		$this->assertSame( 0, $view_all()->length, 'With no posts page the button would only reload the home page.' );
+
+		$front = self::factory()->post->create( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Home' ) );
+		update_option( 'show_on_front', 'page' );
+		update_option( 'page_on_front', $front );
+		$this->assertSame( 0, $view_all()->length, 'A static front page without a posts page still has no blog to link.' );
+
+		$blog = self::factory()->post->create( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'Blog' ) );
+		update_option( 'page_for_posts', $blog );
+		$this->assertSame( get_permalink( $blog ), $view_all()->item( 0 )->getAttribute( 'href' ) );
 	}
 
 	public function test_footer_social_links_point_somewhere_real() {

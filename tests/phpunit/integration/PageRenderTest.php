@@ -239,6 +239,22 @@ class PageRenderTest extends Artifact_Test_Case {
 		$this->assertSame( 1, $xpath->query( '//main//form[@id="commentform"]' )->length );
 	}
 
+	public function test_single_post_labels_its_tags() {
+		$post = self::factory()->post->create( array( 'post_title' => 'Tagged Post', 'tags_input' => array( 'Branding', 'Design' ) ) );
+		$xpath = $this->xpath( $this->render_page( '/?p=' . $post ) );
+		$tags  = $xpath->query( '//main//div[contains(@class,"artifact-tag-list")]' )->item( 0 );
+
+		$this->assertNotNull( $tags );
+		$this->assertSame( 'Tags:', trim( $xpath->query( './/span[contains(@class,"wp-block-post-terms__prefix")]', $tags )->item( 0 )->textContent ) );
+		$this->assertSame( 2, $xpath->query( './/a[@rel="tag"]', $tags )->length );
+	}
+
+	public function test_single_post_without_tags_shows_no_tag_label() {
+		$xpath = $this->xpath( $this->page( '/?p=%post%' ) );
+
+		$this->assertSame( 0, $xpath->query( '//main//*[contains(@class,"wp-block-post-terms__prefix")]' )->length );
+	}
+
 	public function test_404_page_returns_the_404_template_with_a_search_form() {
 		$xpath = $this->xpath( $this->page( '/?p=999999' ) );
 
